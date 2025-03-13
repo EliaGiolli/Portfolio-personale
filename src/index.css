@@ -2,6 +2,18 @@
 
 
 @layer base{
+  :root{
+    --bg-primary-color: #1F2937;
+    --bg-secondary-color: #1F2937;
+    --bg-tretiary-color: #0891B2;
+    --bg-hover-color: #0E7490;
+
+    --text-primary-color: #fff;
+    --text-secondary-color: #D1D5DB;
+    --text-tretiary-color: #67E8F2;
+
+  }
+
   body {
     font-family: 'Roboto', sans-serif;
     marign: 0;
@@ -12,5 +24,94 @@
   h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
   }
+
+}
+
+@layer utilities{
+  .bg-primary{
+    background-color: var(--bg-primary-color);
+  }
+  .bg-secondary{
+    background-color: var(--bg-secondary-color);
+  }
+  .text-primary{
+    color: var(--text-primary-color);
+  }
+  .text-secondary{
+    color: var(--text-secondary-color);
+  }
+  .text-tretiary{
+    color: var(--text-tretiary-color);
+  }
+}
+
+
+@layer components{
+  .custom-button{
+    @apply px-3 py-2 shadow-lg rounded-lg;
+    background-color: var(--bg-tretiary-color);
+    color: var(--text-primary-color);
+    border: 1px solid var(--bg-tretiary-color);
+  }
+  .custom-button:hover{
+    background-color:var(--bg-hover-color);
+    color: var(--text-primary-color);
+  }
+  .navbar{
+    @apply w-full h-16 py-3 px-4 flex justify-between items-center relative;
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    border-bottom: 3px solid var(--text-tretiary-color);
+  }
+  .nav-links{
+    @apply hidden md:flex flex-1 justify-center items-center gap-4;
+  }
+  .nav-search{
+    @apply hidden sm:flex items-center min-w-[200px];
+  }
+  .li-style{
+    @apply px-3 py-2 transition-colors duration-200 ease-in-out;
+    color: var(--text-primary-color);
+  }
+  .li-style:hover{
+    background-color: var(--bg-secondary-color);
+    color:var(--text-tretiary-color);
+    border-radius: 11px;
+  }
+  .nav-input{
+    @apply pl-9 w-full py-2 hidden sm:block;
+    border-radius: 11px;
+    background-color: var(--bg-secondary-color);
+    color: var(--text-primary-color);
+    border: 1px solid var(--text-tretiary-color);
+  }
+  .nav-input::placeholder {
+    color: var(--text-secondary-color);
+  }
+  .nav-icon{
+    @apply absolute hidden sm:block;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-tretiary-color);
+  }
+  .dropdown{
+    @apply absolute top-full right-0 w-full md:hidden shadow-lg mt-3 py-4 px-2;
+    background-color: var(--bg-primary-color);
+    border-top: 1px solid var(--text-tretiary-color);
+    border-bottom: 1px solid var(--text-tretiary-color);
+  }
   
+  .dropdown ul {
+    @apply flex flex-col gap-4;
+  }
+  
+  .dropdown .li-style {
+    @apply text-right px-4;
+  }
+  .buttons{
+    @apply p-3;
+    background-color: var(--text-tretiary-color);
+    color: var(--text-primary-color);
+  }
 }

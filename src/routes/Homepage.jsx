@@ -1,7 +1,13 @@
-
+import Navbar from "../layouts/Navbar"
+import Card from "../layouts/Card"
 function Homepage() {
   return (
-    <div>homepage</div>
+    <>
+      <Navbar />
+      <main className="bg-secondary">
+        <Card />
+      </main>
+    </>
   )
 }
 
