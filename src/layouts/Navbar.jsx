@@ -20,9 +20,10 @@ function Navbar() {
   return (
     <nav className='navbar'>
         {/* Logo */}
-        <div className='flex-none'>
-            <h3 className='text-primary'>LOGO</h3>
-        </div>
+        <Link to="/">
+            <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />
+        </Link>
+
 
         {/* Desktop Menu */}
         <ul className='nav-links'>

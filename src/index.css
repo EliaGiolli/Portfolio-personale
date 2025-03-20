@@ -4,7 +4,7 @@
 @layer base{
   :root{
     --bg-primary-color: #1F2937;
-    --bg-secondary-color: #1F2937;
+    --bg-secondary-color: #374151;
     --bg-tretiary-color: #0891B2;
     --bg-hover-color: #0E7490;
 
@@ -70,7 +70,7 @@
     @apply hidden sm:flex items-center min-w-[200px];
   }
   .li-style{
-    @apply px-3 py-2 transition-colors duration-200 ease-in-out;
+    @apply text-xl px-3 py-2 transition-colors duration-200 ease-in-out;
     color: var(--text-primary-color);
   }
   .li-style:hover{
@@ -113,5 +113,43 @@
     @apply p-3;
     background-color: var(--text-tretiary-color);
     color: var(--text-primary-color);
+  }
+  .cards{
+    @apply rounded-lg shadow-lg p-6 m-4;
+    background-color: var(--bg-secondary-color);
+  }
+  .foto{
+    @apply w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg;
+  }
+  .foto-container{
+    @apply p-2 rounded-full;
+    background-color: #fff;
+  }
+  .subtitle{
+    @apply text-2xl lg:text-xl font-bold text-center;
+    color: var(--text-tretiary-color)
+  }
+  .paragraph{
+    @apply text-xl text-center text-wrap py-2;
+    color: var(--text-primary-color);
+  }
+  .icon{
+    @apply p-2 text-4xl md:text-5xl;
+    color: var(--text-tretiary-color);
+  }
+  .icon:hover{
+    @apply transition-colors duration-300;
+    color: var(--text-primary-color)
+  }
+
+  .carousel-div{
+    @apply w-full max-w-3xl mx-auto rounded-lg shadow-lg p-3 my-5;
+    background-color: var(--bg-secondary-color)
+  }
+  .footerStyle{
+    @apply border-t-2 p-3;
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    border-color: var(--text-tretiary-color)
   }
 }
