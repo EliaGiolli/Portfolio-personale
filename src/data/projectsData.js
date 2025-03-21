@@ -3,7 +3,7 @@ export const projectsData = [
         id: 1,
         title: "Applicazione per il controllo delle spese con React",
         description: "Progetto utile per praticare useReducer() e la libreria react-parallax. L'utente inserisce la quantità della spesa e l'app calcola il totale.",
-        imageUrl: "/img/app-meteo.png",
+        imageUrl: "/img/pennywise.png",
         githubLink: "https://github.com/EliaGiolli/Expense-handler-app",
         demoLink: "https://pennywise-expense-tracker.netlify.app/",
         technologies: ["React", "Tailwind CSS"]

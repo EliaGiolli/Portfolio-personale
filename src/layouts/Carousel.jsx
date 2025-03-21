@@ -44,7 +44,7 @@ function Carousel() {
             <Card variant="project">
                 <div className="flex flex-col text-white scale-100">
                   <div className='w-full'>
-                    <img src={currentProject.imageUrl} alt={currentProject.title} className='object-cover mb-4' />
+                    <img src={currentProject.imageUrl} alt={currentProject.title} className='object-cover rounded-lg mb-4' />
                   </div>
                     <h2 className="subtitle mb-2">{currentProject.title}</h2>
                     <p className="paragraph mb-4">{currentProject.description}</p>
