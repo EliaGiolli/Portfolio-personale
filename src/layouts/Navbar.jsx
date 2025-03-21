@@ -1,5 +1,5 @@
 import React from 'react'
-import  {Link} from 'react-router-dom'
+import  { Link } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa'
 import { FaBars} from 'react-icons/fa'
 import InputField from '../components/InputField'

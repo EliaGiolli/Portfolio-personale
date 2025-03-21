@@ -8,13 +8,7 @@ import About from './routes/About';
 import Contacts from './routes/Contacts';
 
 function App() {
-  const navigate = useNavigate();
-
-//It sends the user directly to the homepage when he first enters the website
-  useEffect(()=>{
-    navigate('/');
-  },[navigate])
-
+ 
 
   return (
     <div className="min-h-screen bg-primary">
@@ -22,7 +16,7 @@ function App() {
         <Route path="/" element={<Homepage/>} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/cv" element={<CvPage />} />
-        <Route path="/error" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
         <Route path='/about' element={<About />} />
         <Route path='/contacts' element={<Contacts />} />
       </Routes>

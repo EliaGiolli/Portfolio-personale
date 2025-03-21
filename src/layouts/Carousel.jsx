@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Card from './Card'
+import Button from '../components/Button'
 import { projectsData } from '../data/projectsData'
 import { FaGithub } from 'react-icons/fa'
 import { FaRegArrowAltCircleLeft } from "react-icons/fa"
@@ -58,14 +59,14 @@ function Carousel() {
                     </div>
                 </div>
                 <div className="flex justify-between items-center mt-auto">
-                    <a 
+                    <Button 
                         href={currentProject.demoLink} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="custom-button"
+                      
                     >
                         Demo
-                    </a>
+                    </Button>
                     <a 
                         href={currentProject.githubLink}
                         target="_blank" 

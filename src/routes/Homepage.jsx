@@ -1,6 +1,7 @@
 //components
 import Navbar from "../layouts/Navbar"
 import Card from "../layouts/Card"
+import Button from '../components/Button'
 import Carousel from "../layouts/Carousel"
 import Footer from '../layouts/Footer'
 
@@ -71,9 +72,9 @@ function Homepage() {
                     <FaNodeJs className="icon"/>
               </div>
             </div>
-            <button className="custom-button">
+            <Button>
               Contattami
-            </button>
+            </Button>
           </div>
         </Card>
 
