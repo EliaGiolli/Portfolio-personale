@@ -77,11 +77,13 @@ function Homepage() {
           </div>
         </Card>
 
+
+         {/* Project cards carousel */}
         <Carousel />
 
         {/* Skills Card Example */}
         <Card variant="skill">
-          <div className="text-white flex flex-col justify-center items-center">
+          <div className="text-white flex flex-col justify-center items-center h-screen">
             <h2 className="subtitle p-2 mb-5">Competenze</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-center border-white border rounded-md px-3 hover:bg-sky-100">

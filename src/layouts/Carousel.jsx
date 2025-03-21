@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import Card from './Card'
-import { projectsData } from '../data/projectsData'
+import { projectsData, getTechIcon } from '../data/projectsData'
 import { FaGithub } from 'react-icons/fa'
 import { FaRegArrowAltCircleLeft } from "react-icons/fa"
 import { FaRegArrowAltCircleRight } from "react-icons/fa"
+
 
 function Carousel() {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
@@ -25,21 +26,23 @@ function Carousel() {
     <div className='carousel-div'>
        <Card variant="project" >
           <div className="flex flex-col text-white scale-100">
-            <img 
-              src={currentProject.imageUrl} 
-              alt={currentProject.title} 
-              className="w-full h-48 object-cover rounded-t-lg mb-4"
-            />
-            <h2 className="subtitle mb-2">{currentProject.title}</h2>
-            <p className="paragraph mb-4">
-              {currentProject.description}
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center mb-4">
-              {currentProject.technologies.map((tech, index) => (
-                <span key={index} className="bg-text-tretiary/20 px-2 py-1 rounded text-sm">
-                  {tech}
-                </span>
-              ))}
+            <div className='grid grid-cols-1 md:grid-cols-2 mb-4'>
+              <div className='bg-[#1F2937] rounded-xl p-1'>
+                <div className='flex flex-wrap gap-2 justify-center items-center mb-4'>
+                  {currentProject.technologies.map((tech, index) => (
+                    <span key={index} className="bg-text-tretiary/20 px-2 py-1 rounded text-sm flex items-center">
+                      {getTechIcon(tech)}
+                      <span className="ml-1">{tech}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className='p-2'>
+                <h2 className="subtitle mb-2">{currentProject.title}</h2>
+                <p className="paragraph mb-4">
+                  {currentProject.description}
+                </p>
+              </div>
             </div>
             <div className="flex justify-between items-center mt-auto">
               <a 
