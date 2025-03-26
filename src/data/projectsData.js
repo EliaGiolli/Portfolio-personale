@@ -1,6 +1,16 @@
 export const projectsData = [
     {
         id: 1,
+        title: "The Cozy Corner",
+        description: "Un'applicazione utile per imparare la manipolazione del DOM implementando tecniche per lo scroll",
+        imageUrl: "/img/cozy-corner.png",
+        githubLink: "https://github.com/EliaGiolli/cozy-corner-ts",
+        demoLink: "https://cozy-corner-app.netlify.app/",
+        technologies: ["Typescript", "Tailwind CSS"]
+    },
+    {
+        
+        id: 2,
         title: "Applicazione per il controllo delle spese con React",
         description: "Progetto utile per praticare useReducer() e la libreria react-parallax. L'utente inserisce la quantità della spesa e l'app calcola il totale.",
         imageUrl: "/img/pennywise.png",
@@ -9,22 +19,13 @@ export const projectsData = [
         technologies: ["React", "Tailwind CSS"]
     },
     {
-        id: 2,
+        id: 3,
         title: "Applicazione meteo w/ Typescript",
         description: "Il mio primo progetto con Typescript: un'app meteo",
         imageUrl: "/img/app-meteo.png",
         githubLink: "https://github.com/EliaGiolli/weather-app-ts",
         demoLink: "https://eliagiolli.github.io/weather-app-ts/",
         technologies: ["Javascript", "Tailwind CSS", "Typescript"]
-    },
-    {
-        id: 3,
-        title: "Galleria di immagini con funzione modale",
-        description: "Una semplice applicazione per imparare a creare un carosello di immagini con javascript vanilla",
-        imageUrl: "/img/js-modal.png",
-        githubLink: "https://github.com/EliaGiolli/Project_img_gallery",
-        demoLink: "https://imagegallery-modalview.netlify.app/",
-        technologies: ["Javascript", "CSS"]
     },
     {
         id: 4,

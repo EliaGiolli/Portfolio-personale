@@ -1,8 +1,16 @@
 import React from 'react'
 
-function Button({ children, onClick }) {
+function Button({ children, onClick, variant }) {
+
+  const baseStyles = 'custom-button'
+
+  const variantStyles ={
+    default: "",
+    arrowBtn: "buttons",
+    scrollBtn: "scrollBtn",
+  }
   return (
-    <button className='custom-button' onClick={onClick}>
+    <button className={`${baseStyles} ${variantStyles[variant]}`} onClick={onClick}>
         {children}
     </button>
   )

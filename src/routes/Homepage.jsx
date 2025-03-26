@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 //components
 import Navbar from "../layouts/Navbar"
 import Card from "../layouts/Card"
@@ -19,9 +20,24 @@ import { FaBusinessTime } from "react-icons/fa6"
 import { MdOutlineTimelapse } from "react-icons/md"
 import { TbWorld } from "react-icons/tb"
 import { FaTasks } from "react-icons/fa"
+import { LuArrowUpToLine } from "react-icons/lu";
 
 
 function Homepage() {
+
+  //logic for the scrollBtn
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(()=>{
+    const toggleVisibility = () => setIsVisible(window.scrollY > 300);
+      window.addEventListener("scroll", toggleVisibility);
+    
+      return () => window.removeEventListener("scroll", toggleVisibility);
+  },[]);
+
+
+
+
   return (
     <>
       <Navbar />
@@ -115,7 +131,14 @@ function Homepage() {
           </div>
         </Card>
       </main>
-      <Footer />
+    {/* button for scroll-to-top */}
+    {isVisible && 
+      <Button 
+        variant="scrollBtn" 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <LuArrowUpToLine />
+      </Button>}
+    <Footer />
     </>
   )
 }

@@ -1,10 +1,25 @@
+import { useState, useEffect } from 'react'
+
 import Navbar from '../layouts/Navbar'
 import Footer from "../layouts/Footer"
 import Card from '../layouts/Card'
 import Button from '../components/Button'
 
+import { LuArrowUpToLine } from "react-icons/lu";
 
 function About() {
+  
+  //logic for the scrollBtn
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(()=>{
+    const toggleVisibility = ()=> setIsVisible(window.scrollY > 300);
+      window.addEventListener("scroll",toggleVisibility);
+
+      return () => window.removeEventListener("scroll", toggleVisibility);
+  },[]);
+
+
   return (
     <>
       <Navbar />
@@ -41,6 +56,15 @@ function About() {
           </div>
         </Card>
       </main>
+
+
+      {/* button for scroll-to-top */}
+    {isVisible && 
+      <Button 
+        variant="scrollBtn" 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <LuArrowUpToLine />
+      </Button>}
       <Footer />    
     </>
   )

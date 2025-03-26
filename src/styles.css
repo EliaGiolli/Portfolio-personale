@@ -47,8 +47,10 @@
 
 
 @layer components{
+
+  /*  BUTTONS  */
   .custom-button{
-    @apply px-3 py-2 shadow-lg rounded-lg;
+    @apply cursor-pointer px-3 py-2 shadow-lg rounded-lg;
     background-color: var(--bg-tretiary-color);
     color: var(--text-primary-color);
     border: 1px solid var(--bg-tretiary-color);
@@ -57,6 +59,18 @@
     background-color:var(--bg-hover-color);
     color: var(--text-primary-color);
   }
+  .buttons{
+    @apply cursor-pointer p-3;
+    background-color: var(--text-tretiary-color);
+    color: var(--text-primary-color);
+  }
+  .scrollBtn{
+    @apply fixed z-50 cursor-pointer bottom-7 right-3 p-3;
+    background-color: var(--bg-tretiary-color);
+    color: var(--text-primary-color);
+    border: 1px solid var(--bg-tretiary-color);
+  }
+  /*  NAVBAR  */
   .navbar{
     @apply w-full h-16 py-3 px-4 flex justify-between items-center relative;
     background-color: var(--bg-primary-color);
@@ -70,7 +84,7 @@
     @apply hidden sm:flex items-center min-w-[200px];
   }
   .li-style{
-    @apply text-xl px-3 py-2 transition-colors duration-200 ease-in-out;
+    @apply text-lg md:text-xl px-3 py-2 transition-colors duration-200 ease-in-out;
     color: var(--text-primary-color);
   }
   .li-style:hover{
@@ -112,11 +126,6 @@
   
   .dropdown .li-style {
     @apply text-right px-4;
-  }
-  .buttons{
-    @apply p-3;
-    background-color: var(--text-tretiary-color);
-    color: var(--text-primary-color);
   }
   .cards{
     @apply rounded-lg shadow-lg p-6 m-4;
