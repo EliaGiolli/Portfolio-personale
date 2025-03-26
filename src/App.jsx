@@ -1,5 +1,4 @@
-import {useEffect} from 'react';
-import {Route, Routes, useNavigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 import Homepage from './routes/Homepage'
 import ProjectsPage from './routes/ProjectsPage';
 import CvPage from './routes/CvPage';

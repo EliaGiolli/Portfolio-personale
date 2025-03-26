@@ -23,8 +23,6 @@ function Navbar() {
         <Link to="/">
             <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />
         </Link>
-
-
         {/* Desktop Menu */}
         <ul className='nav-links'>
             <li className='li-style'>
@@ -37,7 +35,6 @@ function Navbar() {
                 <Link to='/contacts'>Contatti</Link>
             </li>
         </ul>
-
         {/* Search and Mobile Menu */}
         <div className='flex items-center gap-4'>
             <div className="nav-search">
@@ -50,13 +47,11 @@ function Navbar() {
                     <FaSearch className='nav-icon'/>
                 </InputField>
             </div>
-            
             {/* Hamburger Menu */}
             <section className='block md:hidden cursor-pointer' onClick={toggleDropdown}>
                 <FaBars className='text-3xl text-[--text-primary-color]'/>
             </section>
         </div>
-
         {/* Mobile Dropdown */}
         {isDropDown && (
             <div className='dropdown'>

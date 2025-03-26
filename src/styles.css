@@ -78,6 +78,10 @@
     color:var(--text-tretiary-color);
     border-radius: 11px;
   }
+  .li-style-body{
+    @apply list-disc md:text-xl text-center p-2;
+    color:var(--text-primary-color);
+  }
   .nav-input{
     @apply pl-9 w-full py-2 hidden sm:block;
     border-radius: 11px;
@@ -126,15 +130,19 @@
     background-color: #fff;
   }
   .subtitle{
-    @apply text-2xl lg:text-xl font-bold text-center;
+    @apply text-xl lg:text-2xl font-bold text-center text-wrap p-2;
     color: var(--text-tretiary-color)
   }
   .paragraph{
-    @apply text-xl text-center text-wrap py-2;
+    @apply  md:text-xl text-center text-wrap py-3;
     color: var(--text-primary-color);
   }
   .text-accent{
     color: var(--text-tretiary-color)
+  }
+  .text-accent-secondary{
+    @apply text-sm md:text-lg;
+    color: var(--text-secondary-color)
   }
   .icon{
     @apply p-2 text-4xl md:text-5xl;
