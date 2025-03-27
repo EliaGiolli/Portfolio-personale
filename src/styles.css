@@ -34,6 +34,9 @@
   .bg-secondary{
     background-color: var(--bg-secondary-color);
   }
+  .bg-tretiary{
+    background-color:var(--text-secondary-color);
+  }
   .text-primary{
     color: var(--text-primary-color);
   }
@@ -60,9 +63,8 @@
     color: var(--text-primary-color);
   }
   .buttons{
-    @apply cursor-pointer p-3;
-    background-color: var(--text-tretiary-color);
-    color: var(--text-primary-color);
+    @apply text-black text-center cursor-pointer p-2;
+    background-color: var(--text-primary-color);
   }
   .scrollBtn{
     @apply fixed z-50 cursor-pointer bottom-7 right-3 p-3;
