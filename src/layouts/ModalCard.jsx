@@ -6,7 +6,7 @@ import Button from '../components/Button';
 
 function ModalCard({ open, onClose }) {
 
-
+{/*
     //prevention of the scrolling when the modal is open
     useEffect(()=>{
         if(open){
@@ -24,7 +24,7 @@ function ModalCard({ open, onClose }) {
     
     if(!open){
         return null;
-    }
+    } 
 
     
   return (
@@ -63,6 +63,7 @@ function ModalCard({ open, onClose }) {
         </Card>
     </div>
   )
+    */}
 }
 
 export default ModalCard

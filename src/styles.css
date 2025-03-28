@@ -11,6 +11,7 @@
     --text-primary-color: #fff;
     --text-secondary-color: #D1D5DB;
     --text-tretiary-color: #67E8F2;
+    --text-subtitle-secondary: #60A5FA;
 
   }
 
@@ -37,6 +38,9 @@
   .bg-tretiary{
     background-color:var(--text-secondary-color);
   }
+  .bg-hover{
+    background-color:var(--bg-hover-color)
+  }
   .text-primary{
     color: var(--text-primary-color);
   }
@@ -46,6 +50,7 @@
   .text-tretiary{
     color: var(--text-tretiary-color);
   }
+  
 }
 
 
@@ -141,11 +146,15 @@
     background-color: #fff;
   }
   .subtitle{
-    @apply text-xl lg:text-2xl font-bold text-center text-wrap p-2;
+    @apply text-xl lg:text-2xl font-bold text-center text-wrap;
     color: var(--text-tretiary-color)
   }
+  .subtitle-secondary{
+    @apply text-xl text-center;
+    color:var(--text-subtitle-secondary)
+  }
   .paragraph{
-    @apply  md:text-xl text-center text-wrap py-3;
+    @apply  md:text-xl text-center break-words whitespace-normal text-pretty leading-normal md:leading-relaxed lg:leading-loose py-3;
     color: var(--text-primary-color);
   }
   .text-accent{

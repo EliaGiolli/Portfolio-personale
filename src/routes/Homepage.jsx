@@ -44,14 +44,21 @@ function Homepage() {
       <main className="container mx-auto py-8">
         {/* Profile Card Example */}
         <Card variant="profile" className="mb-7">
-          <div className="min-h-fit flex flex-col items-center text-text-primary py-8">
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 p-3 my-4 w-full">
-              <div className="flex flex-col justify-center items-center text-center">
+         
+            <div className="flex flex-col justify-around items-center text-center p-3 my-4 w-full">
+              <div className="flex flex-col items-center text-center md:text-left">
+                <div className="foto-container w-1/2 mb-4">
+                  <img 
+                    src="/img/foto_curriculum.png" 
+                    alt="Profile" 
+                    className="foto w-full"
+                  />
+                </div>
                 <h2 className="text-2xl text-primary mb-2">Elia Giolli</h2>
-                <span className="text-4xl md:text-3xl text-tretiary font-bold mb-4">
+                <span className="text-3xl md:text-4xl text-tretiary font-bold mb-4">
                   <ReactTyped
                     strings={[
-                      "Jr front-end web developer",
+                      "Jr React developer",
                       "Traduttore",
                     ]}
                     typeSpeed={40}
@@ -60,24 +67,12 @@ function Homepage() {
                   />
                 </span>
                 <p className="paragraph">
-                Ho 30 anni e sono uno studente di front-end web development. <br />
-                
-                Le tecnologie che conosco sono HTML, CSS, Javascript, React e Nodejs
+                  Ciao, sono <strong className="text-tretiary">Elia Giolli</strong>, un sviluppatore web front-end con esperienza in <strong className="text-tretiary">HTML, CSS, JavaScript, React e Node.js</strong>. Parlo fluentemente <strong className="text-tretiary">inglese, russo e spagnolo</strong>. 
                 </p>
                 <p className="paragraph">
-                Parlo fluentemente in 4 lingue straniere: inglese, russo, spagnolo e tedesco.
+                  Ho lavorato su diversi progetti web, utilizzando tecnologie moderne per creare esperienze utente coinvolgenti e performanti. Scopri i miei progetti per vedere il mio lavoro!
                 </p>
               </div>
-              <div className="flex justify-center items-center p-4">
-                <div className="foto-container">
-                  <img 
-                    src="/img/foto_curriculum.png" 
-                    alt="Profile" 
-                    className="foto"
-                  />
-                </div>
-              </div>
-            </div>
             <div className="w-full flex flex-col items-center justify-center p-4 my-6">
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 p-4 my-4 max-w-5xl">
                     <FaHtml5 className="icon"/>
@@ -87,6 +82,7 @@ function Homepage() {
                     <FaReact className="icon"/>
                     <FaNodeJs className="icon"/>
               </div>
+              <p className="paragraph text-secondary">Contattami per discutere di come posso aiutarti a realizzare il tuo prossimo progetto web!</p>
             </div>
             <Button>
               Contattami
