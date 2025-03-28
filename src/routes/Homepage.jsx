@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react"
 //components
 import Navbar from "../layouts/Navbar"
+import HeroSection from "../layouts/HeroSection"
 import Card from "../layouts/Card"
 import Button from '../components/Button'
 import Carousel from "../layouts/Carousel"
 import Footer from '../layouts/Footer'
 
 //Icons
-import { FaHtml5 } from "react-icons/fa"
-import { FaCss3 } from "react-icons/fa"
-import { IoLogoJavascript } from "react-icons/io5"
-import { SiTypescript } from "react-icons/si"
-import { FaReact } from "react-icons/fa6"
-import { FaNodeJs } from "react-icons/fa"
+
 import { ReactTyped } from 'react-typed'
 import { RiTeamFill } from "react-icons/ri"
 import { FaUserGear } from "react-icons/fa6"
@@ -21,6 +17,7 @@ import { MdOutlineTimelapse } from "react-icons/md"
 import { TbWorld } from "react-icons/tb"
 import { FaTasks } from "react-icons/fa"
 import { LuArrowUpToLine } from "react-icons/lu";
+
 
 
 function Homepage() {
@@ -41,6 +38,7 @@ function Homepage() {
   return (
     <>
       <Navbar />
+      <HeroSection />
       <main className="container mx-auto py-8">
         {/* Profile Card Example */}
         <Card variant="profile" className="mb-7">
@@ -73,17 +71,6 @@ function Homepage() {
                   Ho lavorato su diversi progetti web, utilizzando tecnologie moderne per creare esperienze utente coinvolgenti e performanti. Scopri i miei progetti per vedere il mio lavoro!
                 </p>
               </div>
-            <div className="w-full flex flex-col items-center justify-center p-4 my-6">
-              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 p-4 my-4 max-w-5xl">
-                    <FaHtml5 className="icon"/>
-                    <FaCss3 className="icon"/>
-                    <IoLogoJavascript className="icon"/>
-                    <SiTypescript className="icon"/>
-                    <FaReact className="icon"/>
-                    <FaNodeJs className="icon"/>
-              </div>
-              <p className="paragraph text-secondary">Contattami per discutere di come posso aiutarti a realizzare il tuo prossimo progetto web!</p>
-            </div>
             <Button>
               Contattami
             </Button>
