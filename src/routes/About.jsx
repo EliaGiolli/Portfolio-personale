@@ -64,19 +64,19 @@ function About() {
         {/* Presentation card */}
         <Card variant='profile' className='cards'>
           <article className="flex flex-col md:grid md:grid-cols-3 gap-3">
-            <div className="w-full flex justify-center">
-              <img src="/img/foto-laurea.jpg" alt="due persone che parlano fra di loro" className="object-cover rounded-lg"/>
+            <div className="w-full flex justify-center md:order-2">
+              <img src="/img/foto-laurea.jpg" alt="la foto della mia laurea" className="object-cover rounded-lg"/>
             </div>
-            <div className="grid col-span-2">
-            <h2 className="subtitle uppercase"> Ciao, sono Giolli ELia, un React Developer orientato alla costruzione di design interattivi e accessibili.</h2>
-              <div className='flex flex-col text-center'>
-                <h3 className='subtitle-secondary mt-5'>Chi sono:</h3>
-                <p className="paragraph">Mi piace trasformare idee in interfacce web moderne, intuitive e performanti. Ogni progetto per me è un'opportunità per unire <strong className='text-tretiary'>design e tecnologia</strong>, creando esperienze utente fluide e coinvolgenti. </p>
-                <h3 className='subtitle-secondary'>Il mio obitttivo:</h3>              
-                <p className='paragraph mb-3'>Sviluppo <strong className='text-tretiary'>soluzioni web scalabili e multilingue</strong>, ideali per chi vuole espandere il proprio business oltre i confini nazionali.</p>
-                <p className='text-secondary mb-5'>Se ti interessa conoscere meglio di cosa mi occupo, dai un'occhiata ai miei progetti!</p>
-              </div>
-              <Button className='buttons'>Guarda i miei progetti!</Button>
+            <div className="grid col-span-2 md:order-1">
+              <h2 className="subtitle uppercase"> Ciao, sono Giolli ELia, un React Developer orientato alla costruzione di design interattivi e accessibili.</h2>
+                <div className='flex flex-col text-center'>
+                  <h3 className='subtitle-secondary mt-5'>Chi sono:</h3>
+                  <p className="paragraph">Mi piace trasformare idee in interfacce web moderne, intuitive e performanti. Ogni progetto per me è un'opportunità per unire <strong className='text-tretiary'>design e tecnologia</strong>, creando esperienze utente fluide e coinvolgenti. </p>
+                  <h3 className='subtitle-secondary'>Il mio obitttivo:</h3>              
+                  <p className='paragraph mb-3'>Sviluppo <strong className='text-tretiary'>soluzioni web scalabili e multilingue</strong>, ideali per chi vuole espandere il proprio business oltre i confini nazionali.</p>
+                  <p className='text-secondary mb-5'>Se ti interessa conoscere meglio di cosa mi occupo, dai un'occhiata ai miei progetti!</p>
+                </div>
+                <Button className='buttons'>Guarda i miei progetti!</Button>
             </div>
           </article>
         </Card>
@@ -85,7 +85,7 @@ function About() {
 
         {/* Formazione & Esperienza card */}
         <Card variant='profile' className='cards'>
-          <div className="flex flex-col md:grid md:grid-cols-3 text-center gap-3">
+          <article className="flex flex-col md:grid md:grid-cols-3 text-center gap-3">
             <div className="w-full flex justify-center">
               <img src="/img/img-principale.png" alt="Formazione" className="object-cover rounded-lg" />
             </div>
@@ -130,7 +130,7 @@ function About() {
               </Button>
             </div>
            {/* <ModalCard open={openModal} onClose={() => setOpenModal(false)} /> */}
-          </div>
+          </article>
         </Card>
 
       {/* button for scroll-to-top */}
