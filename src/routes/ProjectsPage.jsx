@@ -1,8 +1,13 @@
-
+import Navbar from '../layouts/Navbar'
 
 function ProjectsPage() {
   return (
-    <div>ProjectsPage</div>
+    <>
+      <Navbar />
+    
+    
+    
+    </>
   )
 }
 

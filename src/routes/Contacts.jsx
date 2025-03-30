@@ -1,7 +1,12 @@
+import Navbar from "../layouts/Navbar"
+
 
 function Contacts() {
   return (
-    <div>Contacts</div>
+    <>
+      <Navbar />
+    
+    </>
   )
 }
 

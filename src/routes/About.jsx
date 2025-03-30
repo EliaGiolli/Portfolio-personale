@@ -27,14 +27,13 @@ function About() {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col w-full h-fit p-2">
+      <main className="flex flex-col w-full h-fit p-2 mb-10">
         <Card variant='profile' className='cards'>
           <article className="flex flex-col md:grid md:grid-cols-3 gap-3">
             <div className="grid col-span-2 order-2 md:order-1">
               <h2 className="subtitle uppercase">Vuoi un sito web veloce, responsive e ottimizzato per la SEO?</h2>
               <p className="paragraph">Oppure vuoi <strong className='text-accent'>migliorare le performance</strong> del tuo sito attuale per offrire un'esperienza fluida e intuitiva ai tuoi utenti?</p>
               <p className="paragraph text-accent-secondary">Guarda i miei progetti e scopri come posso aiutarti!</p>
-              <Button className='buttons'>Guarda i miei progetti!</Button>
             </div>
             <div className="w-full flex justify-center order-1 md:order-2">
               <img src="/img/talks.jpg" alt="due persone che parlano fra di loro" className="object-cover rounded-lg"/>
@@ -55,12 +54,10 @@ function About() {
                 <li className='li-style-body'><strong className='text-accent'>Facile da navigare</strong> per i tuoi clienti</li>
               </ul>
               <p className='paragraph text-accent-secondary mb-4'>Prenota una call gratuita e trasformiamo la tua idea in un sito web efficace e professionale!</p>
-              <Button className='buttons'>Guarda i miei progetti!</Button>
             </div>
           </div>
         </Card>
-      </main>
-
+        
         {/* Presentation card */}
         <Card variant='profile' className='cards'>
           <article className="flex flex-col md:grid md:grid-cols-3 gap-3">
@@ -76,15 +73,14 @@ function About() {
                   <p className='paragraph mb-3'>Sviluppo <strong className='text-tretiary'>soluzioni web scalabili e multilingue</strong>, ideali per chi vuole espandere il proprio business oltre i confini nazionali.</p>
                   <p className='text-secondary mb-5'>Se ti interessa conoscere meglio di cosa mi occupo, dai un'occhiata ai miei progetti!</p>
                 </div>
-                <Button className='buttons'>Guarda i miei progetti!</Button>
+                <Button className='buttons'>
+                  <Link to='/projects'>Guarda i miei progetti!</Link>
+                </Button>
             </div>
           </article>
         </Card>
-
-
-
         {/* Formazione & Esperienza card */}
-        <Card variant='profile' className='cards'>
+        <Card variant='profile' className='cards mb-10'>
           <article className="flex flex-col md:grid md:grid-cols-3 text-center gap-3">
             <div className="w-full flex justify-center">
               <img src="/img/img-principale.png" alt="Formazione" className="object-cover rounded-lg" />
@@ -126,12 +122,14 @@ function About() {
                 className='buttons'
                 onClick={() => setOpenModal(true)}
               >
-                Guarda i miei progetti su Github
+                <Link to='https://github.com/EliaGiolli'>Guarda il mio profilo su Github</Link>
               </Button>
             </div>
            {/* <ModalCard open={openModal} onClose={() => setOpenModal(false)} /> */}
           </article>
         </Card>
+
+      </main>
 
       {/* button for scroll-to-top */}
     {isVisible && 
