@@ -1,5 +1,5 @@
-import React from 'react'
 
+// eslint-disable-next-line react/prop-types
 function Card({ children, variant = 'default' }) {
   const baseStyles = "cards flex flex-col"
   

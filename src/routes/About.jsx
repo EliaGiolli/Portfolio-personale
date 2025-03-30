@@ -32,7 +32,7 @@ function About() {
           <article className="flex flex-col md:grid md:grid-cols-3 gap-3">
             <div className="grid col-span-2 order-2 md:order-1">
               <h2 className="subtitle uppercase">Vuoi un sito web veloce, responsive e ottimizzato per la SEO?</h2>
-              <p className="paragraph">Oppure vuoi <strong className='text-accent'>migliorare le performance</strong> del tuo sito attuale per offrire un'esperienza fluida e intuitiva ai tuoi utenti?</p>
+              <p className="paragraph">Oppure vuoi <strong className='text-accent'>migliorare le performance</strong> del tuo sito attuale per offrire un&apos;esperienza fluida e intuitiva ai tuoi utenti?</p>
               <p className="paragraph text-accent-secondary">Guarda i miei progetti e scopri come posso aiutarti!</p>
             </div>
             <div className="w-full flex justify-center order-1 md:order-2">
@@ -68,10 +68,10 @@ function About() {
               <h2 className="subtitle uppercase"> Ciao, sono Giolli ELia, un React Developer orientato alla costruzione di design interattivi e accessibili.</h2>
                 <div className='flex flex-col text-center'>
                   <h3 className='subtitle-secondary mt-5'>Chi sono:</h3>
-                  <p className="paragraph">Mi piace trasformare idee in interfacce web moderne, intuitive e performanti. Ogni progetto per me è un'opportunità per unire <strong className='text-tretiary'>design e tecnologia</strong>, creando esperienze utente fluide e coinvolgenti. </p>
+                  <p className="paragraph">Mi piace trasformare idee in interfacce web moderne, intuitive e performanti. Ogni progetto per me è un&apos;opportunità per unire <strong className='text-tretiary'>design e tecnologia</strong>, creando esperienze utente fluide e coinvolgenti. </p>
                   <h3 className='subtitle-secondary'>Il mio obitttivo:</h3>              
                   <p className='paragraph mb-3'>Sviluppo <strong className='text-tretiary'>soluzioni web scalabili e multilingue</strong>, ideali per chi vuole espandere il proprio business oltre i confini nazionali.</p>
-                  <p className='text-secondary mb-5'>Se ti interessa conoscere meglio di cosa mi occupo, dai un'occhiata ai miei progetti!</p>
+                  <p className='text-secondary mb-5'>Se ti interessa conoscere meglio di cosa mi occupo, guarda miei progetti!</p>
                 </div>
                 <Button className='buttons'>
                   <Link to='/projects'>Guarda i miei progetti!</Link>
@@ -117,13 +117,8 @@ function About() {
                     </div>
                 </div>
                 
-              <p className="text-secondary mb-6">Se vuoi saperne di più dai un'occhiata al mio profilo <strong className='text-tretiary'>Github</strong></p>
-              <Button 
-                className='buttons'
-                onClick={() => setOpenModal(true)}
-              >
-                <Link to='https://github.com/EliaGiolli'>Guarda il mio profilo su Github</Link>
-              </Button>
+              <p className="text-secondary mb-6">Se vuoi saperne di più dai guarda mio profilo <strong className='text-tretiary'>Github</strong></p>
+              
             </div>
            {/* <ModalCard open={openModal} onClose={() => setOpenModal(false)} /> */}
           </article>

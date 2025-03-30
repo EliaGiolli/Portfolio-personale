@@ -29,6 +29,7 @@
 }
 
 @layer utilities{
+  /*colors and backgrounds*/
   .bg-primary{
     background-color: var(--bg-primary-color);
   }
@@ -50,7 +51,30 @@
   .text-tretiary{
     color: var(--text-tretiary-color);
   }
-  
+  /* TEXTS*/
+  .title-primary {
+    @apply text-3xl md:text-5xl font-extrabold text-center;
+    color: var(--text-primary-color);
+  }  
+  .subtitle{
+    @apply text-xl lg:text-2xl font-bold text-center text-wrap;
+    color: var(--text-tretiary-color)
+  }
+  .subtitle-secondary{
+    @apply text-xl text-center;
+    color:var(--text-subtitle-secondary)
+  }
+  .paragraph{
+    @apply  md:text-xl text-center break-words whitespace-normal text-pretty leading-normal md:leading-relaxed lg:leading-loose py-3;
+    color: var(--text-primary-color);
+  }
+  .text-accent{
+    color: var(--text-tretiary-color)
+  }
+  .text-accent-secondary{
+    @apply text-sm md:text-lg;
+    color: var(--text-secondary-color)
+  }
 }
 
 
@@ -145,25 +169,7 @@
     @apply p-2 rounded-full;
     background-color: #fff;
   }
-  .subtitle{
-    @apply text-xl lg:text-2xl font-bold text-center text-wrap;
-    color: var(--text-tretiary-color)
-  }
-  .subtitle-secondary{
-    @apply text-xl text-center;
-    color:var(--text-subtitle-secondary)
-  }
-  .paragraph{
-    @apply  md:text-xl text-center break-words whitespace-normal text-pretty leading-normal md:leading-relaxed lg:leading-loose py-3;
-    color: var(--text-primary-color);
-  }
-  .text-accent{
-    color: var(--text-tretiary-color)
-  }
-  .text-accent-secondary{
-    @apply text-sm md:text-lg;
-    color: var(--text-secondary-color)
-  }
+
   .icon{
     @apply p-2 text-4xl md:text-5xl;
     color: var(--text-tretiary-color);

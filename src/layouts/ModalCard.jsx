@@ -1,3 +1,4 @@
+{/*
 import React, {useEffect} from 'react'
 import { FaPhp, FaHtml5 } from "react-icons/fa";
 import { SiMysql, SiAssemblyscript } from "react-icons/si";
@@ -6,7 +7,7 @@ import Button from '../components/Button';
 
 function ModalCard({ open, onClose }) {
 
-{/*
+
     //prevention of the scrolling when the modal is open
     useEffect(()=>{
         if(open){
@@ -63,7 +64,15 @@ function ModalCard({ open, onClose }) {
         </Card>
     </div>
   )
-    */}
+
+
+  <Button 
+                className='buttons'
+                onClick={() => setOpenModal(true)}
+              >
+                <Link to='https://github.com/EliaGiolli'>Guarda il mio profilo su Github</Link>
+              </Button>
+   ì
 }
 
-export default ModalCard
+export default ModalCard  */}

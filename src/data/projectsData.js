@@ -6,7 +6,7 @@ export const projectsData = [
         imageUrl: "/img/cozy-corner.png",
         githubLink: "https://github.com/EliaGiolli/cozy-corner-ts",
         demoLink: "https://cozy-corner-app.netlify.app/",
-        technologies: ["Typescript", "Tailwind CSS"]
+        technologies: ["Typescript", "Tailwind CSS", "Vite"]
     },
     {
         
@@ -16,7 +16,7 @@ export const projectsData = [
         imageUrl: "/img/pennywise.png",
         githubLink: "https://github.com/EliaGiolli/Expense-handler-app",
         demoLink: "https://pennywise-expense-tracker.netlify.app/",
-        technologies: ["React", "Tailwind CSS"]
+        technologies: ["React", "Tailwind CSS","Vite"]
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ export const projectsData = [
         imageUrl: "/img/app-meteo.png",
         githubLink: "https://github.com/EliaGiolli/weather-app-ts",
         demoLink: "https://eliagiolli.github.io/weather-app-ts/",
-        technologies: ["Javascript", "Tailwind CSS", "Typescript"]
+        technologies: ["Typescript", "Tailwind CSS", "Vite"]
     },
     {
         id: 4,
@@ -34,6 +34,15 @@ export const projectsData = [
         imageUrl: "/img/booksearch.png",
         githubLink: "https://github.com/EliaGiolli/search4yourbook_react",
         demoLink: "https://app.netlify.com/sites/search4booksreact/overview",
-        technologies: ["Javascript", "Tailwind CSS", "React"]
+        technologies: ["React", "Tailwind CSS", "Vite"]
+    },
+    {
+        id: 5,
+        title: "VeggieVibes - app di ricerca di ricette veg",
+        description: "VeggieVibes è un'applicazione web che consuma l'API di Spoonacular per mostrare un elenco di ricette vegetariane e vegane.",
+        imageUrl: "/img/booksearch.png",
+        githubLink: "https://github.com/EliaGiolli/search4yourbook_react",
+        demoLink: "https://app.netlify.com/sites/search4booksreact/overview",
+        technologies: ["React", "Tailwind CSS", "Vite"]
     },
 ]; 

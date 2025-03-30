@@ -57,7 +57,7 @@ function Homepage() {
                   <ReactTyped
                     strings={[
                       "Jr React developer",
-                      "Traduttore",
+                      "Jr Front-end developer",
                     ]}
                     typeSpeed={40}
                     backSpeed={50}
