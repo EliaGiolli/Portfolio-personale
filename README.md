@@ -1,4 +1,4 @@
-# 🌐 Portfolio Personale - React, TypeScript & Tailwind CSS
+# 🌐 Portfolio Personale - WORK IN PROGRESS
 
 Benvenuto nella repository del mio portfolio personale! 🚀 Questo progetto rappresenta il mio spazio online per mostrare i miei progetti, il mio percorso nel mondo dello sviluppo front-end e le mie competenze tecniche.
 
