@@ -1,6 +1,7 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 
+// eslint-disable-next-line react/prop-types
 function Button({ children, onClick, variant, to }) {
 
   const baseStyles = 'custom-button'

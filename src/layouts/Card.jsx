@@ -5,9 +5,8 @@ function Card({ children, variant = 'default' }) {
   
   const variantStyles = {
     default: "",
-    project: " max-w-2xl mx-auto md:hover:scale-105 transition-transform duration-300",
-    profile: "max-w-3xl mx-auto md:hover:scale-100 transition-transform duration-300",
-    skill: "max-w-3xl mx-auto"
+    project: " max-w-2xl mx-auto",
+    profile: "max-w-3xl",
   }
 
   return (

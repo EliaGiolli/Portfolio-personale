@@ -1,19 +1,19 @@
-import  { Link } from 'react-router-dom'
-import { FaSearch } from 'react-icons/fa'
-import { FaBars} from 'react-icons/fa'
-import InputField from '../components/InputField'
 import { useState } from 'react'
+import  { Link } from 'react-router-dom'
+
+import { FaBars} from 'react-icons/fa'
+
+
 
 function Navbar() {
-  const [searchValue, setSearchValue] = useState('')
+ 
+   //DROPDWON MENU LOGIC 
   const [isDropDown, setIsDropDown] = useState(false)
 
-  const handleSearch = (e) => {
-    setSearchValue(e.target.value)
-  }
-
   const toggleDropdown = ()=>{
+    console.log("dropdown", !isDropDown)
     setIsDropDown(!isDropDown)
+
   }
 
   return (
@@ -36,20 +36,10 @@ function Navbar() {
         </ul>
         {/* Search and Mobile Menu */}
         <div className='flex items-center gap-4'>
-            <div className="nav-search">
-                <InputField 
-                    className='w-52'
-                    placeholder="Cerca..."
-                    value={searchValue}
-                    onChange={handleSearch}
-                >
-                    <FaSearch className='nav-icon'/>
-                </InputField>
-            </div>
             {/* Hamburger Menu */}
-            <section className='block md:hidden cursor-pointer' onClick={toggleDropdown}>
+            <button className='block md:hidden cursor-pointer' onClick={toggleDropdown}>
                 <FaBars className='text-3xl text-[--text-primary-color]'/>
-            </section>
+            </button>
         </div>
         {/* Mobile Dropdown */}
         {isDropDown && (
