@@ -1,15 +1,17 @@
 # 🌐 Portfolio Personale - React, TypeScript & Tailwind CSS
 
-Benvenuto nella repository del mio portfolio personale! 🚀 Questo progetto rappresenta il mio spazio online per mostrare i miei progetti, il mio percorso nel mondo dello sviluppo front-end e le mie competenze tecniche.
+Benvenuto nella repository del mio portfolio personale! 🚀 Questo progetto è il mio spazio online per mostrare i miei progetti, il mio percorso nello sviluppo front-end e le mie competenze tecniche.
 
 ## ✨ Tecnologie Utilizzate
 
-- **React 19** - Per creare un'interfaccia dinamica e interattiva.
+- **React 19** - Per un'interfaccia moderna e interattiva.
 - **React Router 7** - Per una navigazione fluida tra le pagine.
-- **Tailwind CSS 4** - Per uno stile moderno, responsive e altamente personalizzabile.
+- **React Scroll** - Per lo smooth scrolling tra le sezioni della pagina.
+- **Tailwind CSS 4** - Per uno stile responsive e altamente personalizzabile.
 - **React Icons** - Per arricchire l'interfaccia con icone professionali.
 - **React Typed** - Per effetti di testo animati.
-- **Vite** - Per uno sviluppo veloce e ottimizzato.
+- **Vite 6** - Per uno sviluppo veloce e ottimizzato.
+- **ESLint** - Per garantire codice pulito e manutenibile.
 
 ## 🔧 Installazione e Avvio del Progetto
 
@@ -31,22 +33,21 @@ Se vuoi esplorare o contribuire al progetto, segui questi semplici passi:
    ```sh
    npm run dev
    ```
-5. Apri il browser su `http://localhost:5173/` (se utilizzi Vite).
+5. Apri il browser su `http://localhost:5173/`.
 
 ## 🚀 Funzionalità Principali
 
 - **Homepage interattiva** con un'animazione di testo per catturare l'attenzione.
 - **Sezione "About"** per raccontare chi sono, le mie competenze e la mia esperienza.
-- **Portfolio progetti** con le tecnologie usate e i link ai repository GitHub.
-- **Modulo di contatto** per connettersi con me facilmente.
-
+- **Portfolio progetti** realizzato mediante un carosello che prende dinamicamente i dati dal mio GitHub per mostrare le card degli ultimi 4 progetti, con le tecnologie usate e i link ai repository.
+- **Modulo di contatto** con scrolling fluido per connettersi con me facilmente.
 
 ## 🎯 Prossimi Aggiornamenti
 
-- Implementazione di una pagina progetti per condividere il mio percorso di apprendimento.
-- Implementazione di una pagina contatti dove potrete contattarmi per eventuali collaborazioni
-- Miglioramenti nella UI/UX per un design più accattivante, con focus sulla dark mode col ContextAPI.
-- Ottimizzazione della robustezza del codice con Typescript (.tsx) e Nextjs.
+- Aggiunta di una pagina dettagliata per i progetti con immagini e descrizioni.
+- Ottimizzazione dell'accessibilità e miglioramenti nella UI/UX.
+- Implementazione della **dark mode** tramite ContextAPI.
+- Passaggio da React Router a Next.js per migliorare SEO e performance.
 
 ## 📬 Contatti
 
