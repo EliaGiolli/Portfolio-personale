@@ -103,14 +103,12 @@
   }
   /*  NAVBAR  */
   .navbar{
-    @apply w-full h-20 py-3 px-4 flex justify-between items-center relative;
+    @apply w-full h-20 py-3 px-4 flex justify-between items-center sticky top-0 z-50;
     background-color: var(--bg-primary-color);
     color: var(--text-primary-color);
     border-bottom: 3px solid var(--text-tretiary-color);
   }
-  .nav-links{
-    @apply hidden sm:flex flex-1 justify-end items-center gap-4 p-6;
-  }
+
   .nav-search{
     @apply hidden sm:flex items-center min-w-[200px];
   }
@@ -123,18 +121,7 @@
     color:var(--text-tretiary-color);
     border-radius: 11px;
   }
-  .li-style-body{
-    @apply md:text-xl text-center p-2;
-    color:var(--text-primary-color);
-  }
-
-  .nav-icon{
-    @apply absolute hidden sm:block;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-tretiary-color);
-  }
+  
   .dropdown{
       @apply absolute top-full right-0 w-full sm:hidden shadow-lg p-8;
       background-color: var(--bg-primary-color);
@@ -176,17 +163,18 @@
   }
 
   .form-contacts{
-    @apply w-full max-w-3xl rounded-lg shadow-lg p-3;
+    @apply w-full max-w-3xl p-3;
     background-color: var(--bg--color);
-    border: 1px solid var(--bg-secondary-color);
   }
 
   .form-input {
-    @apply p-2 my-5 md:my-0 w-full rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[--bg-hover] transition-all mr-0 sm:mr-6;
+    @apply rounded-md p-3 my-5 md:my-0 w-full focus:outline-none focus:ring-2 focus:ring-[--bg-hover] transition-all mr-0 sm:mr-6;
     background-color: var(--bg-secondary-color);
     color: var(--text-primary-color);
   }
-  
+  .form-input:nth-of-type(2){
+    @apply py-5;
+  }
   .form-input::placeholder {
     color: var(--text-secondary-color);
   }
@@ -196,7 +184,7 @@
   }
   
   .form-contacts {
-    @apply w-full max-w-2xl mx-auto text-white rounded-lg shadow-lg p-6;
+    @apply w-full max-w-2xl mx-auto text-white p-6;
     background-color: var(--bg-primary-color);
   }
 

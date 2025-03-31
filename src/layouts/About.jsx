@@ -4,7 +4,7 @@ import immagineLaurea from '../../public/img/foto-laurea.jpg'
 
 //LIBRARIES
 import { ReactTyped } from 'react-typed'
-
+import { Element, Link } from 'react-scroll'
 //ICONS
 import { FaLaptopCode } from "react-icons/fa";
 import { TbManualGearbox } from "react-icons/tb";
@@ -17,7 +17,7 @@ function About() {
   return (
     <>
     
-      <main className="flex flex-col w-full h-fit p-2 mb-10 sm:mb-16">
+      <Element name='about' className="flex flex-col w-full h-fit p-2 mb-10 sm:mb-16">
         {/* Profile Card Example */}
         <Card variant="profile" className="mb-11">
          
@@ -39,9 +39,6 @@ function About() {
                 <p className="paragraph"> Ciao, sono Giolli Elia, un React Developer orientato alla costruzione di design interattivi e accessibili.</p>
                 <p className='paragraph mb-3'>Sviluppo soluzioni web scalabili e multilingue, ideali per chi vuole espandere il proprio business oltre i confini nazionali.</p>
               </div>
-            <Button>
-              Contattami
-            </Button>
           </article>
         </Card>
         <Card variant='profile' className='cards'>
@@ -53,28 +50,28 @@ function About() {
               <h2 className="subtitle">Creo interfacce moderne e con React e TypeScript, per siti web veloci e performanti.</h2>
                 <p className="paragraph">Il tuo sito sarà: </p>
                 <ul className='flex flex-col justify-center items-center text-center p-3'>
-                  <li className='li-style-body flex items-center'>
+                  <li className='text-primary md:text-xl text-center p-2 flex items-center'>
                     <FaLaptopCode size={30} className='mr-3'/>
                       Responsivo su tutti i dispositivi    
                   </li>
-                  <li className='li-style-body flex items-center'>
+                  <li className='text-primary md:text-xl text-center p-2 flex items-center'>
                     <TbManualGearbox size={30} className='mr-3' />
                       Ottimizzato per la velocità e la SEO
                     </li>
-                  <li className='li-style-body flex items-center'>
+                  <li className='text-primary md:text-xl text-center p-2 flex items-center'>
                     <TiTick size={30} className='mr-3' />
                     Facile da navigare per i tuoi clienti
                   </li>
                 </ul>
                 <p className='paragraph text-accent-secondary mb-4'>Prenota una call gratuita e trasformiamo la tua idea in un sito web efficace e professionale!</p>
               <Button>
-                Contattami
+               <Link to="contacts" smooth={true} duration={500}>Contattami!</Link>
               </Button>
             </div>
           </article>
         </Card>
 
-      </main>
+      </Element>
 
     </>
   )

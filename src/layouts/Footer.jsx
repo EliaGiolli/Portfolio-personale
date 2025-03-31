@@ -1,5 +1,7 @@
-import React from 'react'
+//External libraries
 import { Link } from 'react-router-dom'
+import { Link as ScrollLink}  from 'react-scroll'
+//React icons
 import { FaFacebookF } from "react-icons/fa"
 import { IoLogoInstagram } from "react-icons/io5"
 import { FaLinkedinIn } from "react-icons/fa"
@@ -11,9 +13,9 @@ function Footer() {
             <div className="container w-full px-4 py-8">
                 <div className="text-center space-y-4">
                     <div className="flex items-center justify-center gap-2">
-                        <Link to="/">
+                        <ScrollLink to="heroSection" smooth={true} duration={500} >
                             <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />
-                        </Link>
+                        </ScrollLink>
                         <h6 className="subtitle">GIOLLI DESIGN</h6>
                     </div>
                 <h5 className="text-2xl">Connettiti con me!</h5>

@@ -1,6 +1,9 @@
 import { useState } from 'react'
-import  { Link } from 'react-router-dom'
 
+//External libraries
+import  { Link } from 'react-scroll'
+
+//React icons
 import { FaBars} from 'react-icons/fa'
 
 
@@ -19,19 +22,19 @@ function Navbar() {
   return (
     <nav className='navbar'>
         {/* Logo */}
-        <Link to="/">
+        <Link to="heroSection">
             <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />
         </Link>
         {/* Desktop Menu */}
-        <ul className='nav-links'>
+        <ul className='hidden sm:flex flex-1 justify-end items-center gap-4 p-6'>
             <li className='li-style'>
-                <Link to='/about'>Su di me</Link>
+                <Link to='about'>Su di me</Link>
             </li>
             <li className='li-style'>
-                <Link to='/projects'>Progetti</Link>
+                <Link to='projects'>Progetti</Link>
             </li>
             <li className='li-style'>
-                <Link to='/contacts'>Contatti</Link>
+                <Link to='contacts'>Contatti</Link>
             </li>
         </ul>
         {/* Search and Mobile Menu */}
@@ -46,13 +49,13 @@ function Navbar() {
             <div className='dropdown'>
                 <ul>
                     <li className='li-style'>
-                        <Link to="/about">Su di me</Link>
+                        <Link to="about">Su di me</Link>
                     </li>
                     <li className='li-style'>
-                        <Link to="/projects">Progetti</Link>
+                        <Link to="projects">Progetti</Link>
                     </li>
                     <li className='li-style'>
-                        <Link to="/contacts">Contatti</Link>
+                        <Link to="contacts">Contatti</Link>
                     </li>
                 </ul>
             </div>

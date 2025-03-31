@@ -5,7 +5,7 @@ import HeroSection from "../layouts/HeroSection"
 import Footer from '../layouts/Footer'
 import About from "../layouts/About"
 import Contacts from "../layouts/Contacts"
-import ProjectsPage from "../layouts/ProjectsPage"
+import Projects from "../layouts/Projects"
 
 
 
@@ -17,9 +17,9 @@ function Homepage() {
     <>
       <Navbar />
       <HeroSection />
-      <main className="bg-primary mx-auto py-8">
+      <main className="bg-inherit mx-auto py-8">
         <About />
-        <ProjectsPage />
+        <Projects />
         <Contacts />
       </main>   
       <Footer />
