@@ -54,8 +54,8 @@ Se vuoi esplorare o contribuire al progetto, segui questi semplici passi:
 
 Se vuoi darmi un feedback o connetterti con me:
 
-💼 LinkedIn
+💼 LinkedIn: www.linkedin.com/in/eliagiolli
 
-🐙 GitHub
+🐙 GitHub: https://github.com/EliaGiolli
 
 Grazie per aver visitato il mio progetto! 😊
