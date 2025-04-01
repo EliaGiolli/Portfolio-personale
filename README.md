@@ -1,4 +1,4 @@
-# 🌐 Portfolio Personale - React, TypeScript & Tailwind CSS
+# 🌐 Portfolio Personale - React & Tailwind CSS
 
 Benvenuto nella repository del mio portfolio personale! 🚀 Questo progetto rappresenta il mio spazio online per mostrare i miei progetti, il mio percorso nel mondo dello sviluppo front-end e le mie competenze tecniche.
 
@@ -10,6 +10,8 @@ Benvenuto nella repository del mio portfolio personale! 🚀 Questo progetto rap
 - **React Icons** - Per arricchire l'interfaccia con icone professionali.
 - **React Typed** - Per effetti di testo animati.
 - **Vite** - Per uno sviluppo veloce e ottimizzato.
+- **React Hook Form** - Per una gestione avanzata della validazione dei form.
+- **EmailJS** - Per inviare email direttamente dal modulo di contatto.
 
 ## 🔧 Installazione e Avvio del Progetto
 
@@ -38,22 +40,23 @@ Se vuoi esplorare o contribuire al progetto, segui questi semplici passi:
 - **Homepage interattiva** con un'animazione di testo per catturare l'attenzione.
 - **Sezione "About"** per raccontare chi sono, le mie competenze e la mia esperienza.
 - **Portfolio progetti** con le tecnologie usate e i link ai repository GitHub.
-- **Modulo di contatto** per connettersi con me facilmente.
-
+- **Modulo di contatto** con validazione avanzata grazie a React Hook Form ed EmailJS per l'invio di email.
 
 ## 🎯 Prossimi Aggiornamenti
 
 - Implementazione di una pagina progetti per condividere il mio percorso di apprendimento.
-- Implementazione di una pagina contatti dove potrete contattarmi per eventuali collaborazioni
+- Implementazione di una pagina contatti dove potrete contattarmi per eventuali collaborazioni.
 - Miglioramenti nella UI/UX per un design più accattivante, con focus sulla dark mode col ContextAPI.
-- Ottimizzazione della robustezza del codice con Typescript (.tsx) e Nextjs.
+- Ottimizzazione della robustezza del codice con TypeScript (.tsx) e Next.js.
+- Riconversione completa del codice JavaScript in TypeScript.
+- Implementazione della traduzione multilingue con la libreria i18next.
 
-## 📬 Contatti
+📬 Contatti
 
 Se vuoi darmi un feedback o connetterti con me:
-- 💼 [LinkedIn](https://linkedin.com/in/eliagiolli)
-- 🐙 [GitHub](https://github.com/EliaGiolli)
-- 📧 Email: tua-email@example.com
+
+💼 LinkedIn
+
+🐙 GitHub
 
 Grazie per aver visitato il mio progetto! 😊
-
