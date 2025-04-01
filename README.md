@@ -44,8 +44,7 @@ Se vuoi esplorare o contribuire al progetto, segui questi semplici passi:
 
 ## 🎯 Prossimi Aggiornamenti
 
-- Implementazione di una pagina progetti per condividere il mio percorso di apprendimento.
-- Implementazione di una pagina contatti dove potrete contattarmi per eventuali collaborazioni.
+- Implementazione di una pagina "blog" per rafforzare ulteriormente il mio personal branding
 - Miglioramenti nella UI/UX per un design più accattivante, con focus sulla dark mode col ContextAPI.
 - Ottimizzazione della robustezza del codice con TypeScript (.tsx) e Next.js.
 - Riconversione completa del codice JavaScript in TypeScript.
