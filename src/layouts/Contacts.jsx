@@ -17,10 +17,10 @@ function Contacts() {
 
   const onSubmit = async (data)=>{
     emailjs.send(
-      "service_7ek4lq7",
-      "template_xgb6npq",
+      process.env.EMAILJS_SERVICE_ID,
+      process.env.EMAILJS_TEMPLATE_ID,
       data,
-      "if_tQaahf33HEGnJF"
+      process.env.EMAILJS_USER_ID
     )
     .then(()=>{
       console.log("email inviata con successo!");
