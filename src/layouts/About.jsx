@@ -1,6 +1,6 @@
 import Card from '../components/Card'
 import Button from '../components/Button'
-import immagineLaurea from '../../public/img/foto-laurea.jpg'
+import immaginePrincipale from '../../public/img/img-principale.png'
 
 //LIBRARIES
 import { ReactTyped } from 'react-typed'
@@ -18,7 +18,6 @@ function About() {
     <>
     
       <Element name='about' className="flex flex-col w-full h-fit p-2 mb-10 sm:mb-16">
-        {/* Profile Card Example */}
         <Card variant="profile" className="mb-11">
          
             <article className="flex flex-col justify-around items-center text-center p-3 my-4 w-full">
@@ -44,7 +43,7 @@ function About() {
         <Card variant='profile' className='cards'>
           <article className="flex flex-col sm:grid md:grid-cols-3 gap-3">
             <div className="foto-container hidden md:block">
-              <img src={immagineLaurea} alt="immagine della mia laurea" className="foto"/>
+              <img src={immaginePrincipale} alt="immagine della mia laurea" className="foto"/>
             </div>
             <div className="grid col-span-2 px-4">
               <h2 className="subtitle">Creo interfacce moderne e con React e TypeScript, per siti web veloci e performanti.</h2>

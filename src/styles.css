@@ -53,7 +53,7 @@
   }
   /* TEXTS*/
   .title-primary {
-    @apply text-3xl md:text-5xl font-extrabold text-center sm:text-right;
+    @apply text-3xl md:text-5xl font-extrabold text-center;
     color: var(--text-tretiary-color);
   }  
   .subtitle{
