@@ -1,6 +1,6 @@
 import { useState} from 'react';
 
-import Card from './Card'
+import Card from '../components/Card'
 import Button from '../components/Button';
 import { projectsData } from '../data/projectsData'
 
@@ -58,17 +58,7 @@ function Projects() {
 
 
   return (
-    <>
-      
-      <section className='bg-inherit max-w-3xl mx-auto p-8 my-11'>
-        <h2 className="subtitle">Scopri le mie creazioni, sviluppate con React e con le tecnologie di ultima generazione</h2>
-        <p className="paragraph px-3">
-          Dai progetti front-end dinamici alle applicazioni interattive, questa sezione raccoglie i lavori che rappresentano la mia crescita come sviluppatore. 
-          Qui potrete vedere i miei ultimi quattro progetti. Se volete vedere tutti i miei progetti, andate sul mio <Link to='https://github.com/projects'><strong className='text-accent'>Github</strong></Link>
-        </p>
-      </section>
-      
-        
+    <>  
       <Element name='projects' className='carousel-div'>
             <Card variant="project">
                 <div className="flex flex-col text-white">
