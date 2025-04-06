@@ -2,18 +2,6 @@
 
 
 @layer base{
-  :root{
-    --bg-primary-color: #1F2937;
-    --bg-secondary-color: #374151;
-    --bg-tretiary-color: #0891B2;
-    --bg-hover-color: #0E7490;
-
-    --text-primary-color: #fff;
-    --text-secondary-color: #D1D5DB;
-    --text-tretiary-color: #67E8F2;
-    --text-subtitle-secondary: #60A5FA;
-
-  }
 
   body {
     font-family: 'Roboto', sans-serif;
@@ -30,18 +18,10 @@
 
 @layer utilities{
   /*colors and backgrounds*/
-  .bg-primary{
-    background-color: var(--bg-primary-color);
-  }
-  .bg-secondary{
-    background-color: var(--bg-secondary-color);
-  }
-  .bg-tretiary{
-    background-color:var(--text-secondary-color);
-  }
-  .bg-hover{
-    background-color:var(--bg-hover-color)
-  }
+  .bg-primary{@apply bg-gray-800;}
+  .bg-secondary{@apply bg-gray-700;}
+  .bg-tretiary{@apply bg-cyan-600;}
+  .bg-hover{@apply bg-cyan-800;}
   .text-primary{
     color: var(--text-primary-color);
   }
