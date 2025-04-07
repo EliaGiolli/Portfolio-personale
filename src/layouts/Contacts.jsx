@@ -34,7 +34,7 @@ function Contacts() {
       <Element name="contacts" className="my-20">
         <form action="POST" onSubmit={handleSubmit(onSubmit)} className="form-contacts" id="form-id">
           <div className="flex justify-center items-center text-center gap-4 w-full p-4">
-            <h2 className="subtitle border-b-white border-b-1">Contattami!</h2>
+            <h2 className="subtitle text-tertiary border-b-white border-b-1">Contattami!</h2>
           </div>
           <div className="p-6">
             <h3 className="subtitle-secondary">Inserisci nome e email</h3>
@@ -48,7 +48,7 @@ function Contacts() {
                     maxLength: 10
                 })} 
                 placeholder="inserisci il tuo nome" 
-                className="form-input"
+                className="form-input bg-secondary"
               />
               {errors.nome && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.nome.message}</p>}
               <label htmlFor="email">Inserisci la tua email </label>
@@ -62,7 +62,7 @@ function Contacts() {
                     }
                   })} 
                 placeholder="inserisci la tua email" 
-                className="form-input"
+                className="form-input bg-secondary"
                 />
                 {errors.email && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.email.message}</p>}
             </div>

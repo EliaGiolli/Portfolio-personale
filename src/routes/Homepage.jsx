@@ -17,7 +17,7 @@ function Homepage() {
   return (
     <ThemeProvider>
       <Navbar />
-      <main className="bg-inherit mx-auto py-8">
+      <main className="bg-inherit mx-auto">
         <HeroSection />
         <About />
         <ParallaxOne />

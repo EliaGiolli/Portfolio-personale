@@ -17,166 +17,72 @@
 }
 
 @layer utilities{
-  /*colors and backgrounds*/
-  .bg-primary{@apply bg-gray-800;}
-  .bg-secondary{@apply bg-gray-700;}
-  .bg-tretiary{@apply bg-cyan-600;}
-  .bg-hover{@apply bg-cyan-800;}
-  .text-primary{
-    color: var(--text-primary-color);
-  }
-  .text-secondary{
-    color: var(--text-secondary-color);
-  }
-  .text-tretiary{
-    color: var(--text-tretiary-color);
-  }
+ 
+    /* LIGHT MODE */
+    .bg-primary   { @apply bg-gray-100; }
+    .bg-secondary { @apply bg-gray-200; }
+    .bg-tertiary  { @apply bg-cyan-700; }
+
+    .text-primary   { @apply text-gray-900; }
+    .text-secondary { @apply text-gray-600; }
+    .text-tertiary  { @apply text-cyan-700; }
+    .text-subtitle  { @apply text-blue-700; }
+
+    /* DARK MODE*/
+    .dark .bg-primary     { @apply bg-gray-800; }
+    .dark .bg-secondary   { @apply bg-gray-700; }
+    .dark .bg-tertiary    { @apply bg-cyan-600; }
+
+    .dark .text-primary   { @apply text-white; }
+    .dark .text-secondary { @apply text-gray-300; }
+    .dark .text-tertiary  { @apply text-cyan-300; }
+    .dark .text-subtitle  { @apply text-blue-400; }
+
+
+
   /* TEXTS*/
   .title-primary {
     @apply text-3xl md:text-5xl font-extrabold text-center;
-    color: var(--text-tretiary-color);
   }  
   .subtitle{
     @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-wrap;
-    color: var(--text-tretiary-color)
   }
-  .subtitle-secondary{
-    @apply text-xl sm:text-2xl text-center;
-    color:var(--text-primary-color)
-  }
+  .subtitle-secondary { @apply text-xl sm:text-2xl text-center; }
   .paragraph{
-    @apply  text-xl text-center break-words whitespace-normal text-pretty leading-normal md:leading-relaxed lg:leading-loose py-3;
-    color: var(--text-primary-color);
+    @apply text-white text-center text-lg sm:text-2xl break-words whitespace-normal text-pretty leading-normal md:leading-relaxed lg:leading-loose py-3;
   }
-  .text-accent{
-    color: var(--text-tretiary-color)
-  }
-  .text-accent-secondary{
-    @apply text-sm md:text-lg;
-    color: var(--text-secondary-color)
-  }
+  .text-accent { @apply text-xl sm:text-2xl; }
+  .text-accent-secondary { @apply text-sm md:text-lg; }
 }
 
 
 @layer components{
-
   /*  BUTTONS  */
-  .custom-button{
-    @apply cursor-pointer px-3 py-2 shadow-lg rounded-lg;
-    background-color: var(--bg-tretiary-color);
-    color: var(--text-primary-color);
-    border: 1px solid var(--bg-tretiary-color);
+  .btn{
+    @apply bg-cyan-600 hover:bg-cyan-800 text-white cursor-pointer px-3 py-2 shadow-lg rounded-lg
   }
-  .custom-button:hover{
-    background-color:var(--bg-hover-color);
-    color: var(--text-primary-color);
-  }
-  .buttons{
-    @apply text-black text-center cursor-pointer p-2;
-    background-color: var(--text-primary-color);
-  }
-  .scrollBtn{
-    @apply fixed z-50 cursor-pointer bottom-7 right-3 p-3;
-    background-color: var(--bg-tretiary-color);
-    color: var(--text-primary-color);
-    border: 1px solid var(--bg-tretiary-color);
-  }
+
+  
   /*  NAVBAR  */
   .navbar{
     @apply w-full h-20 py-3 px-4 flex justify-between items-center sticky top-0 z-50;
-    background-color: var(--bg-primary-color);
-    color: var(--text-primary-color);
-    border-bottom: 3px solid var(--text-tretiary-color);
   }
-
-  .nav-search{
-    @apply hidden sm:flex items-center min-w-[200px];
-  }
-  .li-style{
-    @apply text-lg md:text-xl px-3 py-2 transition-colors duration-200 ease-in-out;
-    color: var(--text-primary-color);
-  }
-  .li-style:hover{
-    background-color: var(--bg-secondary-color);
-    color:var(--text-tretiary-color);
-    border-radius: 11px;
-  }
-  
   .dropdown{
-      @apply absolute top-full right-0 w-full sm:hidden shadow-lg p-8;
-      background-color: var(--bg-primary-color);
-      border-top: 1px solid var(--text-tretiary-color);
-      border-bottom: 1px solid var(--text-tretiary-color);
-      z-index: 50; 
-  }
-    
-  .dropdown ul {
-    @apply flex flex-col items-center gap-4;
-  }
-  
-  .dropdown .li-style {
-    @apply text-right px-4;
-  }
-  .cards{
-    @apply p-6 m-4 bg-inherit h-fit mx-auto;
-  }
-  .foto{
-    @apply w-full h-full rounded-lg object-cover shadow-lg;
-  }
-  .foto-container{
-    @apply p-1 rounded-lg max-h-1/2;
-    background-color: var(--text-subtitle-secondary);
+      @apply absolute top-full right-0 w-full sm:hidden p-8 z-50 border-b-2 border-t-2; 
   }
 
+  /*  FOTO & ICONS  */
+  .foto {  @apply w-full h-full rounded-lg object-cover shadow-lg; }
   .icon{
-    @apply p-2 text-4xl sm:text-5xl;
-    color: var(--text-tretiary-color);
-  }
-  .icon:hover{
-    @apply transition-colors duration-300;
-    color: var(--text-primary-color)
+    @apply p-2 text-4xl text-cyan-300 sm:text-5xl hover:text-white transition-colors duration-300;
   }
 
-  .carousel-div{
-    @apply bg-inherit flex flex-col justify-center items-center max-w-3xl mx-auto h-full p-3 my-5;
-    border: 2px solid var(--bg-secondary-color)
-  }
-
-  .form-contacts{
-    @apply w-full max-w-3xl p-3;
-    background-color: var(--bg--color);
-  }
-
+  .form-contacts  { @apply bg-inherit text-white w-full max-w-3xl mx-auto p-6; }
+  /*  FORM  */
   .form-input {
-    @apply rounded-md p-3 my-5 md:my-0 w-full focus:outline-none focus:ring-2 focus:ring-[--bg-hover] transition-all mr-0 sm:mr-6;
-    background-color: var(--bg-secondary-color);
-    color: var(--text-primary-color);
-  }
-  .form-input:nth-of-type(2){
-    @apply py-5;
-  }
-  .form-input::placeholder {
-    color: var(--text-secondary-color);
+    @apply rounded-md w-full hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0;
   }
   
-  .form-input:hover {
-    background-color: var(--bg-hover-color);
-  }
-  
-  .form-contacts {
-    @apply w-full max-w-2xl mx-auto text-white p-6;
-    background-color: var(--bg-primary-color);
-  }
+  .form-input::placeholder {@apply text-gray-300 text-center}
 
-  .form-contacts input[type="checkbox"] {
-    @apply accent-[--text-tretiary-color];
-  }
-  
-
-  .footerStyle{
-    @apply border-t-2 p-3;
-    background-color: var(--bg-primary-color);
-    color: var(--text-primary-color);
-    border-color: var(--text-tretiary-color)
-  }
 }

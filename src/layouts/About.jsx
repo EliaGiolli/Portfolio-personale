@@ -23,8 +23,8 @@ function About() {
             <article className="flex flex-col justify-around items-center text-center p-3 my-4 w-full">
               <div className="flex flex-col items-center text-center md:text-left p-8">
                 
-                <h3 className="subtitle-secondary">Elia Giolli</h3>
-                <span className="text-3xl sm:text-5xl text-tretiary font-bold my-6">
+                <h3 className="subtitle-secondary text-white">Elia Giolli</h3>
+                <span className="text-3xl sm:text-5xl text-tertiary font-bold my-6">
                   <ReactTyped
                     strings={[
                       "Jr React developer",
@@ -40,13 +40,13 @@ function About() {
               </div>
           </article>
         </Card>
-        <Card variant='profile' className='cards'>
+        <Card variant='profile'>
           <article className="flex flex-col sm:grid md:grid-cols-3 gap-3">
-            <div className="foto-container hidden md:block">
+            <div className="bg-secondary rounded-lg max-h-1/2 hidden md:block p-1">
               <img src={immaginePrincipale} alt="immagine della mia laurea" className="foto"/>
             </div>
             <div className="grid col-span-2 px-4">
-              <h2 className="subtitle">Creo interfacce moderne e con React e TypeScript, per siti web veloci e performanti.</h2>
+              <h2 className="subtitle text-tertiary">Creo interfacce moderne e con React e TypeScript, per siti web veloci e performanti.</h2>
                 <p className="paragraph">Il tuo sito sarà: </p>
                 <ul className='flex flex-col justify-center items-center text-center p-3'>
                   <li className='text-primary md:text-xl text-center p-2 flex items-center'>

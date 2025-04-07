@@ -18,9 +18,9 @@ function ParallaxTwo() {
               <div className="bg-primary flex flex-col justify-center items-center w-full max-w-3xl max-h-fit p-10 sm:p-14 rounded-lg shadow-lg mx-auto">
                 <div className="flex justify-between items-center text-center p-2">
                     <FaHandshake size={30} className="icon" />
-                    <span className="text-lg sm:text-xl text-tretiary">Raccontami il tuo progetto</span>
+                    <span className="text-lg sm:text-xl text-tertiary">Raccontami il tuo progetto</span>
                 </div>
-                <p className="text-white text-xl sm:text-2xl text-center">Sono sempre curioso di ascoltare nuove idee. Scrivimi senza impegno!</p>
+                <p className="paragraph">Sono sempre curioso di ascoltare nuove idee. Scrivimi senza impegno!</p>
               </div>
           </div>
       </Parallax>

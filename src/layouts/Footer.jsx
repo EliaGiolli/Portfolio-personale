@@ -8,8 +8,8 @@ import { IoLogoJavascript } from 'react-icons/io'
 function Footer() {
   return (
     <>
-      <footer className="footerStyle">
-        <div className="container w-full px-4 py-8">
+      <footer className="bg-inherit text-primary border-t-2 border-t-cyan-500 p-3">
+        <div className="w-full px-4 py-8">
           <div className="text-center space-y-4">
             {/* Logo e Titolo */}
             <div className="flex items-center justify-center gap-2">
@@ -20,7 +20,7 @@ function Footer() {
             </div>
 
             {/* Connettiti con me */}
-            <h5 className="text-2xl">Connettiti con me!</h5>
+            <h5 className="subtitle-secondary">Connettiti con me!</h5>
             <p className="paragraph">Mail: info@giollidesign.com</p>
 
             {/* Icone Social */}

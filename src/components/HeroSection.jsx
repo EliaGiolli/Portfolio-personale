@@ -19,12 +19,12 @@ function HeroSection() {
         >
             <div className="absolute inset-0 w-full h-screen bg-gradient-to-br bg-primary opacity-70 z-20"></div>
             <div className="flex flex-col items-center justify-center relative z-30 text-white px-8 py-4 h-screen">
-                <h3 className="text-2xl md:text-xl bold text-center sm:text-right py-4 md:py-3">Pronto a fare il prossimo passo?</h3>
-                <h1 className="title-primary">Trasformo la tua idea in un sito web efficace e professionale!</h1>
-                <p className="paragraph w-full sm:max-w-3xl my-5">Ogni progetto è un’opportunità per crescere. Voglio portare la tua idea online e farla diventare realtà. Scopri cosa posso fare per te!</p>
+                <h3 className="subtitle-secondary sm:text-right bold py-4 md:py-3">Pronto a fare il prossimo passo?</h3>
+                <h1 className="title-primary text-tertiary">Trasformo la tua idea in un sito web efficace e professionale!</h1>
+                <p className="paragraph text-lg sm:text-2xl w-full sm:max-w-3xl my-5">Ogni progetto è un’opportunità per crescere. Voglio portare la tua idea online e farla diventare realtà. Scopri cosa posso fare per te!</p>
                 <div className="w-full flex flex-col items-center justify-center p-4">
-                    <Button className='buttons'>
-                        <Link to="contacts" smooth={true} duration={500}>Contattami!</Link>
+                    <Button>
+                        <Link className='block w-full h-full' to="contacts" smooth={true} duration={500}>Contattami!</Link>
                     </Button>
                 </div>
             </div>

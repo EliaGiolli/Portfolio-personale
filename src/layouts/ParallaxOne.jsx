@@ -18,9 +18,9 @@ function ParallaxOne() {
               <div className="bg-primary flex flex-col justify-center items-center w-full max-w-3xl max-h-fit p-10 sm:p-14 rounded-lg shadow-lg mx-auto">
                 <div className="flex justify-between items-center text-center p-2">
                     <FaRocket size={30} className="icon" />
-                    <span className="text-lg sm:text-xl text-tretiary">Scopri cosa posso fare per te</span>
+                    <span className="text-lg sm:text-xl text-tertiary">Scopri cosa posso fare per te</span>
                 </div>
-                <h3 className="text-white text-xl sm:text-2xl text-center">Imparo facendo. Questi sono alcuni dei miei progetti che mi hanno aiutato a crescere.</h3>
+                <p className="paragraph">Imparo facendo. Questi sono alcuni dei miei progetti che mi hanno aiutato a crescere.</p>
               </div>
           </div>
       </Parallax>

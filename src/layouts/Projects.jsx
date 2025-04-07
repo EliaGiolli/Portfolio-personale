@@ -94,8 +94,8 @@ function Projects() {
                     </Link>
                 </div>
                 <div className='flex justify-center items-center w-full gap-5 p-2 my-4'>
-                    <FaRegArrowAltCircleLeft className='icon cursor-pointer' onClick={prevProject} />
-                    <FaRegArrowAltCircleRight className='icon cursor-pointer' onClick={nextProject} />
+                    <FaRegArrowAltCircleLeft className='icon' size={45} onClick={prevProject} />
+                    <FaRegArrowAltCircleRight className='icon' size={45}onClick={nextProject} />
                 </div>
             </Card>
         </Element>

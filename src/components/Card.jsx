@@ -1,7 +1,7 @@
 
 // eslint-disable-next-line react/prop-types
 function Card({ children, variant = 'default' }) {
-  const baseStyles = "cards flex flex-col"
+  const baseStyles = "bg-inherit h-fit mx-auto flex flex-col p-6 m-4"
   
   const variantStyles = {
     default: "",
