@@ -3,18 +3,22 @@ import Homepage from './routes/Homepage'
 import CvPage from './routes/CvPage';
 import ErrorPage from './routes/ErrorPage';
 
+//Theme
+import { useTheme } from './contexts/ThemeContext';
 
 function App() {
- 
+ const {themeMode} =useTheme();
 
   return (
-    <div className="min-h-screen bg-primary">
-      <Routes>
-        <Route path="/" element={<Homepage/>} />
-        <Route path="/cv" element={<CvPage />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </div>
+    <>
+      <div className={`min-h-screen ${themeMode === 'dark' ? 'bg-primary text-primary' : 'bg-white text-gray-900'}`}>
+        <Routes>
+          <Route path="/" element={<Homepage/>} />
+          <Route path="/cv" element={<CvPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </div>
+    </>
   )
 }
 

@@ -1,4 +1,4 @@
-import { ThemeProvider } from "../contexts/ThemeContext"
+
 //components
 import Navbar from "../layouts/Navbar"
 import HeroSection from "../components/HeroSection"
@@ -12,12 +12,12 @@ import ParallaxTwo from "../layouts/ParallaxTwo"
 
 
 function Homepage() {
-
+  
 
   return (
-    <ThemeProvider>
+    <>
       <Navbar />
-      <main className="bg-inherit mx-auto">
+      <main className='mx-auto bg-inherit'>
         <HeroSection />
         <About />
         <ParallaxOne />
@@ -26,7 +26,7 @@ function Homepage() {
         <Contacts />
       </main>   
       <Footer />
-    </ThemeProvider>
+    </>
   )
 }
 

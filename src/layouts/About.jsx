@@ -2,6 +2,8 @@ import Card from '../components/Card'
 import Button from '../components/Button'
 import immaginePrincipale from '../../public/img/img-principale.png'
 
+import { useTheme } from '../contexts/ThemeContext'
+
 //LIBRARIES
 import { ReactTyped } from 'react-typed'
 import { Element, Link } from 'react-scroll'
@@ -12,7 +14,7 @@ import { TiTick } from "react-icons/ti";
 
 
 function About() {
-  
+    const {themeMode} = useTheme();
   
   return (
     <>
@@ -23,8 +25,8 @@ function About() {
             <article className="flex flex-col justify-around items-center text-center p-3 my-4 w-full">
               <div className="flex flex-col items-center text-center md:text-left p-8">
                 
-                <h3 className="subtitle-secondary text-white">Elia Giolli</h3>
-                <span className="text-3xl sm:text-5xl text-tertiary font-bold my-6">
+                <h3 className={`subtitle-secondary ${themeMode === 'dark' ? 'text-primary':'text-gray-900'}`}>Elia Giolli</h3>
+                <span className={`text-3xl sm:text-5xl font-bold my-6 ${themeMode === 'dark' ? 'text-tertiary':'text-yellow-400'}`}>
                   <ReactTyped
                     strings={[
                       "Jr React developer",
@@ -35,8 +37,8 @@ function About() {
                     loop
                   />
                 </span>
-                <p className="paragraph"> Ciao, sono Giolli Elia, un React Developer orientato alla costruzione di design interattivi e accessibili.</p>
-                <p className='paragraph mb-3'>Sviluppo soluzioni web scalabili e multilingue, ideali per chi vuole espandere il proprio business oltre i confini nazionali.</p>
+                <p className={`paragraph ${themeMode === 'dark'?'text-white':'text-gray-900'}`}> Ciao, sono Giolli Elia, un React Developer orientato alla costruzione di design interattivi e accessibili.</p>
+                <p className={`paragraph ${themeMode === 'dark'?'text-white':'text-gray-900'}`}>Sviluppo soluzioni web scalabili e multilingue, ideali per chi vuole espandere il proprio business oltre i confini nazionali.</p>
               </div>
           </article>
         </Card>
@@ -46,18 +48,18 @@ function About() {
               <img src={immaginePrincipale} alt="immagine della mia laurea" className="foto"/>
             </div>
             <div className="grid col-span-2 px-4">
-              <h2 className="subtitle text-tertiary">Creo interfacce moderne e con React e TypeScript, per siti web veloci e performanti.</h2>
+              <h2 className={`subtitle ${themeMode === 'dark'?'text-tertiary':'text-yellow-400'}`}>Creo interfacce moderne e con React e TypeScript, per siti web veloci e performanti.</h2>
                 <p className="paragraph">Il tuo sito sarà: </p>
                 <ul className='flex flex-col justify-center items-center text-center p-3'>
-                  <li className='text-primary md:text-xl text-center p-2 flex items-center'>
+                  <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark'? 'text-primary':'text-grey-900'}`}>
                     <FaLaptopCode size={30} className='mr-3'/>
                       Responsivo su tutti i dispositivi    
                   </li>
-                  <li className='text-primary md:text-xl text-center p-2 flex items-center'>
+                  <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark'? 'text-primary':'text-grey-900'}`}>
                     <TbManualGearbox size={30} className='mr-3' />
                       Ottimizzato per la velocità e la SEO
                     </li>
-                  <li className='text-primary md:text-xl text-center p-2 flex items-center'>
+                  <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark'? 'text-primary':'text-grey-900'}`}>
                     <TiTick size={30} className='mr-3' />
                     Facile da navigare per i tuoi clienti
                   </li>
