@@ -13,7 +13,7 @@ function Button({ children, onClick, to }) {
   }
 
   return (
-    <button className='btn'>
+    <button className='btn'onClick={onClick}>
         {children}
     </button>
   )

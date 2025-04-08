@@ -32,7 +32,11 @@ function Contacts() {
   return (
     <>
       <Element name="contacts" className="my-20">
-        <form action="POST" onSubmit={handleSubmit(onSubmit)} className="form-contacts" id="form-id">
+        <form 
+          action="POST" 
+          onSubmit={handleSubmit(onSubmit)} 
+          className="bg-inherit text-white w-full max-w-3xl mx-auto p-6" id="form-id"
+          >
           <div className="flex justify-center items-center text-center gap-4 w-full p-4">
             <h2 className="subtitle text-tertiary border-b-white border-b-1">Contattami!</h2>
           </div>
@@ -48,7 +52,7 @@ function Contacts() {
                     maxLength: 10
                 })} 
                 placeholder="inserisci il tuo nome" 
-                className="form-input bg-secondary"
+                className="bg-secondary rounded-md w-full hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0"
               />
               {errors.nome && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.nome.message}</p>}
               <label htmlFor="email">Inserisci la tua email </label>
@@ -62,7 +66,7 @@ function Contacts() {
                     }
                   })} 
                 placeholder="inserisci la tua email" 
-                className="form-input bg-secondary"
+                className="bg-secondary rounded-md w-full hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0"
                 />
                 {errors.email && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.email.message}</p>}
             </div>
