@@ -2,15 +2,15 @@ import React from 'react'
 
 import { useTheme } from '../contexts/ThemeContext';
 //EXTERNAL LIBRARIES
-import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Dialog, DialogPanel } from '@headlessui/react'
 
 //REACT ICONS
 import { MdCloseFullscreen } from "react-icons/md";
-import { CgDarkMode } from 'react-icons/cg';
+
 
 function ModalCard({ closeModal, project, getTechIcon }) {
 
-    const {title, description, imageUrl, githubLink, technologies, demoLink} = project;
+    const {title,longDescription, imageUrl, githubLink, technologies, demoLink} = project;
 
     const {themeMode} = useTheme();
 
@@ -23,8 +23,8 @@ function ModalCard({ closeModal, project, getTechIcon }) {
         <div className="fixed inset-0 bg-black/70" aria-hidden="true" />        
         <div className="fixed inset-0 flex items-center justify-center p-4">
             <DialogPanel className={`w-full max-w-3xl rounded-xl shadow-xl overflow-hidden ${themeMode ==='dark'?'bg-primary text-primary':'bg-white text-gray-900'}`}>
-                <div className={`flex justify-between items-center p-4 ${themeMode==='dark'?'bg-secondary text-primary':'bg-yellow-100 text-gray-900'}`}>
-                    <DialogTitle className="text-xl font-bold">{title}</DialogTitle>
+                <div className={`flex justify-center items-center py-2 ${themeMode==='dark'?'bg-secondary text-primary':'bg-yellow-100 text-gray-900'}`}>
+                    
                     <button 
                         onClick={closeModal}
                         className={`${themeMode ==='dark'?'icon':'bg-yellow-400 hover:bg-yellow-500 text-gray-900 hover:text-white rounded-lg p-1'}`}
@@ -33,12 +33,12 @@ function ModalCard({ closeModal, project, getTechIcon }) {
                     </button>
                 </div>
                 
-                <div className="p-6">
+                <div className="px-6 py-2">
                     <div className="mb-4">
                         <img src={imageUrl} alt={title} className="w-full h-auto rounded-lg" />
                     </div>
                     
-                    <p className={`my-10 ${themeMode==='dark'?'text-primary':'text-gray-900'}`}>{description}</p>
+                    <p className={`my-5 ${themeMode==='dark'?'text-primary':'text-gray-900'}`}>{longDescription}</p>
                     
                     <h3 className="text-lg font-semibold mb-2">Tecnologie:</h3>
                     <div className="flex flex-wrap gap-2 mb-4">
