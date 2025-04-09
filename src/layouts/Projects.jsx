@@ -49,7 +49,7 @@ function Projects() {
   return (
     <>  
       <Element name='projects' className='carousel-div'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 h-96 gap-6 px-10'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-h-[500px] gap-6 px-10'>
           {projectsData.map((project, index) => (
             <Card key={index} variant="project">
               <div className="flex flex-col text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
