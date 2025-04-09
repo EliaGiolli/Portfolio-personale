@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import React from 'react';
+
+import { useTheme } from '../contexts/ThemeContext';
 
 import Card from '../components/Card'
 import Button from '../components/Button';
@@ -16,27 +19,28 @@ import { Element } from 'react-scroll';
 
 
 function Projects() {
+  const {themeMode} = useTheme();
   // Stato per aprire/chiudere la modale
   const [isOpen, setIsOpen] = useState(false);
   // Aggiungiamo uno stato per il progetto selezionato
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const getTechIcon = (tech) => {
+  const getTechIcon = (tech, className) => {
     switch (tech) {
       case 'Javascript':
-        return <FaJs className='icon' />;
+        return <FaJs className={`icon ${className}`} />;
       case 'React':
-        return <FaReact className='icon' />;
+        return <FaReact className={`icon ${className}`} />;
       case 'CSS':
-        return <FaCss3Alt className='icon' />;
+        return <FaCss3Alt className={`icon ${className}`} />;
       case 'Tailwind CSS':
-        return <RiTailwindCssFill className='icon' />;
+        return <RiTailwindCssFill className={`icon ${className}`} />;
       case 'Typescript':
-        return <SiTypescript className='icon' />;
+        return <SiTypescript className={`icon ${className}`} />;
       case 'Axios':
-        return <SiAxios className='icon' />;
+        return <SiAxios className={`icon ${className}`} />;
       case 'Vite':
-        return <TbBrandVite className='icon' />;
+        return <TbBrandVite className={`icon ${className}`} />;
       default:
         return null;
     }
@@ -52,16 +56,8 @@ function Projects() {
                 <div className='max-w-3xl'>
                   <img src={project.imageUrl} alt={project.title} className='object-cover rounded-lg mb-4' />
                 </div>
-                <h2 className="subtitle mb-2">{project.title}</h2>
+                <h2 className={`subtitle mb-2 ${themeMode ==='dark'?'text-primary':'text-yellow-100'}`}>{project.title}</h2>
                 <p className="paragraph mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 justify-center mb-4">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="bg-text-tretiary/20 px-2 py-1 rounded text-sm flex items-center">
-                      {getTechIcon(tech)}
-                      <span className="ml-1">{tech}</span>
-                    </span>
-                  ))}
-                </div>
                 <Button onClick={() => {
                   setSelectedProject(project);
                   setIsOpen(true);

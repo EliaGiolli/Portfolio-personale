@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className={`min-h-screen ${themeMode === 'dark' ? 'bg-primary text-primary' : 'bg-white text-gray-900'}`}>
+      <div className={`min-h-screen ${themeMode === 'dark' ? 'bg-primary text-primary' : 'bg-yellow-50 text-gray-900'}`}>
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/cv" element={<CvPage />} />

@@ -1,12 +1,17 @@
 import Button from "../components/Button"
 import InputField from "../components/InputField"
 
+import { useTheme } from "../contexts/ThemeContext"
+
 //External libraries
 import {Element} from 'react-scroll'
 import { useForm } from "react-hook-form"
 import emailjs from '@emailjs/browser'
 
 function Contacts() {
+
+  //tema
+  const {themeMode} = useTheme();
 
   const {
     register,
@@ -35,14 +40,14 @@ function Contacts() {
         <form 
           action="POST" 
           onSubmit={handleSubmit(onSubmit)} 
-          className="bg-inherit text-white w-full max-w-3xl mx-auto p-6" id="form-id"
+          className={`bg-inherit w-full max-w-3xl mx-auto p-6 ${themeMode ==='dark'?'text-primary':'text-gray-900'}`} id="form-id"
           >
           <div className="flex justify-center items-center text-center gap-4 w-full p-4">
-            <h2 className="subtitle text-tertiary border-b-white border-b-1">Contattami!</h2>
+            <h2 className={`subtitle border-b-1 ${themeMode==='dark'?'text-tertiary border-b-white':'text-yellow-400 border-b-yellow-500'}`}>Contattami!</h2>
           </div>
           <div className="p-6">
             <h3 className="subtitle-secondary">Inserisci nome e email</h3>
-            <div className="flex flex-col items-center text-white gap-4 p-6">
+            <div className="flex flex-col items-center gap-4 p-6">
               <label htmlFor="name" className="mt-5">Inserisci il tuo nome </label>
               <InputField 
                 type="text"
@@ -52,7 +57,7 @@ function Contacts() {
                     maxLength: 10
                 })} 
                 placeholder="inserisci il tuo nome" 
-                className="bg-secondary rounded-md w-full hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0"
+                className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 ${themeMode ==='dark'?'bg-secondary text-primary rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 '}`}
               />
               {errors.nome && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.nome.message}</p>}
               <label htmlFor="email">Inserisci la tua email </label>
@@ -66,7 +71,7 @@ function Contacts() {
                     }
                   })} 
                 placeholder="inserisci la tua email" 
-                className="bg-secondary rounded-md w-full hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0"
+                className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 ${themeMode ==='dark'?'bg-secondary text-primary rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 '}`}
                 />
                 {errors.email && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.email.message}</p>}
             </div>

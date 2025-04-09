@@ -25,7 +25,7 @@ function Navbar() {
      }
 
   return (
-    <nav className={`flex justify-around items-center border-b-2 border-b-cyan-700 w-full h-20 py-3 px-4 sticky top-0 z-50 ${themeMode === 'dark' ? 'bg-primary text-secondary' : 'bg-gray-100 text-gray-900 border-b-4 border-b-yellow-600' }`}>
+    <nav className={`flex justify-around items-center border-b-2 border-b-cyan-700 w-full h-20 py-3 px-4 sticky top-0 z-50 ${themeMode === 'dark' ? 'bg-primary text-secondary' : 'bg-yellow-100 text-gray-900 border-b-4 border-b-yellow-600' }`}>
         {/* Logo */}
         <Link to="heroSection">
             <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />

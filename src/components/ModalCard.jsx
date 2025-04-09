@@ -1,13 +1,18 @@
 import React from 'react'
 
+import { useTheme } from '../contexts/ThemeContext';
 //EXTERNAL LIBRARIES
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 
 //REACT ICONS
 import { MdCloseFullscreen } from "react-icons/md";
+import { CgDarkMode } from 'react-icons/cg';
 
 function ModalCard({ closeModal, project, getTechIcon }) {
+
     const {title, description, imageUrl, githubLink, technologies, demoLink} = project;
+
+    const {themeMode} = useTheme();
 
   return (
     <Dialog 
@@ -17,12 +22,12 @@ function ModalCard({ closeModal, project, getTechIcon }) {
     >
         <div className="fixed inset-0 bg-black/70" aria-hidden="true" />        
         <div className="fixed inset-0 flex items-center justify-center p-4">
-            <DialogPanel className="w-full max-w-3xl bg-primary text-primary rounded-xl shadow-xl overflow-hidden">
-                <div className="bg-secondary text-primary flex justify-between items-center p-4">
+            <DialogPanel className={`w-full max-w-3xl rounded-xl shadow-xl overflow-hidden ${themeMode ==='dark'?'bg-primary text-primary':'bg-white text-gray-900'}`}>
+                <div className={`flex justify-between items-center p-4 ${themeMode==='dark'?'bg-secondary text-primary':'bg-yellow-100 text-gray-900'}`}>
                     <DialogTitle className="text-xl font-bold">{title}</DialogTitle>
                     <button 
                         onClick={closeModal}
-                        className="icon"
+                        className={`${themeMode ==='dark'?'icon':'bg-yellow-400 hover:bg-yellow-500 text-gray-900 hover:text-white rounded-lg p-1'}`}
                     >
                         <MdCloseFullscreen size={24} />
                     </button>
@@ -33,13 +38,13 @@ function ModalCard({ closeModal, project, getTechIcon }) {
                         <img src={imageUrl} alt={title} className="w-full h-auto rounded-lg" />
                     </div>
                     
-                    <p className="text-primary mb-4">{description}</p>
+                    <p className={`my-10 ${themeMode==='dark'?'text-primary':'text-gray-900'}`}>{description}</p>
                     
                     <h3 className="text-lg font-semibold mb-2">Tecnologie:</h3>
                     <div className="flex flex-wrap gap-2 mb-4">
                         {technologies.map((tech, index) => (
-                            <span key={index} className="bg-secondary px-3 py-1 rounded-full text-sm flex items-center my-3">
-                                {getTechIcon(tech)}
+                            <span key={index} className='flex items-center text-sm px-3 py-1 my-3'>
+                                {getTechIcon(tech, themeMode === 'dark' ? 'bg-cyan-500 hover:bg-cyan-800 text-white rounded-lg' : 'bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-xl')}
                                 <span className="ml-1">{tech}</span>
                             </span>
                         ))}
@@ -48,7 +53,7 @@ function ModalCard({ closeModal, project, getTechIcon }) {
                     <div className="flex gap-3">
                         <a 
                             href={githubLink} 
-                            className="btn" 
+                            className={`btn ${themeMode==='dark'?'bg-cyan-600 hover:bg-cyan-800 text-primary':'bg-yellow-400 hover:bg-yellow-500 text-gray-900 hover:text-white'}`}
                             target="_blank" 
                             rel="noopener noreferrer"
                         >
@@ -56,7 +61,7 @@ function ModalCard({ closeModal, project, getTechIcon }) {
                         </a>
                         <a 
                             href={demoLink} 
-                            className="btn" 
+                            className={`btn ${themeMode==='dark'?'bg-cyan-600 hover:bg-cyan-800 text-primary':'bg-yellow-400 hover:bg-yellow-500 text-gray-900 hover:text-white'}`} 
                             target="_blank" 
                             rel="noopener noreferrer"
                         >
