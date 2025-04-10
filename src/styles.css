@@ -50,7 +50,7 @@
   }
   .subtitle-secondary { @apply text-xl sm:text-2xl text-center; }
   .paragraph{
-    @apply text-center text-lg sm:text-2xl break-words whitespace-normal text-pretty leading-normal md:leading-relaxed lg:leading-loose py-3;
+    @apply text-center text-lg sm:text-2xl p-3;
   }
   .text-accent { @apply text-xl sm:text-2xl; }
   .text-accent-secondary { @apply text-sm md:text-lg; }

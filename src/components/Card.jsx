@@ -1,11 +1,14 @@
-// eslint-disable-next-line react/prop-types
+import { useTheme } from "../contexts/ThemeContext"
+
 function Card({ children, variant = 'default'}) {
-  const baseStyles = "bg-inherit min-h-full mx-auto flex flex-col relative group p-6 m-4 overflow-hidden"
-  
+  const {themeMode} = useTheme();
+
+  const baseStyles = "bg-inherit min-h-full mx-auto flex flex-col overflow-hidden";
+  const themeProjectCard = `max-w-2xl p-5 rounded-lg ${themeMode === 'dark'?'bg-primary border-1 border-cyan-800':'bg-white border-1 border-yellow-400'}`;
   const variantStyles = {
     default: "",
-    project: " max-w-2xl absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all p-10",
-    profile: "max-w-3xl",
+    project: themeProjectCard,
+    profile: "max-w-3xl py-3",
   }
 
   return (

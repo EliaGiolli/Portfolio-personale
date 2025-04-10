@@ -48,24 +48,24 @@ function Projects() {
 
   return (
     <>  
-      <Element name='projects' className='carousel-div'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-10 min-h-[500px]'>
+      <Element name='projects' className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-4 min-h-[500px]'>
+        
           {projectsData.map((project, index) => (
             <Card key={index} variant="project">
-              <div className="flex flex-col text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 min-h-[500px]">
+              <div className="flex flex-col justify-center text-white h-[500px]">
                 <div className='max-w-3xl'>
-                  <img src={project.imageUrl} alt={project.title} className='object-cover rounded-lg mb-4' />
+                  <img src={project.imageUrl} alt={project.title} className='object-cover w-full h-[200px] rounded-lg mb-4' />
                 </div>
-                <h2 className={`subtitle mb-2 ${themeMode ==='dark'?'text-primary':'text-yellow-100'}`}>{project.title}</h2>
-                <p className="paragraph mb-4">{project.description}</p>
-                <Button onClick={() => {
-                  setSelectedProject(project);
-                  setIsOpen(true);
-                }}>Scopri di più!</Button>
-              </div>
+                  <h2 className={`subtitle mb-2 ${themeMode ==='dark'?'text-primary':'text-yellow-400'}`}>{project.title}</h2>
+                  <p className={`${themeMode ==='dark'?'paragraph':'paragraph text-gray-900 text-lg'}`}>{project.description}</p>
+                  <Button onClick={() => {
+                    setSelectedProject(project);
+                    setIsOpen(true);
+                  }}>Scopri di più!</Button>
+                </div>
             </Card>
           ))}
-        </div>
+        
       </Element>
 
       {/* Passiamo il progetto selezionato alla modale */}
