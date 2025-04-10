@@ -31,7 +31,7 @@ function Navbar() {
             <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />
         </Link>
         {/* Desktop Menu */}
-        <ul className={`hidden sm:flex justify-end items-center gap-4 ${themeMode === 'dark' ? 'bg-gray-800' : 'bg-gray-100 '}`}>
+        <ul className='hidden sm:flex justify-end items-center gap-4 '>
             <li className={` ${themeMode === 'dark' ? 'text-secondary hover:bg-cyan-800 hover:text-white hover:rounded-lg' : 'text-gray-600 hover:bg-yellow-400 hover:text-white hover:rounded-lg'} text-lg md:text-xl px-3 py-2 transition-colors duration-200 ease-in-out`}>
                 <Link to='about' className='block w-full h-full'>Su di me</Link>
             </li>
