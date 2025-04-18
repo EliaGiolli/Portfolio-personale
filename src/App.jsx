@@ -14,7 +14,6 @@ function App() {
       <div className={`min-h-screen ${themeMode === 'dark' ? 'bg-primary text-primary' : 'bg-yellow-50 text-gray-900'}`}>
         <Routes>
           <Route path="/" element={<Homepage/>} />
-          <Route path="/cv" element={<CvPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
