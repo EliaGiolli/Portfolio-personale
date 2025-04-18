@@ -1,13 +1,13 @@
 export const projectsData = [
     {
         id: 1,
-        title: "The Cozy Corner",
-        description: "Sito vetrina interattivo per rilassarsi e scoprire sezioni in modo dinamico.",
-        longDescription: "The Cozy Corner è un progetto sviluppato per esplorare un design minimalista e un'interazione rilassante per l'utente. Ogni sezione è pensata per offrire un'esperienza visiva piacevole, sfruttando animazioni leggere e un layout responsive. Tecnologie principali: TypeScript, Tailwind CSS e Vite.",
-        imageUrl: "/img/cozy-corner.png",
-        githubLink: "https://github.com/EliaGiolli/cozy-corner-ts",
-        demoLink: "https://cozy-corner-app.netlify.app/",
-        technologies: ["Typescript", "Tailwind CSS", "Vite"]
+        title: "VeggieVibes",
+        description: "Sito vetrina interattivo per la ricerca di ricette vegetariane e vegane.",
+        longDescription: "The VeggieVibes è un progetto sviluppato per esplorare la chiamata alla API di Spoonacular e il nuovo React-router v7. Ogni chiamata API è gestita anche dal debounce e dall'abortController. Tecnologie principali: React, TypeScript, Tailwind CSS e Vite.",
+        imageUrl: "/img/VeggieVibes.png",
+        githubLink: "https://github.com/EliaGiolli/VeggieVibes-react",
+        demoLink: "https://veggie-vibes-react.vercel.app/",
+        technologies: ["React","Typescript", "Tailwind CSS", "Vite"]
     },
     {
         id: 2,
@@ -37,6 +37,6 @@ export const projectsData = [
         imageUrl: "/img/booksearch.png",
         githubLink: "https://github.com/EliaGiolli/search4yourbook_react",
         demoLink: "https://search4booksreact.netlify.app/",
-        technologies: ["React", "Tailwind CSS", "Vite"]
+        technologies: ["React","Typescript", "Tailwind CSS", "Vite"]
     },
 ];
