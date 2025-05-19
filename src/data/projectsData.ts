@@ -1,4 +1,6 @@
-export const projectsData = [
+import { ProjectDataTypes } from "../types/ProjectDataTypes";
+
+export const projectsData: ProjectDataTypes[]  = [
     {
         id: 1,
         title: "The Cozy Corner",

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import 'react'
+import { InputProps } from "../types/generalTypes"
 
 function InputField({ 
   children, 
@@ -8,7 +8,7 @@ function InputField({
   value,
   onChange,
   ...props  
-}) {
+}: InputProps) {
   return (
     <div className="relative">
         <input 

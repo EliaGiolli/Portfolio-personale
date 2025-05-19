@@ -1,6 +1,6 @@
 import { createContext,useContext, useState, useEffect } from "react";
 import { ReactNode } from "react";
-import { ContextTypes, Theme } from "../types/generalTypes";
+import { ContextTypes, Theme } from "../types/ContextTypes";
 
 const ThemeContext= createContext<ContextTypes>({
     themeMode: 'dark',

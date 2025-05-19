@@ -1,7 +1,5 @@
 //React components
 import Button from './Button'
-
-import ImgHero from '../../public/img/foto-laurea.jpg'
 //External libraries
 import { Link } from 'react-scroll'
 import { Parallax } from 'react-parallax'
@@ -12,13 +10,13 @@ function HeroSection() {
     const {themeMode} = useTheme()
   return (
     <>
-        <Parallax 
-            name='heroSection' 
-            bgImage={ImgHero}
-            strength={800} 
-            bgImageAlt='foto di un mio snippet di codice con React'
-            className="relative h-screen w-full overflow-hidden"
-        >
+        <div id='parallaxSectionOne'>
+            <Parallax 
+                bgImage='/img/foto-laurea.jpg'
+                strength={800} 
+                bgImageAlt='foto di un mio snippet di codice con React'
+                className="relative h-screen w-full overflow-hidden"
+            >
             <div className="absolute inset-0 w-full h-screen bg-gradient-to-br bg-primary opacity-70 z-20"></div>
             <div className="flex flex-col items-center justify-center relative z-30 text-white px-8 py-4 h-screen">
                 <h3 className='subtitle-secondary py-3'>Pronto a fare il prossimo passo?</h3>
@@ -31,6 +29,7 @@ function HeroSection() {
                 </div>
             </div>
         </Parallax>
+        </div>
     </>
   )
 }

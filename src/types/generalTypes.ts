@@ -1,13 +1,20 @@
-import React, { ReactNode } from "react";
+import React, { type ChangeEvent, type ReactNode } from "react";
+
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: 'customBtn' | 'toggleBtn' | 'hamburgerBtn'
     children?: ReactNode
 }
 
-export interface ContextTypes {
-    themeMode: Theme,
-    toggleTheme: () => void;
+export interface InputProps {
+    children?: ReactNode,
+    className: string,
+    placeholder: string,
+    value: string,
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void 
 }
 
-export type Theme = "light" | "dark"
+export type CardProps = React.HTMLAttributes<HTMLDivElement> & {
+    CardVariant?: 'project' | 'profile' | 'default',
+    children?: ReactNode
+}

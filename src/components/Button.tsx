@@ -4,11 +4,11 @@ import { useTheme } from '../contexts/ThemeContext'
 import { ButtonProps } from '../types/generalTypes';
 // eslint-disable-next-line react/prop-types
 function Button({ children, onClick, className, variant = 'customBtn', ...props }:ButtonProps) {
-  const { theme } = useTheme();
+  const { themeMode } = useTheme();
 
   return (
    <button
-      className={clsx(buttonVariant({ variant, theme}), className)}
+      className={clsx(buttonVariant({ variant, themeMode}), className)}
       onClick={onClick}
       {...props}
     >
@@ -29,7 +29,7 @@ const buttonVariant = cva(
           hamburgerBtn: "block md:hidden",
           toggleBtn: "bg-blue-500 hover:bg-blue-800 text-white shd", 
         },
-        theme: {
+        themeMode: {
           light: "",
           dark: "",
         },
@@ -37,29 +37,29 @@ const buttonVariant = cva(
       compoundVariants: [
         {
           variant: "customBtn",
-          theme: "light",
+          themeMode: "light",
           className: "bg-blue-900 hover:bg-blue-700 text-gray-200 shadow-gray-900",
         },
         {
           variant: "customBtn",
-          theme: "dark",
+          themeMode: "dark",
           className: "bg-blue-500 hover:bg-blue-400 text-gray-300 hover:text-gray-200 shadow-gray-200",
         },
         {
           variant: 'toggleBtn',
-          theme: 'light',
+          themeMode: 'light',
           className: 'bg-blue-500 hover:bg-blue-400 text-gray-300 hover:text-gray-200 shadow-gray-200'
         },
         {
           variant: 'toggleBtn',
-          theme: 'dark',
+          themeMode: 'dark',
           className: 'bg-blue-800 text-white hover:bg-blue-700 shadow-gray-200'
 
         }
       ],
       defaultVariants: {
         variant: "customBtn",
-        theme: "dark",
+        themeMode: "dark",
       },
     }
   );
