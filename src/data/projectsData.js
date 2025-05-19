@@ -3,7 +3,7 @@ export const projectsData = [
         id: 1,
         title: "VeggieVibes",
         description: "Sito vetrina interattivo per la ricerca di ricette vegetariane e vegane.",
-        longDescription: "The VeggieVibes è un progetto sviluppato per esplorare la chiamata alla API di Spoonacular e il nuovo React-router v7. Ogni chiamata API è gestita anche dal debounce e dall'abortController. Tecnologie principali: React, TypeScript, Tailwind CSS e Vite.",
+        longDescription: "VeggieVibes è un progetto sviluppato per esplorare la chiamata alla API di Spoonacular e il nuovo React-router v7. Ogni chiamata API è gestita anche dal debounce e dall'abortController. Tecnologie principali: React, TypeScript, Tailwind CSS e Vite.",
         imageUrl: "/img/VeggieVibes.png",
         githubLink: "https://github.com/EliaGiolli/VeggieVibes-react",
         demoLink: "https://veggie-vibes-react.vercel.app/",
@@ -31,7 +31,7 @@ export const projectsData = [
     },
     {
         id: 4,
-        title: "Ricerca Libri",
+        title: "Search 4 Your Book",
         description: "Sito per cercare libri per titolo o autore da un database online.",
         longDescription: "Questo progetto consente di cercare libri tramite l'integrazione con un'API pubblica. L'utente può cercare libri per titolo o autore e visualizzare i dettagli principali. È stato un esercizio utile per prendere confidenza con fetch API, gestione degli errori e design responsive con Tailwind.",
         imageUrl: "/img/booksearch.png",
