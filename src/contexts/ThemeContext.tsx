@@ -1,17 +1,21 @@
 import { createContext,useContext, useState, useEffect } from "react";
+import { ReactNode } from "react";
+import { ContextTypes, Theme } from "../types/generalTypes";
 
-const ThemeContext = createContext({
-    theme: 'dark',
+const ThemeContext= createContext<ContextTypes>({
+    themeMode: 'dark',
     toggleTheme: ()=>{},
 });
 
-export const ThemeProvider = ({children})=>{
-    const [themeMode, setThemeMode] = useState('dark');
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
+    const [themeMode, setThemeMode] = useState<Theme>('dark');
 
     useEffect(()=>{
         const savedTheme = localStorage.getItem('theme');
-        if(themeMode){
+        if(savedTheme === "light" || savedTheme === "dark"){
             setThemeMode(savedTheme)
+        }else{
+            setThemeMode('light')
         }
     },[]);
 

@@ -49,10 +49,7 @@
 
 
 @layer components{
-  /*  BUTTONS  */
-  .btn{
-    @apply cursor-pointer px-3 py-2 shadow-lg rounded-lg
-  }  /*  FOTO & ICONS  */
+  /*  FOTO & ICONS  */
   .foto {  @apply w-full h-auto max-h-96 rounded-lg object-cover shadow-lg; }
   .icon{
     @apply p-2 text-4xl text-cyan-300 sm:text-5xl hover:text-white transition-colors duration-300;
