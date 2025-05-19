@@ -18,16 +18,7 @@
 
 @layer utilities{
  
-    /* LIGHT MODE */
-    .bg-primary   { @apply bg-gray-100; }
-    .bg-secondary { @apply bg-gray-200; }
-    .bg-tertiary  { @apply bg-green-500; }
-
-    .text-primary   { @apply text-gray-900; }
-    .text-secondary { @apply text-gray-600; }
-    .text-tertiary  { @apply text-green-500; }
-    .text-subtitle  { @apply text-green-600; }
-
+   
     /* DARK MODE*/
     .dark .bg-primary     { @apply bg-gray-800; }
     .dark .bg-secondary   { @apply bg-gray-700; }

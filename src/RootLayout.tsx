@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-        <div className={`min-h-screen ${themeMode === 'dark' ? 'bg-primary text-primary' : 'bg-yellow-50 text-gray-900'}`}>
+        <div className={`min-h-screen ${themeMode === 'dark' ? 'bg-primary text-primary' : 'bg-blue-50 text-gray-900'}`}>
           <Outlet />
         </div>
       <Footer/>  
