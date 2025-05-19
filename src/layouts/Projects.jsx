@@ -9,7 +9,7 @@ import ModalCard from '../components/ModalCard';
 import { projectsData } from '../data/projectsData'
 
 // React icons
-import { FaJs, FaReact, FaCss3Alt } from 'react-icons/fa';
+import { FaJs, FaReact, FaCss3Alt, FaVuejs } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { SiTypescript, SiAxios } from 'react-icons/si';
 import { TbBrandVite } from "react-icons/tb";
@@ -41,6 +41,8 @@ function Projects() {
         return <SiAxios className={`icon ${className}`} />;
       case 'Vite':
         return <TbBrandVite className={`icon ${className}`} />;
+        case 'Vue':
+        return <FaVuejs className={`icon ${className}`} />;
       default:
         return null;
     }

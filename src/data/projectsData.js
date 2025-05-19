@@ -39,4 +39,24 @@ export const projectsData = [
         demoLink: "https://search4booksreact.netlify.app/",
         technologies: ["React","Typescript", "Tailwind CSS", "Vite"]
     },
+    {
+        id: 5,
+        title: "ClockWise",
+        description: "Dashboard interattiva che mostra le presenze e le ore mensili lavorate",
+        longDescription: "Questo progetto consente di visualizzare dei grafici con Recharts per visualizzare i turni settimanali e le ore mensili lavorate. L'utente può inserire dei task che potrà visualizzare in una tabella.",
+        imageUrl: "/img/clockwise.png",
+        githubLink: "https://github.com/EliaGiolli/ClockWise---React-ts/tree/main",
+        demoLink: "https://clock-wise-react-ts.vercel.app/",
+        technologies: ["React","Typescript", "Tailwind CSS", "Vite"]
+    },
+    {
+        id: 6,
+        title: "VueStock",
+        description: "App moderna e interattiva che permette di aggiungere dei prodotti inseriti dall'utente al catalogo",
+        longDescription: "Questo progetto consente di compiere delle basi operazioni CRUD per aggiungere e cancellare degli elementi all'inventario. L'app è stata creata con la CompositionAPI di Vue3 e TailwindCSS v4",
+        imageUrl: "/img/vuestock.png",
+        githubLink: "https://github.com/EliaGiolli/Vue-VueStock",
+        demoLink: "https://vue-vue-stock.vercel.app/",
+        technologies: ["Vue", "Tailwind CSS", "Vite"]
+    },
 ];
