@@ -7,6 +7,7 @@ import Card from '../components/Card'
 import Button from '../components/Button';
 import ModalCard from '../components/ModalCard';
 import { projectsData } from '../data/projectsData'
+import { ProjectDataTypes } from '../types/ProjectDataTypes';
 
 // React icons
 import { FaJs, FaReact, FaCss3Alt, FaVuejs } from 'react-icons/fa';
@@ -23,9 +24,9 @@ function Projects() {
   // Stato per aprire/chiudere la modale
   const [isOpen, setIsOpen] = useState(false);
   // Aggiungiamo uno stato per il progetto selezionato
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectDataTypes | null>(null);
 
-  const getTechIcon = (tech, className) => {
+  const getTechIcon = (tech:string, className:string) => {
     switch (tech) {
       case 'Javascript':
         return <FaJs className={`icon ${className}`} />;
@@ -52,13 +53,13 @@ function Projects() {
     <>  
       <Element name='projects' className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-4 min-h-[500px]'>
         
-          {projectsData.map((project, index) => (
-            <Card key={index} variant="project">
+          {projectsData.map((project:ProjectDataTypes, index) => (
+            <Card key={index} CardVariant="project">
               <div className="flex flex-col justify-center text-white h-[500px]">
                 <div className='max-w-3xl'>
                   <img src={project.imageUrl} alt={project.title} className='object-cover w-full h-[200px] rounded-lg mb-4' />
                 </div>
-                  <h2 className={`subtitle mb-2 ${themeMode ==='dark'?'text-primary':'text-yellow-400'}`}>{project.title}</h2>
+                  <h2 className={`subtitle mb-2 ${themeMode ==='dark'?'text-primary':'text-blue-400'}`}>{project.title}</h2>
                   <p className={`${themeMode ==='dark'?'paragraph':'paragraph text-gray-900 text-lg'}`}>{project.description}</p>
                   <Button onClick={() => {
                     setSelectedProject(project);
@@ -70,12 +71,14 @@ function Projects() {
         
       </Element>
 
-      {/* Passiamo il progetto selezionato alla modale */}
-      {isOpen && <ModalCard 
-        closeModal={() => setIsOpen(false)} 
-        getTechIcon={getTechIcon} 
-        project={selectedProject} 
-      />}
+      {/* This ensures that selectedProject is never null when passed through props */}
+      {isOpen && selectedProject && (
+        <ModalCard 
+          closeModal={() => setIsOpen(false)} 
+          getTechIcon={getTechIcon} 
+          project={selectedProject} 
+        />
+      )}
     </>
   );
 }

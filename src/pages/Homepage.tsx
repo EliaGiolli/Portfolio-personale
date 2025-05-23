@@ -7,14 +7,16 @@ import Projects from "../layouts/Projects"
 import ParallaxOne from "../layouts/ParallaxOne"
 import ParallaxTwo from "../layouts/ParallaxTwo"
 
-
+//Theme
+import { useTheme } from '../contexts/ThemeContext';
 
 function Homepage() {
-  
+
+  const { themeMode } = useTheme();  
 
   return (
     <>
-      <main className='mx-auto bg-inherit'>
+      <main className={`min-h-screen ${themeMode === 'dark' ? 'bg-primary text-primary' : 'bg-blue-50 text-gray-900'} mx-auto`}>
         <HeroSection />
         <About />
         <ParallaxOne />
