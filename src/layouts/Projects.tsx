@@ -55,17 +55,19 @@ function Projects() {
         
           {projectsData.map((project:ProjectDataTypes, index) => (
             <Card key={index} CardVariant="project">
-              <div className="flex flex-col justify-center text-white h-[500px]">
+              <div className="flex flex-col h-[500px] text-white">
                 <div className='max-w-3xl'>
                   <img src={project.imageUrl} alt={project.title} className='object-cover w-full h-[200px] rounded-lg mb-4' />
                 </div>
-                  <h2 className={`subtitle mb-2 ${themeMode ==='dark'?'text-primary':'text-blue-400'}`}>{project.title}</h2>
-                  <p className={`${themeMode ==='dark'?'paragraph':'paragraph text-gray-900 text-lg'}`}>{project.description}</p>
+                <h2 className={`subtitle mb-2 ${themeMode ==='dark'?'text-primary':'text-blue-400'}`}>{project.title}</h2>
+                <p className={`${themeMode ==='dark'?'paragraph':'paragraph text-gray-900 text-lg'}`}>{project.description}</p>
+                <div className="mt-auto flex justify-center">
                   <Button onClick={() => {
                     setSelectedProject(project);
                     setIsOpen(true);
                   }}>Scopri di più!</Button>
                 </div>
+              </div>
             </Card>
           ))}
         

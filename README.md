@@ -1,59 +1,69 @@
-# 🌐 Portfolio Personale - React, TypeScript & Tailwind CSS
+# 🌐 Personal Portfolio – React, TypeScript & Tailwind CSS
 
-Benvenuto nella repository del mio portfolio personale! 🚀 Questo progetto rappresenta il mio spazio online per mostrare i miei progetti, il mio percorso nel mondo dello sviluppo front-end e le mie competenze tecniche.
+Welcome to the repository of my personal portfolio! 🚀 This project is my online space to showcase my projects, my journey in front-end development, and my technical skills.
 
-## ✨ Tecnologie Utilizzate
+## ✨ Tech Stack
 
-- **React 19** - Per creare un'interfaccia dinamica e interattiva.
-- **React Router 7** - Per una navigazione fluida tra le pagine.
-- **Tailwind CSS 4** - Per uno stile moderno, responsive e altamente personalizzabile.
-- **React Icons** - Per arricchire l'interfaccia con icone professionali.
-- **React Typed** - Per effetti di testo animati.
-- **Vite** - Per uno sviluppo veloce e ottimizzato.
+- **React 19** – For building a dynamic and interactive UI.
+- **TypeScript** – For type safety and robust code.
+- **Vite** – For fast and optimized development.
+- **Tailwind CSS 4** – For modern, responsive, and highly customizable styling.
+- **@headlessui/react** – For accessible UI components (modals, dialogs).
+- **React Router 7** – For smooth navigation between pages.
+- **React Icons** – To enrich the interface with professional icons.
+- **React Typed** – For animated typing text effects.
+- **React Parallax** – For engaging parallax scrolling effects.
+- **React Hook Form** – For flexible and performant forms.
+- **React Scroll** – For smooth scrolling navigation.
+- **Class Variance Authority & clsx** – For utility-first and conditional class management.
+- **EmailJS** – For sending emails directly from the contact form.
 
-## 🔧 Installazione e Avvio del Progetto
+## 🔧 Getting Started
 
-Se vuoi esplorare o contribuire al progetto, segui questi semplici passi:
+To explore or contribute to the project, follow these simple steps:
 
-1. Clona la repository:
+1. Clone the repository:
    ```sh
-   git clone https://github.com/tuo-username/tuo-portfolio.git
+   git clone https://github.com/your-username/your-portfolio.git
    ```
-2. Spostati nella cartella del progetto:
+2. Move into the project directory:
    ```sh
-   cd tuo-portfolio
+   cd your-portfolio
    ```
-3. Installa le dipendenze:
+3. Install dependencies:
    ```sh
    npm install
    ```
-4. Avvia l'ambiente di sviluppo:
+4. Start the development server:
    ```sh
    npm run dev
    ```
-5. Apri il browser su `http://localhost:5173/` (se utilizzi Vite).
+5. Open your browser at `http://localhost:5173/` (default for Vite).
 
-## 🚀 Funzionalità Principali
+## 🚀 Main Features
 
-- **Homepage interattiva** con un'animazione di testo per catturare l'attenzione.
-- **Sezione "About"** per raccontare chi sono, le mie competenze e la mia esperienza.
-- **Portfolio progetti** con le tecnologie usate e i link ai repository GitHub.
-- **Modulo di contatto** per connettersi con me facilmente.
+- **Interactive homepage** with animated typing text and parallax effects.
+- **About section** to introduce myself, my skills, and experience.
+- **Project portfolio page** displaying a grid of projects. Each project card includes an image, title, description, and a button to learn more.
+- **Project modal**: Clicking "Learn more" opens a modal with a detailed project description, technology stack (with icons), and direct links to GitHub and live demos. The modal is accessible and styled for both light and dark themes.
+- **Contact form** powered by React Hook Form and EmailJS for easy communication.
+- **Smooth navigation** with React Router and React Scroll.
+- **Responsive design** with Tailwind CSS for all devices.
 
+## 🎯 Upcoming Updates
 
-## 🎯 Prossimi Aggiornamenti
+- Dedicated projects page to share my learning journey.
+- Contact page for collaboration opportunities.
+- UI/UX improvements with a focus on dark mode using ContextAPI.
+- Further code robustness and scalability with TypeScript (.tsx) and Next.js.
+- **Internationalization (i18n)** to support multiple languages and reach a wider audience.
 
-- Implementazione di una pagina progetti per condividere il mio percorso di apprendimento.
-- Implementazione di una pagina contatti dove potrete contattarmi per eventuali collaborazioni
-- Miglioramenti nella UI/UX per un design più accattivante, con focus sulla dark mode col ContextAPI.
-- Ottimizzazione della robustezza del codice con Typescript (.tsx) e Nextjs.
+## 📬 Contact
 
-## 📬 Contatti
-
-Se vuoi darmi un feedback o connetterti con me:
+Feel free to reach out or connect with me:
 - 💼 [LinkedIn](https://linkedin.com/in/eliagiolli)
 - 🐙 [GitHub](https://github.com/EliaGiolli)
-- 📧 Email: tua-email@example.com
+- 📧 Email: your-email@example.com
 
-Grazie per aver visitato il mio progetto! 😊
+Thank you for visiting my project! 😊
 
