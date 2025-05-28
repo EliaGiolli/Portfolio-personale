@@ -6,6 +6,7 @@ import { router } from './router/router.js'
 
 import './styles.css'
 
+import './i18n.js'
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
