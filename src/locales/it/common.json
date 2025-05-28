@@ -1,0 +1,63 @@
+{
+  "navbar": {
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "heroSection": {
+    "h3": "Pronto a fare il tuo primo passo?",
+    "h1": "Trasformerò la tua idea in un sito professionale e performante!",
+    "p": "Ogni progetto è un’opportunità per crescere. Sono qui per portare la tua idea online e trasformarla in realtà. Scopri cosa posso fare per te.",
+    "btn": "Contattami!"
+  },
+  "about": {
+    "p1": "Ciao! Sono Elia, uno sviluppatore React appassionato di interfacce web interattive e accessibili.",
+    "p2": "Sviluppo siti scalabili e multilingue, ideali per chi vuole espandere il proprio business oltre i confini nazionali.",
+    "h2": "Creo siti scalabili e multilingue — perfetti per aziende che vogliono crescere oltre i confini.",
+    "p3": "Il tuo sito sarà:",
+    "ul": [
+      "Responsive su tutti i dispositivi",
+      "Ottimizzato per velocità e SEO",
+      "Facile da navigare per i tuoi utenti"
+    ],
+    "p4": "Prenotiamo una call gratuita e trasformiamo la tua idea in un sito professionale che porta risultati.",
+    "btn": "Contattami!"
+  },
+  "projects": {
+    "veggieVibes": {
+      "description": "Una vetrina interattiva per ricette vegetariane e vegane.",
+      "longDescription": "VeggieVibes è un progetto sviluppato per esplorare chiamate API con Spoonacular e sperimentare React Router v7. Include debounce e AbortController per migliorare l’esperienza utente."
+    },
+    "pennyWise": {
+      "description": "App per tracciare le spese giornaliere e il totale.",
+      "longDescription": "Un’app semplice e intuitiva per tracciare le spese quotidiane. Permette di aggiungere voci, vedere la lista e il totale immediatamente. Ottimo progetto per approfondire la gestione dello stato in React."
+    },
+    "taskFlow": {
+      "description": "Lista di cose da fare per gestire le attività quotidiane.",
+      "longDescription": "Un’app personale per gestire le attività giornaliere. Aggiungi, modifica e cancella task velocemente. Offre persistenza dati tramite localStorage e un toggle tema chiaro/scuro. Creato per praticare le best practice React e una gestione efficace dello stato."
+    },
+    "searchForYourBook": {
+      "description": "Applicazione web per cercare libri per titolo e autore da un database online.",
+      "longDescription": "Uno strumento di ricerca libri che utilizza un’API pubblica per ottenere risultati per titolo o autore. Gli utenti possono sfogliare e vedere dettagli chiave su ogni libro. Ottimo per praticare fetch API, gestione errori e design responsivo con TailwindCSS."
+    }
+  },
+  "contact": {
+    "h2": "Contattami!",
+    "h3": "Inserisci nome e mail",
+    "name": {
+      "label": "Inserisci il tuo nome",
+      "required": "Il campo è obbligatorio",
+      "shortName": "Nome troppo corto"
+    },
+    "email": {
+      "label": "Inserisci la tua email",
+      "required": "Il campo è obbligatorio",
+      "invalidEmail": "Per favore inserisci una email valida"
+    },
+    "privacy": {
+      "text": "I tuoi dati saranno trattati secondo la nostra privacy policy",
+      "accept": "Accetto la privacy policy"
+    },
+    "btn": "Contattami!"
+  }
+}

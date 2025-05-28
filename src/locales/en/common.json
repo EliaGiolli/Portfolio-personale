@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "h3": "Ready to take your first step?",
+    "h1": "I’ll turn your idea into a high-performing and professional website!",
+    "p": "Every project is a chance to grow. I’m here to bring your idea online and turn it into reality. See what I can do for you.",
+    "button": "Contact me!"
+  },
+  "about": {
+    "intro1": "Hi! I’m Elia, a React developer passionate about building interactive and accessible web interfaces.",
+    "intro2": "I develop scalable and multi-language websites, ideal for those who want to expand their business outside national borders.",
+    "h2": "I build scalable, multilingual websites — perfect for businesses looking to grow beyond borders.",
+    "p1": "Your website will be:",
+    "features": {
+      "responsive": "Responsive across every device",
+      "seo": "Optimized for speed and SEO",
+      "navigation": "Easy for your users to navigate"
+    },
+    "p2": "Let’s book a free call and turn your idea into a professional website that gets results.",
+    "button": "Contact me!"
+  },
+  "projects": {
+    "veggievibes": {
+      "short": "An interactive showcase for finding vegetarian and vegan recipes.",
+      "long": "VeggieVibes is a project developed to explore API calls using Spoonacular and experiment with React Router v7. It includes debounce and AbortController for better UX."
+    },
+    "pennywise": {
+      "short": "A simple, intuitive app for tracking daily expenses.",
+      "long": "PennyWise lets you add items, view your list, and see the total cost instantly. A great project to deepen your understanding of state management in React."
+    },
+    "taskflow": {
+      "short": "List of todos to handle daily activities.",
+      "long": "A personal to-do list app to manage daily tasks. Add, edit, and delete tasks quickly. Features data persistence via localStorage and a light/dark theme toggle. Built to practice React best practices and effective state management."
+    },
+    "booksearch": {
+      "short": "Web application for searching books by title and author.",
+      "long": "A book search tool that uses a public API to fetch results by title or author. Users can browse and view key details about each book. Great for practicing fetch API, error handling, and responsive design with TailwindCSS."
+    }
+  },
+  "contact": {
+    "h2": "Contact me!",
+    "h3": "Enter your name and email",
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter your name",
+      "required": "This field is required",
+      "short": "Name is too short"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter your email",
+      "required": "This field is required",
+      "invalid": "Please enter a valid email"
+    },
+    "privacy": {
+      "label": "I accept the privacy policy",
+      "p": "Your data will be processed according to our privacy policy"
+    },
+    "button": "Contact me!"
+  }
+}
