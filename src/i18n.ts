@@ -7,7 +7,6 @@ import ru from './locales/ru/common.json';
 
 i18n   
 .use(LanguageDetector) 
-// Rilevamento automatico lingua   
 .use(initReactI18next)   
 .init({ resources: { 
 	en: { translation: en }, 
@@ -15,10 +14,8 @@ i18n
 	ru: { translation: ru },     
 	},     
 	fallbackLng: 'it', 
-	// Se la lingua non è supportata     
 	interpolation: {      
 		 escapeValue: false, 
-		 // React già fa escaping     
 		 },   
-		 });  
+	 });  
 	export default i18n;
