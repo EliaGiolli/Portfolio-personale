@@ -4,11 +4,12 @@
     "projects": "Projects",
     "contact": "Contact"
   },
-  "hero": {
+  "heroSection": {
     "h3": "Ready to take your first step?",
     "h1": "I’ll turn your idea into a high-performing and professional website!",
     "p": "Every project is a chance to grow. I’m here to bring your idea online and turn it into reality. See what I can do for you.",
-    "button": "Contact me!"
+    "btn": "Contact me!",
+    "bgAltImg": "A pic of a React snippet I wrote"
   },
   "about": {
     "intro1": "Hi! I’m Elia, a React developer passionate about building interactive and accessible web interfaces.",
@@ -24,10 +25,6 @@
     "button": "Contact me!"
   },
   "projects": {
-    "veggievibes": {
-      "short": "An interactive showcase for finding vegetarian and vegan recipes.",
-      "long": "VeggieVibes is a project developed to explore API calls using Spoonacular and experiment with React Router v7. It includes debounce and AbortController for better UX."
-    },
     "pennywise": {
       "short": "A simple, intuitive app for tracking daily expenses.",
       "long": "PennyWise lets you add items, view your list, and see the total cost instantly. A great project to deepen your understanding of state management in React."
@@ -36,10 +33,23 @@
       "short": "List of todos to handle daily activities.",
       "long": "A personal to-do list app to manage daily tasks. Add, edit, and delete tasks quickly. Features data persistence via localStorage and a light/dark theme toggle. Built to practice React best practices and effective state management."
     },
-    "booksearch": {
-      "short": "Web application for searching books by title and author.",
-      "long": "A book search tool that uses a public API to fetch results by title or author. Users can browse and view key details about each book. Great for practicing fetch API, error handling, and responsive design with TailwindCSS."
-    }
+    "thecozycorner": {
+      "short": "An interactive showcase website to relax and discover sections dynamically.",
+      "long": "The Cozy Corner is a project developed to explore a minimalist design and a relaxing user interaction. Each section is designed to offer a pleasant visual experience, using light animations and a responsive layout. Main technologies: TypeScript, Tailwind CSS, and Vite."
+    },
+    "clockwise": {
+      "short": "Interactive dashboard showing attendance and monthly worked hours.",
+      "long": "This project allows you to view charts with Recharts to display weekly shifts and monthly worked hours. Users can add tasks that are displayed in a table."
+    },
+    "horrorvault": {
+      "short": "Showcase site for searching movies online. Users can choose horror or other genres.",
+      "long": "This project allows you to search for movies through the integration of a public API. Users can search for movies from a mock database. It was a useful exercise to get familiar with the fetch API, error handling, and routing with Vue Router."
+    },
+    "vuestock": {
+      "short": "Modern and interactive app to add user-entered products to the catalog.",
+      "long": "This project allows you to perform basic CRUD operations to add and delete items from the inventory. The app was created with Vue 3's Composition API and TailwindCSS v4."
+    },
+    "learnMore" : "Learn more"
   },
   "contact": {
     "h2": "Contact me!",
@@ -61,5 +71,20 @@
       "p": "Your data will be processed according to our privacy policy"
     },
     "button": "Contact me!"
+  },
+  "parallax": {
+    "one": {
+      "title": "Discover what I can do for you",
+      "iconAlt": "Rocket icon",
+      "text": "I learn by doing. Here are some of my projects that helped me grow."
+    },
+    "two": {
+      "title": "Tell me about your project",
+      "iconAlt": "Handshake icon",
+      "text": "I'm always curious to hear new ideas. Feel free to write me!"
+    }
+  },
+  "footer": {
+    "connect": "Connect with me!"
   }
 }

@@ -8,49 +8,61 @@
     "h3": "Pronto a fare il tuo primo passo?",
     "h1": "Trasformerò la tua idea in un sito professionale e performante!",
     "p": "Ogni progetto è un’opportunità per crescere. Sono qui per portare la tua idea online e trasformarla in realtà. Scopri cosa posso fare per te.",
-    "btn": "Contattami!"
+    "btn": "Contattami!",
+    "bgAltImg": "foto di un mio snippet di codice con React"
   },
   "about": {
-    "p1": "Ciao! Sono Elia, uno sviluppatore React appassionato di interfacce web interattive e accessibili.",
-    "p2": "Sviluppo siti scalabili e multilingue, ideali per chi vuole espandere il proprio business oltre i confini nazionali.",
+    "intro1": "Ciao! Sono Elia, uno sviluppatore React appassionato di interfacce web interattive e accessibili.",
+    "intro2": "Sviluppo siti scalabili e multilingue, ideali per chi vuole espandere il proprio business oltre i confini nazionali.",
     "h2": "Creo siti scalabili e multilingue — perfetti per aziende che vogliono crescere oltre i confini.",
-    "p3": "Il tuo sito sarà:",
-    "ul": [
-      "Responsive su tutti i dispositivi",
-      "Ottimizzato per velocità e SEO",
-      "Facile da navigare per i tuoi utenti"
-    ],
-    "p4": "Prenotiamo una call gratuita e trasformiamo la tua idea in un sito professionale che porta risultati.",
-    "btn": "Contattami!"
-  },
+    "p1": "Il tuo sito sarà:",
+    "features": {
+      "responsive": "Responsive su tutti i dispositivi",
+      "seo": "Ottimizzato per velocità e SEO",
+      "navigation": "Facile da navigare per i tuoi utenti"
+    },
+    "p2": "Prenotiamo una call gratuita e trasformiamo la tua idea in un sito professionale che porta risultati.",
+    "button": "Contattami!"
+    },
   "projects": {
-    "veggieVibes": {
-      "description": "Una vetrina interattiva per ricette vegetariane e vegane.",
-      "longDescription": "VeggieVibes è un progetto sviluppato per esplorare chiamate API con Spoonacular e sperimentare React Router v7. Include debounce e AbortController per migliorare l’esperienza utente."
+    "pennywise": {
+      "short": "App per tracciare le spese giornaliere e il totale.",
+      "long": "Un’app semplice e intuitiva per tracciare le spese quotidiane. Permette di aggiungere voci, vedere la lista e il totale immediatamente. Ottimo progetto per approfondire la gestione dello stato in React."
     },
-    "pennyWise": {
-      "description": "App per tracciare le spese giornaliere e il totale.",
-      "longDescription": "Un’app semplice e intuitiva per tracciare le spese quotidiane. Permette di aggiungere voci, vedere la lista e il totale immediatamente. Ottimo progetto per approfondire la gestione dello stato in React."
+    "taskflow": {
+      "short": "Lista di cose da fare per gestire le attività quotidiane.",
+      "long": "Un’app personale per gestire le attività giornaliere. Aggiungi, modifica e cancella task velocemente. Offre persistenza dati tramite localStorage e un toggle tema chiaro/scuro. Creato per praticare le best practice React e una gestione efficace dello stato."
     },
-    "taskFlow": {
-      "description": "Lista di cose da fare per gestire le attività quotidiane.",
-      "longDescription": "Un’app personale per gestire le attività giornaliere. Aggiungi, modifica e cancella task velocemente. Offre persistenza dati tramite localStorage e un toggle tema chiaro/scuro. Creato per praticare le best practice React e una gestione efficace dello stato."
+    "thecozycorner": {
+      "short": "Sito vetrina interattivo per rilassarsi e scoprire sezioni in modo dinamico.",
+      "long": "The Cozy Corner è un progetto sviluppato per esplorare un design minimalista e un'interazione rilassante per l'utente. Ogni sezione è pensata per offrire un'esperienza visiva piacevole, sfruttando animazioni leggere e un layout responsive. Tecnologie principali: TypeScript, Tailwind CSS e Vite."
     },
-    "searchForYourBook": {
-      "description": "Applicazione web per cercare libri per titolo e autore da un database online.",
-      "longDescription": "Uno strumento di ricerca libri che utilizza un’API pubblica per ottenere risultati per titolo o autore. Gli utenti possono sfogliare e vedere dettagli chiave su ogni libro. Ottimo per praticare fetch API, gestione errori e design responsivo con TailwindCSS."
-    }
+    "clockwise": {
+      "short": "Dashboard interattiva che mostra le presenze e le ore mensili lavorate.",
+      "long": "Questo progetto consente di visualizzare dei grafici con Recharts per visualizzare i turni settimanali e le ore mensili lavorate. L'utente può inserire dei task che potrà visualizzare in una tabella."
+    },
+    "horrorvault": {
+      "short": "Sito vetrina per cercare film online. L'utente può scegliere i film horror o di altri generi.",
+      "long": "Questo progetto consente di cercare i film tramite l'integrazione di un'API pubblica. L'utente può cercare film ricavati da un mock database. È stato un esercizio utile per prendere confidenza con fetch API, gestione degli errori e il routing con Vue Router."
+    },
+    "vuestock": {
+      "short": "App moderna e interattiva che permette di aggiungere dei prodotti inseriti dall'utente al catalogo.",
+      "long": "Questo progetto consente di compiere delle basi operazioni CRUD per aggiungere e cancellare degli elementi all'inventario. L'app è stata creata con la CompositionAPI di Vue3 e TailwindCSS v4."
+    },
+    "learnMore" : "scopri di più"
   },
   "contact": {
     "h2": "Contattami!",
     "h3": "Inserisci nome e mail",
     "name": {
-      "label": "Inserisci il tuo nome",
+      "label": "il tuo nome",
+      "placeholder": "Inserisci il tuo nome",
       "required": "Il campo è obbligatorio",
       "shortName": "Nome troppo corto"
     },
     "email": {
-      "label": "Inserisci la tua email",
+      "label": "la tua email",
+      "placeholder": "Inserisci la tua email",
       "required": "Il campo è obbligatorio",
       "invalidEmail": "Per favore inserisci una email valida"
     },
@@ -59,5 +71,20 @@
       "accept": "Accetto la privacy policy"
     },
     "btn": "Contattami!"
+  },
+  "parallax": {
+    "one": {
+      "title": "Scopri cosa posso fare per te",
+      "iconAlt": "Icona razzo",
+      "text": "Imparo facendo. Questi sono alcuni dei miei progetti che mi hanno aiutato a crescere."
+    },
+    "two": {
+      "title": "Raccontami il tuo progetto",
+      "iconAlt": "Icona stretta di mano",
+      "text": "Sono sempre curioso di ascoltare nuove idee. Scrivimi senza impegno!"
+    }
+  },
+  "footer": {
+    "connect": "Connettiti con me!"
   }
 }

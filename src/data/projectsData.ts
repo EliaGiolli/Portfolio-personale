@@ -33,13 +33,13 @@ export const projectsData: ProjectDataTypes[]  = [
     },
     {
         id: 4,
-        title: "Search 4 Your Book",
-        description: "Sito per cercare libri per titolo o autore da un database online.",
-        longDescription: "Questo progetto consente di cercare libri tramite l'integrazione con un'API pubblica. L'utente può cercare libri per titolo o autore e visualizzare i dettagli principali. È stato un esercizio utile per prendere confidenza con fetch API, gestione degli errori e design responsive con Tailwind.",
-        imageUrl: "/img/booksearch.png",
-        githubLink: "https://github.com/EliaGiolli/search4yourbook_react",
-        demoLink: "https://search4booksreact.netlify.app/",
-        technologies: ["React","Typescript", "Tailwind CSS", "Vite"]
+        title: "HorrorVault",
+        description: "Sito vetrina per cercare film online. L'utente può scegliere i film horror o di altri generi",
+        longDescription: "Questo progetto consente di cercare i film tramite l'integrazione di un'API pubblica. L'utente può cercare film ricavati da un mock database. È stato un esercizio utile per prendere confidenza con fetch API, gestione degli errori e il routing con Vue Router",
+        imageUrl: "/img/horrorvault.png",
+        githubLink: "https://github.com/EliaGiolli/HorrorVault-Vue",
+        demoLink: "https://horror-vault-vue.vercel.app/horror",
+        technologies: ["Vue", "Vite"]
     },
     {
         id: 5,

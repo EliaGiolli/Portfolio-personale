@@ -2,6 +2,7 @@ import { useState } from 'react';
 import React from 'react';
 
 import { useTheme } from '../contexts/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 import Card from '../components/Card'
 import Button from '../components/Button';
@@ -20,13 +21,15 @@ import { Element } from 'react-scroll';
 
 
 function Projects() {
-  const {themeMode} = useTheme();
+  const { themeMode } = useTheme();
+  const { t } = useTranslation();
+
   // Stato per aprire/chiudere la modale
   const [isOpen, setIsOpen] = useState(false);
   // Aggiungiamo uno stato per il progetto selezionato
   const [selectedProject, setSelectedProject] = useState<ProjectDataTypes | null>(null);
 
-  const getTechIcon = (tech:string, className:string) => {
+  const getTechIcon = (tech: string, className: string) => {
     switch (tech) {
       case 'Javascript':
         return <FaJs className={`icon ${className}`} />;
@@ -42,7 +45,7 @@ function Projects() {
         return <SiAxios className={`icon ${className}`} />;
       case 'Vite':
         return <TbBrandVite className={`icon ${className}`} />;
-        case 'Vue':
+      case 'Vue':
         return <FaVuejs className={`icon ${className}`} />;
       default:
         return null;
@@ -53,23 +56,35 @@ function Projects() {
     <>  
       <Element name='projects' className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-4 min-h-[500px]'>
         
-          {projectsData.map((project:ProjectDataTypes, index) => (
-            <Card key={index} CardVariant="project">
-              <div className="flex flex-col h-[500px] text-white">
-                <div className='max-w-3xl'>
-                  <img src={project.imageUrl} alt={project.title} className='object-cover w-full h-[200px] rounded-lg mb-4' />
+          {projectsData.map((project: ProjectDataTypes, index) => {
+            // Normalizza la chiave per la traduzione (es: "thecozycorner", "clockwise", ecc.)
+            const key = project.title
+              .toLowerCase()
+              .replace(/\s/g, '')
+              .replace(/[^a-z0-9]/gi, '');
+
+            return (
+              <Card key={index} CardVariant="project">
+                <div className="flex flex-col h-[500px] text-white">
+                  <div className='max-w-3xl'>
+                    <img src={project.imageUrl} alt={project.title} className='object-cover w-full h-[200px] rounded-lg mb-4' />
+                  </div>
+                  <h2 className={`subtitle mb-2 ${themeMode === 'dark' ? 'text-primary' : 'text-blue-400'}`}>{project.title}</h2>
+                  <p className={`${themeMode === 'dark' ? 'paragraph' : 'paragraph text-gray-900 text-lg'}`}>
+                    {t(`projects.${key}.short`)}
+                  </p>
+                  <div className="mt-auto flex justify-center">
+                    <Button onClick={() => {
+                      setSelectedProject(project);
+                      setIsOpen(true);
+                    }}>
+                      {t('projects.learnMore')}
+                    </Button>
+                  </div>
                 </div>
-                <h2 className={`subtitle mb-2 ${themeMode ==='dark'?'text-primary':'text-blue-400'}`}>{project.title}</h2>
-                <p className={`${themeMode ==='dark'?'paragraph':'paragraph text-gray-900 text-lg'}`}>{project.description}</p>
-                <div className="mt-auto flex justify-center">
-                  <Button onClick={() => {
-                    setSelectedProject(project);
-                    setIsOpen(true);
-                  }}>Scopri di più!</Button>
-                </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            );
+          })}
         
       </Element>
 

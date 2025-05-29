@@ -2,13 +2,17 @@ import { useTheme } from '../contexts/ThemeContext'
 
 import { Link } from 'react-router-dom'
 import { Link as ScrollLink } from 'react-scroll'
+import { useTranslation } from 'react-i18next'
 // React Icons
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { FaReact, FaNodeJs, FaHtml5, FaCss3 } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io'
 
 function Footer() {
-  const {themeMode} =useTheme();
+
+  const { t } = useTranslation('common')
+  const { themeMode } = useTheme();
+
   return (
     <>
       <footer className={`border-t-2 p-3 ${themeMode ==='dark'?'bg-primary text-primary border-t-cyan-500':'bg-blue-50 text-gray-900 border-t-blue-500'}`}>
@@ -23,8 +27,8 @@ function Footer() {
             </div>
 
             {/* Connettiti con me */}
-            <h5 className="subtitle-secondary">Connettiti con me!</h5>
-            <p className="paragraph">Mail: info@giollidesign.com</p>
+            <h5 className="subtitle-secondary">{t('footer.connect')}</h5>
+            <p className="paragraph">{t('footer.email')}: info@giollidesign.com</p>
 
             {/* Icone Social */}
             <div className="flex justify-center gap-8">
