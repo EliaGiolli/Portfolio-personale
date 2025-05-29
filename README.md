@@ -17,6 +17,7 @@ Welcome to the repository of my personal portfolio! 🚀 This project is my onli
 - **React Scroll** – For smooth scrolling navigation.
 - **Class Variance Authority & clsx** – For utility-first and conditional class management.
 - **EmailJS** – For sending emails directly from the contact form.
+- **i18next** – For robust internationalization support.
 
 ## 🔧 Getting Started
 
@@ -50,13 +51,129 @@ To explore or contribute to the project, follow these simple steps:
 - **Smooth navigation** with React Router and React Scroll.
 - **Responsive design** with Tailwind CSS for all devices.
 
+## 🌍 Internationalization (i18n) Setup
+
+The project implements a robust internationalization system using i18next, supporting multiple languages (English, Italian, and Russian). Here's a detailed breakdown of the i18n implementation:
+
+### Configuration Files
+
+1. **`src/i18n.ts`** - Main i18n configuration file:
+   ```typescript
+   import i18n from 'i18next';
+   import { initReactI18next } from 'react-i18next';
+   import LanguageDetector from 'i18next-browser-languagedetector';
+   ```
+   - Initializes i18next with React integration
+   - Uses browser language detection
+   - Sets up fallback language (Italian)
+   - Configures interpolation and default namespace
+
+2. **`src/i18n.d.ts`** - TypeScript declaration file:
+   ```typescript
+   import 'i18next';
+   import eCommon from './locales/en/common.json'
+   ```
+   - Provides TypeScript type safety for translations
+   - Extends i18next's type definitions
+   - Ensures type checking for translation keys
+
+### Translation Structure
+
+Translations are organized in the `src/locales` directory:
+```
+src/locales/
+├── en/
+│   └── common.json
+├── it/
+│   └── common.json
+└── ru/
+    └── common.json
+```
+
+Each language file follows the same structure, making it easy to maintain consistency across translations.
+
+### Type Safety with TypeScript
+
+The project leverages TypeScript to ensure type safety in translations:
+
+1. **Type Definitions**: The `i18n.d.ts` file extends i18next's type system:
+   ```typescript
+   declare module 'i18next' {
+     interface CustomTypeOptions {
+       resources: {
+         translation: typeof eCommon;
+       };
+       defaultNS: 'common';
+     }
+   }
+   ```
+   This ensures that:
+   - Translation keys are type-checked
+   - Autocomplete works in your IDE
+   - Prevents typos in translation keys
+
+2. **Usage in Components**:
+   ```typescript
+   import { useTranslation } from 'react-i18next';
+   
+   function MyComponent() {
+     const { t } = useTranslation();
+     return <h1>{t('navbar.about')}</h1>;
+   }
+   ```
+
+### Key Features
+
+1. **Automatic Language Detection**:
+   - Uses `i18next-browser-languagedetector` to detect user's preferred language
+   - Falls back to Italian if the detected language isn't supported
+
+2. **Namespace Organization**:
+   - Uses the 'common' namespace for shared translations
+   - Structured JSON format for easy maintenance
+   - Hierarchical organization of translation keys
+
+3. **Type-Safe Translations**:
+   - Full TypeScript support
+   - Compile-time checking of translation keys
+   - IDE autocomplete support
+
+4. **Easy Language Switching**:
+   ```typescript
+   const { i18n } = useTranslation();
+   i18n.changeLanguage('en'); // Switch to English
+   ```
+
+### Best Practices Implemented
+
+1. **Separation of Concerns**:
+   - Translation files are separate from application logic
+   - Clear directory structure for different languages
+
+2. **Type Safety**:
+   - Strong TypeScript integration
+   - Compile-time checking of translation keys
+   - Prevents runtime errors from missing translations
+
+3. **Maintainability**:
+   - Consistent JSON structure across languages
+   - Easy to add new languages
+   - Clear organization of translation keys
+
+4. **Performance**:
+   - Lazy loading of translation files
+   - Efficient language switching
+   - Browser caching support
+
+
+
 ## 🎯 Upcoming Updates
 
 - Dedicated projects page to share my learning journey.
 - Contact page for collaboration opportunities.
 - UI/UX improvements with a focus on dark mode using ContextAPI.
-- Further code robustness and scalability with TypeScript (.tsx) and Next.js.
-- **Internationalization (i18n)** to support multiple languages and reach a wider audience.
+- Further code robustness and scalability with Next.js.
+- Unit testing with Jest and React Testing Library
 
 ## 📬 Contact
 
