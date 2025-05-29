@@ -9,13 +9,14 @@ i18n
 .use(LanguageDetector) 
 .use(initReactI18next)   
 .init({ resources: { 
-	en: { translation: en }, 
-	it: { translation: it },           
-	ru: { translation: ru },     
+	en: { common: en }, 
+	it: { common: it },           
+	ru: { common: ru },     
 	},     
 	fallbackLng: 'it', 
 	interpolation: {      
 		 escapeValue: false, 
-		 },   
+		 }, 
+		defaultNS: 'common'
 	 });  
 	export default i18n;
