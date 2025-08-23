@@ -17,10 +17,8 @@ function Card({ children, CardVariant = "default", className, ...props }: CardPr
 
 export default Card;
 
-
-// Define the card variants using cva
 const cardVariant = cva(
-  "bg-inherit min-h-full mx-auto flex flex-col overflow-hidden", // baseStyles
+  "bg-inherit min-h-full mx-auto flex flex-col overflow-hidden",
   {
     variants: {
       variant: {
@@ -37,7 +35,7 @@ const cardVariant = cva(
       {
         variant: "project",
         themeMode: "light",
-        className: "max-w-2xl p-5 rounded-lg bg-white border-1 border-blue-400",
+        className: "max-w-2xl p-5 rounded-lg bg-white border border-gray-200 shadow-md",
       },
       {
         variant: "project",

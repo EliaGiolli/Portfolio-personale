@@ -27,7 +27,7 @@ const buttonVariant = cva(
           default: "",
           customBtn: "shadow-md",
           hamburgerBtn: "block md:hidden",
-          toggleBtn: "bg-blue-500 hover:bg-blue-800 text-white shd", 
+          toggleBtn: "shadow-md", 
         },
         themeMode: {
           light: "",
@@ -38,7 +38,7 @@ const buttonVariant = cva(
         {
           variant: "customBtn",
           themeMode: "light",
-          className: "bg-blue-900 hover:bg-blue-700 text-gray-200 shadow-gray-900",
+          className: "bg-blue-600 hover:bg-blue-700 text-white shadow-gray-300",
         },
         {
           variant: "customBtn",
@@ -48,13 +48,12 @@ const buttonVariant = cva(
         {
           variant: 'toggleBtn',
           themeMode: 'light',
-          className: 'bg-blue-500 hover:bg-blue-400 text-gray-300 hover:text-gray-200 shadow-gray-200'
+          className: 'bg-blue-600 hover:bg-blue-700 text-white shadow-gray-300'
         },
         {
           variant: 'toggleBtn',
           themeMode: 'dark',
           className: 'bg-blue-800 text-white hover:bg-blue-700 shadow-gray-200'
-
         }
       ],
       defaultVariants: {

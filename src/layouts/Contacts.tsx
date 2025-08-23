@@ -33,7 +33,7 @@ function Contacts() {
           className={`bg-inherit w-full max-w-3xl mx-auto p-6 ${themeMode ==='dark'?'text-primary':'text-gray-900'}`} id="form-id"
         >
           <div className="flex justify-center items-center text-center gap-4 w-full p-4">
-            <h2 className={`subtitle border-b-1 ${themeMode==='dark'?'text-tertiary border-b-white':'text-blue-400 border-b-blue-500'}`}>
+            <h2 className={`subtitle border-b-1 ${themeMode==='dark'?'text-tertiary border-b-white':'text-blue-600 border-b-blue-600'}`}>
               {t("contact.h2", "Contattami!")}
             </h2>
           </div>
@@ -49,7 +49,7 @@ function Contacts() {
                     maxLength: 10
                 })} 
                 placeholder={t("contact.name.placeholder", "inserisci il tuo nome")} 
-                className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 ${themeMode ==='dark'?'bg-secondary text-primary rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 '}`}
+                className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 ${themeMode ==='dark'?'bg-secondary text-primary rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200'}`}
               />
               {errors.nome && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.nome.message}</p>}
               <label htmlFor="email">{t("contact.email.label", "Inserisci la tua email")}</label>
@@ -63,7 +63,7 @@ function Contacts() {
                     }
                   })} 
                 placeholder={t("contact.email.placeholder", "inserisci la tua email")} 
-                className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 ${themeMode ==='dark'?'bg-secondary text-primary rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 '}`}
+                className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 ${themeMode ==='dark'?'bg-secondary text-primary rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200'}`}
               />
               {errors.email && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.email.message}</p>}
             </div>
@@ -85,7 +85,6 @@ function Contacts() {
           </div>
         </form>
       </Element>     
-    
     </>
   )
 }

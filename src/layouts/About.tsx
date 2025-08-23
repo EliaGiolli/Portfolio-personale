@@ -28,11 +28,11 @@ function About() {
               Elia Giolli
             </h3>
             
-            <span className={`text-3xl sm:text-5xl font-bold my-4 ${themeMode === 'dark' ? 'text-tertiary' : 'text-blue-400'}`}>
+            <span className={`text-3xl sm:text-5xl font-bold my-4 ${themeMode === 'dark' ? 'text-tertiary' : 'text-blue-600'}`}>
               <ReactTyped
                 strings={[
                   "Jr React developer",
-                  "Jr Front-end developer",
+                  "Jr Full-stack developer",
                 ]}
                 typeSpeed={40}
                 backSpeed={50}
@@ -52,22 +52,22 @@ function About() {
 
         <Card CardVariant="profile">
           <div className="grid col-span-2 px-4">
-            <h2 className={`subtitle ${themeMode === 'dark' ? 'text-tertiary' : 'text-blue-400'}`}>
+            <h2 className={`subtitle ${themeMode === 'dark' ? 'text-tertiary' : 'text-blue-600'}`}>
               {t('about.h2')}
             </h2>
 
             <p className="paragraph">{t('about.p1')}</p>
 
             <ul className='flex flex-col justify-center items-center text-center p-3'>
-              <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark' ? 'text-primary' : 'text-grey-900'}`}>
+              <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark' ? 'text-primary' : 'text-gray-900'}`}>
                 <FaLaptopCode size={30} className='mr-3' />
                 {t('about.features.responsive')}
               </li>
-              <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark' ? 'text-primary' : 'text-grey-900'}`}>
+              <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark' ? 'text-primary' : 'text-gray-900'}`}>
                 <TbManualGearbox size={30} className='mr-3' />
                 {t('about.features.seo')}
               </li>
-              <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark' ? 'text-primary' : 'text-grey-900'}`}>
+              <li className={`md:text-xl text-center p-2 flex items-center ${themeMode === 'dark' ? 'text-primary' : 'text-gray-900'}`}>
                 <TiTick size={30} className='mr-3' />
                 {t('about.features.navigation')}
               </li>
