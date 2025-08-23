@@ -51,7 +51,7 @@ function Projects() {
 
   return (
     <>  
-      <Element name='projects' className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-4 min-h-[500px]'>
+      <Element name='projects' className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-4 min-h-[600px]'>
         {projectsData.map((project: ProjectDataTypes, index) => {
           const key = project.title
             .toLowerCase()
@@ -60,15 +60,15 @@ function Projects() {
 
           return (
             <Card key={index} CardVariant="project">
-              <div className="flex flex-col h-[500px]">
+              <div className="flex flex-col h-[600px]">
                 <div className='max-w-3xl'>
                   <img src={project.imageUrl} alt={project.title} className='object-cover w-full h-[200px] rounded-lg mb-4' />
                 </div>
                 <h2 className={`subtitle mb-2 ${themeMode === 'dark' ? 'text-primary' : 'text-blue-600'}`}>{project.title}</h2>
-                <p className={`${themeMode === 'dark' ? 'paragraph' : 'paragraph text-gray-900 text-lg'}`}>
+                <p className={`${themeMode === 'dark' ? 'paragraph' : 'paragraph text-gray-900 text-lg'} flex-grow`}>
                   {t(`projects.${key}.short`)}
                 </p>
-                <div className="mt-auto flex justify-center">
+                <div className="mt-4 flex justify-center">
                   <Button onClick={() => {
                     setSelectedProject(project);
                     setIsOpen(true);
