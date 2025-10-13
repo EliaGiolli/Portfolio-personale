@@ -9,6 +9,7 @@
     "h1": "Trasformerò la tua idea in un sito professionale e performante!",
     "p": "Ogni progetto è un’opportunità per crescere. Sono qui per portare la tua idea online e trasformarla in realtà. Scopri cosa posso fare per te.",
     "btn": "Contattami!",
+    "buttonTransparent": "Scopri i miei progetti!",
     "bgAltImg": "foto di un mio snippet di codice con React"
   },
   "about": {
@@ -67,8 +68,8 @@
       "invalidEmail": "Per favore inserisci una email valida"
     },
     "privacy": {
-      "text": "I tuoi dati saranno trattati secondo la nostra privacy policy",
-      "accept": "Accetto la privacy policy"
+      "label": "Accetto la privacy policy",
+      "p": "I tuoi dati saranno trattati secondo la nostra privacy policy"
     },
     "btn": "Contattami!"
   },
@@ -85,6 +86,7 @@
     }
   },
   "footer": {
-    "connect": "Connettiti con me!"
+    "connect": "Connettiti con me!",
+    "email": "email"
   }
 }

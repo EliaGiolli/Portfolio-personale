@@ -1,13 +1,20 @@
-import { cva, VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import clsx from "clsx";
 import { useTheme } from "../contexts/ThemeContext";
 import { CardProps } from "../types/generalTypes";
+import { CardVariants } from "../types/enums";
 
-function Card({ children, CardVariant = "default", className, ...props }: CardProps) {
+function Card({ 
+  children, 
+  variant = CardVariants.default , 
+  className, 
+  ...props }: CardProps) {
+
   const { themeMode } = useTheme(); 
+
   return (
     <div
-      className={clsx(cardVariant({ variant: CardVariant, themeMode: themeMode }), className)}
+      className={clsx(cardVariant({ variant, themeMode: themeMode }), className)}
       {...props}
     >
       {children}
@@ -18,7 +25,7 @@ function Card({ children, CardVariant = "default", className, ...props }: CardPr
 export default Card;
 
 const cardVariant = cva(
-  "bg-inherit min-h-full mx-auto flex flex-col overflow-hidden",
+  "min-h-full mx-auto flex flex-col overflow-hidden",
   {
     variants: {
       variant: {
@@ -27,8 +34,8 @@ const cardVariant = cva(
         profile: "max-w-3xl py-3",
       },
       themeMode: {
-        light: "",
-        dark: "",
+        light: "bg-blue-50",
+        dark: "bg-gray-800",
       },
     },
     compoundVariants: [

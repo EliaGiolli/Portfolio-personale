@@ -18,35 +18,13 @@
 
 @layer utilities{
  
-   
-    /* DARK MODE*/
-    .dark .bg-primary     { @apply bg-gray-800; }
-    .dark .bg-secondary   { @apply bg-gray-700; }
-    .dark .bg-tertiary    { @apply bg-cyan-600; }
-
-    .dark .text-primary   { @apply text-white; }
-    .dark .text-secondary { @apply text-gray-300; }
-    .dark .text-tertiary  { @apply text-cyan-300; }
-    .dark .text-subtitle  { @apply text-blue-400; }
-
-
-
-
-  /* TEXTS*/
-  .title-primary {
-    @apply text-3xl md:text-5xl font-extrabold text-center;
-  }  
-  .subtitle{
-    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words;
+   .app-container {
+      max-width: 1200px; 
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
   }
-  .subtitle-secondary { @apply text-xl sm:text-2xl text-center; }
-  .paragraph{
-    @apply text-center text-lg sm:text-2xl p-3;
-  }
-  .text-accent { @apply text-xl sm:text-2xl; }
-  .text-accent-secondary { @apply text-sm md:text-lg; }
 }
-
 
 @layer components{
   /*  FOTO & ICONS  */

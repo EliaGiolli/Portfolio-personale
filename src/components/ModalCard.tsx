@@ -31,12 +31,12 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
             <div className="fixed inset-0 flex items-center justify-center p-4">
                 <DialogPanel 
                     ref={modalRef}
-                    className={`w-full max-w-3xl rounded-xl shadow-xl overflow-hidden ${themeMode === 'dark' ? 'bg-primary text-primary' : 'bg-white text-gray-900'}`}
+                    className={`w-full max-w-3xl rounded-xl shadow-xl overflow-hidden ${themeMode === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700'}`}
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="modal-title"
                 >
-                    <div className={`flex justify-between items-center py-2 px-4 ${themeMode === 'dark' ? 'bg-secondary text-primary' : 'bg-gray-50 text-gray-900 border-b border-gray-200'}`}>
+                    <div className={`flex justify-between items-center py-2 px-4 ${themeMode === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700 border-b border-gray-200'}`}>
                         <h2 id="modal-title" className="text-lg font-semibold">{title}</h2>
                         <button 
                             ref={closeButtonRef}
@@ -53,7 +53,7 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                             <img src={imageUrl} alt={title} className="w-full h-auto rounded-lg" />
                         </div>
                         
-                        <p className={`my-5 ${themeMode === 'dark' ? 'text-primary' : 'text-gray-900'}`}>
+                        <p className={`my-5 ${themeMode === 'dark' ? 'text-white' : 'text-gray-700'}`}>
                             {t(`projects.${key}.long`, longDescription)}
                         </p>
                         
@@ -71,7 +71,7 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                             <a 
                                 ref={firstLinkRef}
                                 href={githubLink} 
-                                className={`btn ${themeMode === 'dark' ? 'bg-cyan-600 hover:bg-cyan-800 text-primary' : 'bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md'}`}
+                                className={`btn ${themeMode === 'dark' ? 'bg-cyan-600 hover:bg-cyan-800 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md'}`}
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 aria-label={`View ${title} on GitHub`}
@@ -80,7 +80,7 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                             </a>
                             <a 
                                 href={demoLink} 
-                                className={`btn ${themeMode === 'dark' ? 'bg-cyan-600 hover:bg-cyan-800 text-primary' : 'bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md'}`} 
+                                className={`btn ${themeMode === 'dark' ? 'bg-cyan-600 hover:bg-cyan-800 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md'}`} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 aria-label={`View ${title} live demo`}

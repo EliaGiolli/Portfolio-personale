@@ -2,8 +2,16 @@ import {cva} from 'class-variance-authority'
 import clsx from 'clsx';
 import { useTheme } from '../contexts/ThemeContext'
 import { ButtonProps } from '../types/generalTypes';
+import { ButtonVariants } from '../types/enums';
 // eslint-disable-next-line react/prop-types
-function Button({ children, onClick, className, variant = 'customBtn', ...props }:ButtonProps) {
+function Button({ 
+    children, 
+    onClick, 
+    className, 
+    disabled,
+    variant = ButtonVariants.customBtn,
+     ...props }:ButtonProps) {
+
   const { themeMode } = useTheme();
 
   return (
@@ -11,6 +19,7 @@ function Button({ children, onClick, className, variant = 'customBtn', ...props 
       className={clsx(buttonVariant({ variant, themeMode}), className)}
       onClick={onClick}
       {...props}
+      disabled={disabled}
     >
       {children}
     </button>
@@ -20,14 +29,15 @@ function Button({ children, onClick, className, variant = 'customBtn', ...props 
 export default Button
 
 const buttonVariant = cva(
-    "px-5 py-4 font-semibold rounded-md cursor-pointer transition-all duration-200",
+    "inline-flex justify-center items-center px-4 py-3 font-semibold rounded-lg cursor-pointer transition-all duration-200 text-base box-border",
     {
       variants: {
         variant: {
           default: "",
-          customBtn: "shadow-md",
+          customBtn: "shadow-sm",
           hamburgerBtn: "block md:hidden",
-          toggleBtn: "shadow-md", 
+          toggleBtn: "", 
+          transparentBtn: "shadow-md border-2"
         },
         themeMode: {
           light: "",
@@ -39,6 +49,16 @@ const buttonVariant = cva(
           variant: "customBtn",
           themeMode: "light",
           className: "bg-blue-600 hover:bg-blue-700 text-white shadow-gray-300",
+        },
+        {
+          variant: "transparentBtn",
+          themeMode: "light",
+          className: "bg-transparent hover:bg-blue-100 text-gray-900 hover:text-gray-600 border-cyan-300"
+        },
+        {
+          variant: "transparentBtn",
+          themeMode: "dark",
+          className: "bg-transparent hover:bg-blue-50 text-gray-300 hover:text-gray-600 border-cyan-300"
         },
         {
           variant: "customBtn",
@@ -54,6 +74,10 @@ const buttonVariant = cva(
           variant: 'toggleBtn',
           themeMode: 'dark',
           className: 'bg-blue-800 text-white hover:bg-blue-700 shadow-gray-200'
+        },
+        {
+          variant: "transparentBtn",
+
         }
       ],
       defaultVariants: {

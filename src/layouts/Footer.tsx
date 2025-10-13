@@ -16,7 +16,8 @@ function Footer() {
 
   return (
     <>
-      <footer className={`border-t-2 p-3 ${themeMode ==='dark'?'bg-primary text-primary border-t-cyan-500':'bg-white text-gray-900 border-t-gray-200'}`}>
+      <footer className={`p-3 
+        ${themeMode ==='dark'?'bg-gray-800 text-white':'bg-blue-50 text-gray-700'}`}>
         <div className="w-full px-4 py-8">
           <div className="text-center space-y-4">
             {/* Logo e Titolo */}
@@ -24,12 +25,13 @@ function Footer() {
               <ScrollLink to="heroSection" smooth={true} duration={500}>
                 <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />
               </ScrollLink>
-              <h6 className={`subtitle ${themeMode ==='dark'?'text-tertiary':'text-blue-600'}`}>GIOLLI DESIGN</h6>
+              <h6 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words
+                ${themeMode ==='dark'?'text-cyan-300':'text-blue-600'}`}>GIOLLI DESIGN</h6>
             </div>
 
             {/* Connettiti con me */}
-            <h5 className="subtitle-secondary">{t('footer.connect')}</h5>
-            <p className="paragraph">{t('footer.email')}: info@giollidesign.com</p>
+            <h5 className="text-xl sm:text-2xl text-center">{t('footer.connect')}</h5>
+            <p className="text-center text-lg sm:text-2xl p-3">{t('footer.email')}: info@giollidesign.com</p>
 
             {/* Icone Social */}
             <div className="flex justify-center gap-8">

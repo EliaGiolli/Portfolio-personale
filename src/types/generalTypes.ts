@@ -1,11 +1,11 @@
 import React, { type ChangeEvent, type ReactNode } from "react";
 import { ProjectDataTypes } from "./ProjectDataTypes";
-
+import { ButtonVariants, CardVariants } from "./enums";
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: 'customBtn' | 'toggleBtn' | 'hamburgerBtn'
-    children?: ReactNode
-    disable?: boolean,
+    variant?: ButtonVariants
+    children?: ReactNode,
+    disabled?: boolean
 }
 
 export interface InputProps {
@@ -18,7 +18,7 @@ export interface InputProps {
 }
 
 export type CardProps = React.HTMLAttributes<HTMLDivElement> & {
-    CardVariant?: 'project' | 'profile' | 'default',
+    variant?: CardVariants,
     children?: ReactNode
 }
 

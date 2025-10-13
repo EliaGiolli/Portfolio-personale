@@ -9,6 +9,7 @@
     "h1": "I’ll turn your idea into a high-performing and professional website!",
     "p": "Every project is a chance to grow. I’m here to bring your idea online and turn it into reality. See what I can do for you.",
     "btn": "Contact me!",
+    "buttonTransparent": "Discover my projects!",
     "bgAltImg": "A pic of a React snippet I wrote"
   },
   "about": {
@@ -85,6 +86,7 @@
     }
   },
   "footer": {
-    "connect": "Connect with me!"
+    "connect": "Connect with me!",
+    "email": "email"
   }
 }

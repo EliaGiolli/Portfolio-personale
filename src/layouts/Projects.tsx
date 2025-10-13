@@ -4,10 +4,10 @@ import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useTranslation } from 'react-i18next';
 
-import Card from '../components/Card'
+import Card from '../components/Card';
 import Button from '../components/Button';
 import ModalCard from '../components/ModalCard';
-import { projectsData } from '../data/projectsData'
+import { projectsData } from '../data/projectsData';
 import { ProjectDataTypes } from '../types/ProjectDataTypes';
 
 // React icons
@@ -18,6 +18,7 @@ import { TbBrandVite } from "react-icons/tb";
 
 // External libraries
 import { Element } from 'react-scroll';
+import { CardVariants } from '../types/enums';
 
 function Projects() {
   const { themeMode } = useTheme();
@@ -49,23 +50,37 @@ function Projects() {
     }
   };
 
+  const limitedProjects = projectsData.slice(0, 3);
+
   return (
     <>  
-      <Element name='projects' className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-4 min-h-[600px]'>
-        {projectsData.map((project: ProjectDataTypes, index) => {
+      <Element name='projects' className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-8 py-8 min-h-[600px]'>
+        {limitedProjects.map((project: ProjectDataTypes, index) => {
           const key = project.title
             .toLowerCase()
             .replace(/\s/g, '')
             .replace(/[^a-z0-9]/gi, '');
 
           return (
-            <Card key={index} CardVariant="project">
+            <Card key={index} variant={CardVariants.project}>
               <div className="flex flex-col h-[600px]">
                 <div className='max-w-3xl'>
-                  <img src={project.imageUrl} alt={project.title} className='object-cover w-full h-[200px] rounded-lg mb-4' />
+                  <img 
+                    src={project.imageUrl} 
+                    alt={project.title} 
+                    className='object-cover w-full h-[200px] rounded-lg mb-4' 
+                  />
                 </div>
-                <h2 className={`subtitle mb-2 ${themeMode === 'dark' ? 'text-primary' : 'text-blue-600'}`}>{project.title}</h2>
-                <p className={`${themeMode === 'dark' ? 'paragraph' : 'paragraph text-gray-900 text-lg'} flex-grow`}>
+                <h2 
+                  className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words mb-2 
+                    ${themeMode === 'dark' ? 'text-cyan-500' : 'text-blue-600'}`}
+                >
+                  {project.title}
+                </h2>
+                <p 
+                  className={`text-center text-lg sm:text-2xl p-3 flex-grow
+                    ${themeMode === 'dark' ? 'text-white' : 'text-gray-700'}`}
+                >
                   {t(`projects.${key}.short`)}
                 </p>
                 <div className="mt-4 flex justify-center">
