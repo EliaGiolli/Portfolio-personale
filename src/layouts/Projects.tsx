@@ -1,5 +1,5 @@
 //Hooks
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 //Internal imports
 import { useThemeStore } from '../store/store';
 //External libraries
@@ -21,13 +21,25 @@ import { projectsData } from '../data/projectsData';
 import { ProjectDataTypes } from '../types/ProjectDataTypes';
 
 function Projects() {
+  
   const initialTheme = useThemeStore(state => state.initialTheme);
   const { t } = useTranslation();
-
+  //States
   const [isOpen, setIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<ProjectDataTypes | null>(null);
 
-  const getTechIcon = (tech: string, className: string) => {
+  //Modal callbacks
+  const handleOpenModal = useCallback((project: ProjectDataTypes) => {
+    setSelectedProject(project);
+    setIsOpen(true);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setIsOpen(false);
+    setSelectedProject(null);
+  }, []);
+
+  const getTechIcon = useCallback((tech: string, className: string) => {
     switch (tech) {
       case 'Javascript':
         return <FaJs className={`icon ${className}`} />;
@@ -48,7 +60,7 @@ function Projects() {
       default:
         return null;
     }
-  };
+  }, []);
 
   const limitedProjects = projectsData.slice(0, 3);
 
@@ -84,10 +96,7 @@ function Projects() {
                   {t(`projects.${key}.short`)}
                 </p>
                 <div className="mt-4 flex justify-center">
-                  <Button onClick={() => {
-                    setSelectedProject(project);
-                    setIsOpen(true);
-                  }}>
+                  <Button onClick={() => handleOpenModal(project)}>
                     {t('projects.learnMore')}
                   </Button>
                 </div>
@@ -99,7 +108,7 @@ function Projects() {
 
       {isOpen && selectedProject && (
         <ModalCard 
-          closeModal={() => setIsOpen(false)} 
+          closeModal={closeModal} 
           getTechIcon={getTechIcon} 
           project={selectedProject} 
         />
