@@ -1,6 +1,6 @@
 import {cva} from 'class-variance-authority'
 import clsx from 'clsx';
-import { useTheme } from '../contexts/ThemeContext'
+import { useThemeStore } from '../store/store';
 import { ButtonProps } from '../types/generalTypes';
 import { ButtonVariants } from '../types/enums';
 // eslint-disable-next-line react/prop-types
@@ -12,11 +12,11 @@ function Button({
     variant = ButtonVariants.customBtn,
      ...props }:ButtonProps) {
 
-  const { themeMode } = useTheme();
+  const initialTheme = useThemeStore(state => state.initialTheme ?? 'dark');
 
   return (
    <button
-      className={clsx(buttonVariant({ variant, themeMode}), className)}
+      className={clsx(buttonVariant({ variant, themeMode: initialTheme}), className)}
       onClick={onClick}
       {...props}
       disabled={disabled}

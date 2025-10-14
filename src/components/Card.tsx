@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 import clsx from "clsx";
-import { useTheme } from "../contexts/ThemeContext";
+import { useThemeStore } from "../store/store";
 import { CardProps } from "../types/generalTypes";
 import { CardVariants } from "../types/enums";
 
@@ -10,11 +10,11 @@ function Card({
   className, 
   ...props }: CardProps) {
 
-  const { themeMode } = useTheme(); 
+  const initialTheme = useThemeStore(state => state.initialTheme ?? 'dark'); 
 
   return (
     <div
-      className={clsx(cardVariant({ variant, themeMode: themeMode }), className)}
+      className={clsx(cardVariant({ variant, themeMode: initialTheme }), className)}
       {...props}
     >
       {children}

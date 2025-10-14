@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import { useTheme } from "../contexts/ThemeContext";
+import { useThemeStore } from "../store/store";
 
 const languages = [
      { code: 'it', label: '🇮🇹 Italiano' },
@@ -11,7 +11,7 @@ const languages = [
 
 function LanguageSwitcher() {
 
-    const { themeMode } = useTheme();
+    const initialTheme = useThemeStore(state => state.initialTheme);
 
     const { i18n } = useTranslation();
 
@@ -23,7 +23,7 @@ function LanguageSwitcher() {
     <select
         onChange={handleChange}
         value={i18n.language}
-        className={`${themeMode === 'dark' ? 'bg-white text-gray-900' : 'bg-gray-600 text-gray-200'} border px-2 py-1 rounded text-sm`}
+        className={`${initialTheme === 'dark' ? 'bg-white text-gray-900' : 'bg-gray-600 text-gray-200'} border px-2 py-1 rounded text-sm`}
     >
         {languages.map((lang)=>(
             <option key={lang.code} value={lang.code}>

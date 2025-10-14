@@ -1,18 +1,19 @@
+//Components
 import Button from "../components/Button"
 import InputField from "../components/InputField"
-
-import { useTheme } from "../contexts/ThemeContext"
-import { ContactFormData } from "../types/generalTypes"
+//Internal imports
+import { useThemeStore } from "../store/store"
 import { useOnSubmit } from "../custom hooks/useOnSubmit"
-
 //External libraries
 import {Element} from 'react-scroll'
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
+//Types
+import { ContactFormData } from "../types/generalTypes"
 
 function Contacts() {
 
-  const { themeMode } = useTheme();
+  const initialTheme = useThemeStore(state => state.initialTheme);
   const { t } = useTranslation();
 
   const {
@@ -31,12 +32,12 @@ function Contacts() {
           action="POST" 
           onSubmit={handleSubmit(onSubmit)} 
           className={`bg-inherit w-full max-w-3xl mx-auto p-6 
-            ${themeMode ==='dark'?'text-white':'text-gray-800'}`} 
+            ${initialTheme ==='dark'?'text-white':'text-gray-800'}`} 
             id="form-id"
         >
           <div className="flex justify-center items-center text-center gap-4 w-full p-4">
             <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words border-b-1 
-              ${themeMode==='dark'?'text-cyan-300 border-b-white':'text-blue-600 border-b-blue-600'}`}>
+              ${initialTheme==='dark'?'text-cyan-300 border-b-white':'text-blue-600 border-b-blue-600'}`}>
               {t("contact.h2", "Contattami!")}
             </h2>
           </div>
@@ -53,7 +54,7 @@ function Contacts() {
                 })} 
                 placeholder={t("contact.name.placeholder", "inserisci il tuo nome")} 
                 className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 
-                  ${themeMode ==='dark'?'bg-gray-700 text-white rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200'}`}
+                  ${initialTheme ==='dark'?'bg-gray-700 text-white rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200'}`}
               />
               {errors.nome && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.nome.message}</p>}
               <label htmlFor="email">{t("contact.email.label", "Inserisci la tua email")}</label>
@@ -68,7 +69,7 @@ function Contacts() {
                   })} 
                 placeholder={t("contact.email.placeholder", "inserisci la tua email")} 
                 className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 
-                  ${themeMode ==='dark'?'bg-gray-700 text-white rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200'}`}
+                  ${initialTheme ==='dark'?'bg-gray-700 text-white rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200'}`}
               />
               {errors.email && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.email.message}</p>}
             </div>

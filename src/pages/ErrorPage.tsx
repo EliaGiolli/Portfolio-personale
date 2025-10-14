@@ -1,5 +1,6 @@
+//External libs
 import { useRouteError } from "react-router-dom";
-
+//Types
 import { ErrorProps } from "../types/ErrorTypes";
 
 function ErrorPage() {

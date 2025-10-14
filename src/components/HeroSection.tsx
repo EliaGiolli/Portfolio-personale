@@ -1,18 +1,19 @@
 //React components
-import Button from './Button'
+import Button from './Button';
 //External libraries
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
-import { useTheme } from '../contexts/ThemeContext'
-import { useTranslation } from 'react-i18next'
+import { useThemeStore } from '../store/store';
+import { useTranslation } from 'react-i18next';
 
-import FotoLaurea from '../../public/img/foto-laurea.jpg'
-import { ButtonVariants } from '../types/enums'
+//Internal imports
+import FotoLaurea from '../../public/img/foto-laurea.jpg';
+import { ButtonVariants } from '../types/enums';
 
 function HeroSection() {
 
     const { t } = useTranslation('common');
-    const {themeMode} = useTheme();
+    const initialTheme = useThemeStore(state => state.initialTheme);
 
     const router = useNavigate();
 
@@ -32,12 +33,12 @@ function HeroSection() {
 
             <div className={
                 `flex flex-col items-center md:items-start justify-center px-8 py-4 h-screen gap-y-4
-                ${themeMode === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
+                ${initialTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
                 <h3 className='text-lg sm:text-xl font-medium tracking-wide uppercase'>{t("heroSection.h3")}</h3>
                 <h1 className={`text-3xl md:text-4xl font-extrabold leading-tight 
-                    ${themeMode === 'dark' ? 'text-cyan-300' : 'text-blue-600'} `}>{t("heroSection.h1")}</h1>
+                    ${initialTheme === 'dark' ? 'text-cyan-300' : 'text-blue-600'} `}>{t("heroSection.h1")}</h1>
                 <p className={`text-lg md:text-xl w-full sm:max-w-3xl my-5 
-                    ${themeMode === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>{t("heroSection.p")}</p>
+                    ${initialTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>{t("heroSection.p")}</p>
                 <div className="flex items-start gap-6">
                     <Button 
                         variant={ButtonVariants.customBtn}

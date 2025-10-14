@@ -1,27 +1,27 @@
+//Hooks
 import { useState } from 'react';
-import React from 'react';
-
-import { useTheme } from '../contexts/ThemeContext';
+//Internal imports
+import { useThemeStore } from '../store/store';
+//External libraries
 import { useTranslation } from 'react-i18next';
-
+//Components
 import Card from '../components/Card';
 import Button from '../components/Button';
 import ModalCard from '../components/ModalCard';
-import { projectsData } from '../data/projectsData';
-import { ProjectDataTypes } from '../types/ProjectDataTypes';
-
 // React icons
 import { FaJs, FaReact, FaCss3Alt, FaVuejs } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { SiTypescript, SiAxios } from 'react-icons/si';
 import { TbBrandVite } from "react-icons/tb";
-
 // External libraries
 import { Element } from 'react-scroll';
 import { CardVariants } from '../types/enums';
+//Types
+import { projectsData } from '../data/projectsData';
+import { ProjectDataTypes } from '../types/ProjectDataTypes';
 
 function Projects() {
-  const { themeMode } = useTheme();
+  const initialTheme = useThemeStore(state => state.initialTheme);
   const { t } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -73,13 +73,13 @@ function Projects() {
                 </div>
                 <h2 
                   className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words mb-2 
-                    ${themeMode === 'dark' ? 'text-cyan-500' : 'text-blue-600'}`}
+                    ${initialTheme === 'dark' ? 'text-cyan-500' : 'text-blue-600'}`}
                 >
                   {project.title}
                 </h2>
                 <p 
                   className={`text-center text-lg sm:text-2xl p-3 flex-grow
-                    ${themeMode === 'dark' ? 'text-white' : 'text-gray-700'}`}
+                    ${initialTheme === 'dark' ? 'text-white' : 'text-gray-700'}`}
                 >
                   {t(`projects.${key}.short`)}
                 </p>
