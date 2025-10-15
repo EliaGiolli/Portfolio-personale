@@ -1,11 +1,20 @@
+//External libs
 import { useParams } from "react-router-dom";
+//Components
+import Card from "../../components/Card";
+import { ModalButton } from "../../components/ModalButton";
+//Internal imports
+import { useThemeStore } from "../../store/store";
+//Data
 import { projectsData } from "../../data/projectsData";
+//Types
+import { CardVariants } from "../../types/enums";
 
 export default function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
 
   const project = projectsData.find((p) => p.slug === slug);
-
+  
   if (!project) {
     return (
       <div className="p-6 text-center text-red-500">
@@ -14,37 +23,39 @@ export default function ProjectDetailPage() {
     );
   }
 
+  const initialTheme = useThemeStore(state => state.initialTheme);
+
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
+    <Card variant={CardVariants.project}
+      className="p-6 max-w-4xl mx-auto">
+      <h1 className={`text-3xl md:text-4xl font-extrabold leading-tight  mb-5
+          ${initialTheme === 'dark' ? 'text-cyan-300' : 'text-blue-600'} `}>{project.title}</h1>
       <img
         src={project.imageUrl}
         alt={project.title}
-        className="rounded-xl shadow-md mb-6"
+        className="rounded-xl shadow-md mb-6 max-h-[400px] w-full object-cover"
       />
-      <p className="text-gray-700 mb-4">{project.longDescription}</p>
+      <p className={`${initialTheme === 'dark' ? 'text-gray-300' : 'text-gray-700'} text-md md:text-lg mb-4`}>{project.longDescription}</p>
       <div className="flex gap-4">
         {project.githubLink && (
-          <a
+          <ModalButton
             href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
           >
             GitHub
-          </a>
+          </ModalButton>
         )}
         {project.demoLink && (
-          <a
+          <ModalButton
             href={project.demoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-500 hover:underline"
           >
             Demo
-          </a>
+          </ModalButton>
         )}
       </div>
-    </div>
+    </Card>
   );
 }

@@ -46,7 +46,7 @@ function Projects() {
         return <FaReact className={`icon ${className}`} />;
       case 'CSS':
         return <FaCss3Alt className={`icon ${className}`} />;
-      case 'Tailwind CSS':
+      case 'TailwindCSS':
         return <RiTailwindCssFill className={`icon ${className}`} />;
       case 'Typescript':
         return <SiTypescript className={`icon ${className}`} />;
@@ -74,7 +74,7 @@ function Projects() {
 
           return (
             <Card key={index} variant={CardVariants.project}>
-              <div className="flex flex-col h-[600px]">
+              <div className="flex flex-col">
                 <div className='max-w-3xl'>
                   <img 
                     src={project.imageUrl} 

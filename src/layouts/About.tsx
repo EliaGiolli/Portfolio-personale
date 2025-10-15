@@ -25,7 +25,7 @@ function About() {
     <>
       <section className="flex flex-col w-full min-h-screen p-2 mb-12 sm:mb-16">
         
-        <Card variant={CardVariants.profile} className="mb-11">
+        <Card variant={CardVariants.profile} className="mb-11 bg-inherit">
           <div className="flex flex-col items-center text-center md:text-left px-8 py-5 grow">
             
             <h3 className={`text-xl sm:text-2xl text-center 
@@ -57,7 +57,7 @@ function About() {
           </div>
         </Card>
 
-        <Card variant={CardVariants.profile}>
+        <Card variant={CardVariants.profile} className='bg-inherit'>
           <div className="grid col-span-2 px-4">
             <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words 
               ${initialTheme === 'dark' ? 'text-cyan-300' : 'text-blue-600'}`}>

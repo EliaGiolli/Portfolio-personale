@@ -1,4 +1,4 @@
-import React, { type ChangeEvent, type ReactNode } from "react";
+import React, { type ChangeEvent, type ReactNode, AnchorHTMLAttributes } from "react";
 import { ProjectDataTypes } from "./ProjectDataTypes";
 import { ButtonVariants, CardVariants } from "./enums";
 
@@ -7,6 +7,12 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     children?: ReactNode,
     disabled?: boolean
 }
+
+export interface ModalButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  href: string;
+  children: ReactNode;
+}
+
 
 export interface InputProps {
     children?: ReactNode,

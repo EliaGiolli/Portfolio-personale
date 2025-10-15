@@ -1,3 +1,5 @@
+//Components
+import { ModalButton } from './ModalButton';
 //Libs
 import { useTranslation } from 'react-i18next';
 import { Dialog, DialogPanel } from '@headlessui/react'
@@ -21,10 +23,7 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
         autoFocus: true
     });
 
-    const key = title
-        .toLowerCase()
-        .replace(/\s/g, '')
-        .replace(/[^a-z0-9]/gi, '');
+    const key = project.slug;
 
     return (
         <Dialog 
@@ -34,9 +33,13 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
         >
             <div className="fixed inset-0 bg-black/70" aria-hidden="true" />        
             <div className="fixed inset-0 flex items-center justify-center p-4">
-                <DialogPanel 
+                <DialogPanel
                     ref={modalRef}
-                    className={`w-full max-w-3xl rounded-xl shadow-xl overflow-hidden ${initialTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700'}`}
+                    className={`
+                        w-[90%] max-w-xl 
+                        rounded-2xl shadow-2xl overflow-hidden 
+                        ${initialTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700'}
+                    `}
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="modal-title"
@@ -55,7 +58,11 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                     
                     <div className="px-6 py-4">
                         <div className="mb-4">
-                            <img src={imageUrl} alt={title} className="w-full h-auto rounded-lg" />
+                            <img 
+                                src={imageUrl} 
+                                alt={title} 
+                                className="w-full max-h-64 object-cover rounded-lg"
+                            />
                         </div>
                         
                         <p className={`my-5 ${initialTheme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
@@ -63,7 +70,7 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                         </p>
                         
                         <h3 className="text-lg font-semibold mb-2">{t('projects.technologies', 'Technologies:')}</h3>
-                        <div className="flex flex-wrap gap-2 mb-4">
+                        <div className="md:flex flex-wrap gap-2 mb-4 hidden">
                             {technologies.map((tech, index) => (
                                 <span key={index} className='flex items-center text-sm px-3 py-1 my-3'>
                                     {getTechIcon(tech, initialTheme === 'dark' ? 'bg-cyan-500 hover:bg-cyan-800 text-white rounded-lg' : 'bg-blue-600 hover:bg-blue-700 text-white rounded-xl')}
@@ -73,25 +80,23 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                         </div>
                         
                         <div className="flex gap-3">
-                            <a 
+                            <ModalButton
                                 ref={firstLinkRef}
-                                href={githubLink} 
-                                className={`btn ${initialTheme === 'dark' ? 'bg-cyan-600 hover:bg-cyan-800 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md'}`}
+                                href={githubLink}   
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 aria-label={`View ${title} on GitHub`}
                             >
                                 GitHub
-                            </a>
-                            <a 
-                                href={demoLink} 
-                                className={`btn ${initialTheme === 'dark' ? 'bg-cyan-600 hover:bg-cyan-800 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md'}`} 
+                            </ModalButton>
+                            <ModalButton 
+                                href={demoLink}   
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 aria-label={`View ${title} live demo`}
                             >
                                 Demo
-                            </a>
+                            </ModalButton>
                         </div>
                     </div>
                 </DialogPanel>

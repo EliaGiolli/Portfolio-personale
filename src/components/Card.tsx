@@ -35,7 +35,7 @@ const cardVariant = cva(
       },
       themeMode: {
         light: "bg-blue-50",
-        dark: "bg-gray-800",
+        dark: "bg-gray-900",
       },
     },
     compoundVariants: [
@@ -47,7 +47,7 @@ const cardVariant = cva(
       {
         variant: "project",
         themeMode: "dark",
-        className: "max-w-2xl p-5 rounded-lg bg-primary border-1 border-cyan-800",
+        className: "max-w-2xl p-5 rounded-lg bg-gray-900 border-1 border-cyan-800",
       },
     ],
     defaultVariants: {
