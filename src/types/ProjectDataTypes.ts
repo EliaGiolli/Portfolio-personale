@@ -6,5 +6,7 @@ export interface ProjectDataTypes {
     imageUrl: string,
     githubLink: string,
     demoLink: string,
-    technologies: string[]
+    technologies: string[],
+    type: string,
+    slug: string
 }

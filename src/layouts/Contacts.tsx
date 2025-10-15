@@ -5,7 +5,6 @@ import InputField from "../components/InputField"
 import { useThemeStore } from "../store/store"
 import { useOnSubmit } from "../custom hooks/useOnSubmit"
 //External libraries
-import {Element} from 'react-scroll'
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 //Types
@@ -27,7 +26,7 @@ function Contacts() {
  
   return (
     <>
-      <Element name="contacts" className="mt-20 pb-10">
+      <section className="mt-20 pb-10">
         <form 
           action="POST" 
           onSubmit={handleSubmit(onSubmit)} 
@@ -90,7 +89,7 @@ function Contacts() {
             </Button>
           </div>
         </form>
-      </Element>     
+      </section>     
     </>
   )
 }

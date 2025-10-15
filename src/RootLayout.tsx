@@ -11,7 +11,7 @@ function App() {
   const initialTheme = useThemeStore((state) => state.initialTheme);
 
   return (
-    <div className={`app-container ${initialTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700'}`}>
+    <div className={`${initialTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700'}`}>
       <Navbar />
       <Subnavbar />
         <div>

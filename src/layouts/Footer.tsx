@@ -2,7 +2,6 @@
 import { useThemeStore } from '../store/store'
 //External imports
 import { Link } from 'react-router-dom'
-import { Link as ScrollLink } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 // React Icons
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
@@ -23,9 +22,9 @@ function Footer() {
           <div className="text-center space-y-4">
             {/* Logo e Titolo */}
             <div className="flex items-center justify-center gap-4">
-              <ScrollLink to="heroSection" smooth={true} duration={500}>
+              <Link to="/">
                 <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />
-              </ScrollLink>
+              </Link>
               <h6 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words
                 ${initialTheme ==='dark'?'text-cyan-300':'text-blue-600'}`}>GIOLLI DESIGN</h6>
             </div>

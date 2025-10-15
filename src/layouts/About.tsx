@@ -5,7 +5,6 @@ import Button from '../components/Button';
 import { useThemeStore } from '../store/store';
 import { useTranslation } from 'react-i18next';
 import { ReactTyped } from 'react-typed';
-import { Element } from 'react-scroll';
 import { useNavigate } from 'react-router-dom';
 
 // ICONS
@@ -24,7 +23,7 @@ function About() {
 
   return (
     <>
-      <Element name='about' className="flex flex-col w-full min-h-screen p-2 mb-12 sm:mb-16">
+      <section className="flex flex-col w-full min-h-screen p-2 mb-12 sm:mb-16">
         
         <Card variant={CardVariants.profile} className="mb-11">
           <div className="flex flex-col items-center text-center md:text-left px-8 py-5 grow">
@@ -95,7 +94,7 @@ function About() {
           </div>
         </Card>
 
-      </Element>
+      </section>
     </>
   )
 }

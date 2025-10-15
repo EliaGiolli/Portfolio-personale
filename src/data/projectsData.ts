@@ -9,7 +9,9 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/cozy-corner.png",
         githubLink: "https://github.com/EliaGiolli/cozy-corner-ts",
         demoLink: "https://cozy-corner-app.netlify.app/",
-        technologies: ["Typescript", "Tailwind CSS", "Vite"]
+        technologies: ["Typescript", "TailwindCSS", "Vite"],
+        type: "frontend",
+        slug: "the-cozy-corner"
     },
     {
         id: 2,
@@ -19,17 +21,21 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/pennywise.png",
         githubLink: "https://github.com/EliaGiolli/Expense-handler-app",
         demoLink: "https://pennywise-expense-tracker.netlify.app/",
-        technologies: ["React", "Tailwind CSS","Vite"]
+        technologies: ["React", "TailwindCSS","Vite"],
+        type: "frontend",
+        slug: "pennywise"
     },
     {
         id: 3,
         title: "TaskFlow ",
         description: "Lista di cose da fare per gestire le attività quotidiane.",
         longDescription: "TaskFlow è un'applicazione per la gestione delle attività personali. Permette di aggiungere, modificare e cancellare task in modo rapido. Include anche la persistenza dei dati in localStorage e la possibilità di cambiare tema (dark/light). Sviluppata per esercitarmi nelle best practices di React e gestione dello stato.",
-        imageUrl: "/img/taskFlow.jpg",
+        imageUrl: "/img/taskflow.png",
         githubLink: "https://github.com/EliaGiolli/React-todo-app",
         demoLink: "https://taskflow-todo.netlify.app/",
-        technologies: ["React", "Tailwind CSS", "Vite"]
+        technologies: ["React", "TailwindCSS", "Vite"],
+        type: "frontend",
+        slug: "taskflow"
     },
     {
         id: 4,
@@ -39,7 +45,9 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/horrorvault.png",
         githubLink: "https://github.com/EliaGiolli/HorrorVault-Vue",
         demoLink: "https://horror-vault-vue.vercel.app/horror",
-        technologies: ["Vue", "Vite"]
+        technologies: ["Vue", "Vite"],
+        type: "frontend",
+        slug: "horrorvault"
     },
     {
         id: 5,
@@ -49,7 +57,9 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/clockwise.png",
         githubLink: "https://github.com/EliaGiolli/ClockWise---React-ts/tree/main",
         demoLink: "https://clock-wise-react-ts.vercel.app/",
-        technologies: ["React","Typescript", "Tailwind CSS", "Vite"]
+        technologies: ["React","Typescript", "TailwindCSS", "Vite"],
+        type: "frontend",
+        slug: "clockwise"
     },
     {
         id: 6,
@@ -59,7 +69,9 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/vuestock.png",
         githubLink: "https://github.com/EliaGiolli/Vue-VueStock",
         demoLink: "https://vue-vue-stock.vercel.app/",
-        technologies: ["Vue", "Tailwind CSS", "Vite"]
+        technologies: ["Vue", "TailwindCSS", "Vite"],
+        type: "frontend",
+        slug: "vuestock"
     },
     {
         id: 7,
@@ -69,7 +81,9 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/shelfspot.png",
         githubLink: "https://github.com/EliaGiolli/ShelfSpot-react",
         demoLink: "https://shelf-spot-react.vercel.app/login",
-        technologies: ["React","Typescript", "Tailwind CSS", "Vite"]
+        technologies: ["React","Typescript", "TailwindCSS", "Vite"],
+        type: "frontend",
+        slug: "shelfspot"
     },
     {
         id: 8,
@@ -79,7 +93,9 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/authserver.png",
         githubLink: "https://github.com/EliaGiolli/express-ts-authserver",
         demoLink: "",
-        technologies: ["Express","Typescript", "MongoDB"]
+        technologies: ["Express","Typescript", "MongoDB"],
+        type: "backend",
+        slug: "express-auth-server"
     },
     {
         id: 9,
@@ -89,7 +105,9 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/dashboard-admin.png",
         githubLink: "https://github.com/EliaGiolli/dashboard-admin-express",
         demoLink: "",
-        technologies: ["Express","Typescript"]
+        technologies: ["Express","Typescript"],
+        type: "backend",
+        slug: "express-dashboard-admin"
     },
     {
         id: 10,
@@ -99,7 +117,9 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/quotes-server.png",
         githubLink: "https://github.com/EliaGiolli/first-server-with-express/tree/main",
         demoLink: "",
-        technologies: ["Express"]
+        technologies: ["Express"],
+        type: "backend",
+        slug: "express-quotes-server"
     },
     {
         id: 11,
@@ -109,6 +129,8 @@ export const projectsData: ProjectDataTypes[]  = [
         imageUrl: "/img/veggievibes.png",
         githubLink: "https://github.com/EliaGiolli/VeggieVibes-react",
         demoLink: "https://veggie-vibes-react.vercel.app/",
-        technologies: ["React", "Typescript","Tailwind CSS", "Vite"]
+        technologies: ["React", "Typescript","TailwindCSS", "Vite"],
+        type: "frontend",
+        slug: "veggievibes"
     },
 ];

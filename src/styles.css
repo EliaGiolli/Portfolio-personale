@@ -16,16 +16,6 @@
 
 }
 
-@layer utilities{
- 
-   .app-container {
-      max-width: 1200px; 
-      margin: 0 auto;
-      padding-left: 1rem;
-      padding-right: 1rem;
-  }
-}
-
 @layer components{
   /*  FOTO & ICONS  */
   .foto {  @apply w-full h-auto max-h-96 rounded-lg object-cover shadow-lg; }

@@ -14,7 +14,6 @@ import { RiTailwindCssFill } from 'react-icons/ri';
 import { SiTypescript, SiAxios } from 'react-icons/si';
 import { TbBrandVite } from "react-icons/tb";
 // External libraries
-import { Element } from 'react-scroll';
 import { CardVariants } from '../types/enums';
 //Types
 import { projectsData } from '../data/projectsData';
@@ -66,7 +65,7 @@ function Projects() {
 
   return (
     <>  
-      <Element name='projects' className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-8 py-8 min-h-[600px]'>
+      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-8 py-8 min-h-[600px]'>
         {limitedProjects.map((project: ProjectDataTypes, index) => {
           const key = project.title
             .toLowerCase()
@@ -104,7 +103,7 @@ function Projects() {
             </Card>
           );
         })}
-      </Element>
+      </section>
 
       {isOpen && selectedProject && (
         <ModalCard 

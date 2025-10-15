@@ -2,8 +2,8 @@
 import { useThemeStore } from '../store/store';
 import { useMobileMenu } from '../custom hooks/useMobileMenu';
 //External libraries
-import  { Link } from 'react-scroll'
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 //React icons
 import { FaBars} from 'react-icons/fa'
 import { CiLight } from "react-icons/ci";
@@ -33,20 +33,20 @@ function Navbar() {
             ${initialTheme === 'dark' ? 'bg-gray-800 text-gray-300' : 'bg-blue-50 text-gray-700'}`}>
             <nav className='flex justify-center max-w-[1200px] mx-auto px-4 gap-10'>
                 {/* Logo */}
-                <Link to="heroSection">
+                <Link to="/">
                     <img src="/img/logo.jpg" alt="Logo Giolli Design" className={`w-12 h-11 object-cover rounded ${initialTheme === 'dark' ? 'border-2 border-gray-300' : 'border-2 border-blue-600'}`} />
                 </Link>
                 
                 {/* Desktop Menu */}
                 <ul className='hidden sm:flex justify-end items-center gap-4'>
                     <li className={`${initialTheme === 'dark' ? 'text-gray-300 hover:bg-cyan-800 hover:text-white hover:rounded-lg' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:rounded-lg'} text-lg md:text-xl px-3 py-2 transition-colors duration-200 ease-in-out`}>
-                        <Link to='about' className='block w-full h-full'>{t('navbar.about')}</Link>
+                        <Link to='/' className='block w-full h-full'>{t('navbar.about')}</Link>
                     </li>
                     <li className={`${initialTheme === 'dark' ? 'text-gray-300 hover:bg-cyan-800 hover:text-white hover:rounded-lg' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:rounded-lg'} text-lg md:text-xl px-3 py-2 transition-colors duration-200 ease-in-out`}>
-                        <Link to='projects'>{t('navbar.projects')}</Link>
+                        <Link to='/projects'>{t('navbar.projects')}</Link>
                     </li>
                     <li className={`${initialTheme === 'dark' ? 'text-gray-300 hover:bg-cyan-800 hover:text-white hover:rounded-lg' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:rounded-lg'} text-lg md:text-xl px-3 py-2 transition-colors duration-200 ease-in-out`}>
-                        <Link to='contacts'>{t('navbar.contact')}</Link>
+                        <Link to='/contacts'>{t('navbar.contact')}</Link>
                     </li>
                 </ul>
                 
@@ -79,13 +79,13 @@ function Navbar() {
                     >
                         <ul className='flex flex-col gap-4'>
                             <li className={`${initialTheme === 'dark' ? 'text-gray-300 hover:text-white' : 'text-gray-900 hover:text-blue-600'} text-lg md:text-xl transition-colors duration-200 ease-in-out`}>
-                                <Link to='about' onClick={handleLinkClick} role="menuitem">{t('navbar.about')}</Link>
+                                <Link to='/' onClick={handleLinkClick} role="menuitem">{t('navbar.about')}</Link>
                             </li>
                             <li className={`${initialTheme === 'dark' ? 'text-gray-300 hover:text-white' : 'text-gray-900 hover:text-blue-600'} text-lg md:text-xl transition-colors duration-200 ease-in-out`}>
-                                <Link to='projects' onClick={handleLinkClick} role="menuitem">{t('navbar.projects')}</Link>
+                                <Link to='/projects' onClick={handleLinkClick} role="menuitem">{t('navbar.projects')}</Link>
                             </li>
                             <li className={`${initialTheme === 'dark' ? 'text-gray-300 hover:text-white' : 'text-gray-900 hover:text-blue-600'} text-lg md:text-xl transition-colors duration-200 ease-in-out`}>
-                                <Link to='contacts' onClick={handleLinkClick} role="menuitem">{t('navbar.contact')}</Link>
+                                <Link to='/contacts' onClick={handleLinkClick} role="menuitem">{t('navbar.contact')}</Link>
                             </li>
                         </ul>
                     </div>
