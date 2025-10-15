@@ -61,4 +61,54 @@ export const projectsData: ProjectDataTypes[]  = [
         demoLink: "https://vue-vue-stock.vercel.app/",
         technologies: ["Vue", "Tailwind CSS", "Vite"]
     },
+    {
+        id: 7,
+        title: "ShelfSpot",
+        description: "ShelfSpot è un’app web che permette di scoprire, salvare e prendere in prestito libri, offrendo un’esperienza simile a una biblioteca digitale.",
+        longDescription: "ShelfSpot è un’app React con TypeScript e TailwindCSS che integra l’OpenLibrary API per gestione libri, Redux Toolkit per lo stato globale e React Router v7 per la navigazione. Include autenticazione, percorsi protetti, gestione di preferiti e sistema di prestito simulato, con test tramite Vitest e Testing Library",
+        imageUrl: "/img/shelfspot.png",
+        githubLink: "https://github.com/EliaGiolli/ShelfSpot-react",
+        demoLink: "https://shelf-spot-react.vercel.app/login",
+        technologies: ["React","Typescript", "Tailwind CSS", "Vite"]
+    },
+    {
+        id: 8,
+        title: "AuthServer",
+        description: "Questa applicazione permette agli utenti di registrarsi, accedere in sicurezza e gestire le proprie attività. Ogni utente può creare, modificare, consultare e cancellare i propri compiti, con un sistema che protegge i dati sensibili e assicura che solo chi ha accesso autorizzato possa vedere o modificare le informazioni.",
+        longDescription: "Quest'applicazione è una REST API con Node.js, Express, TypeScript e MongoDB. Offre autenticazione JWT sicura, gestione completa delle attività (CRUD) con validazione Zod e protezione dei dati con Helmet e bcrypt. Strutturata in modo modulare, è pronta per essere integrata con un frontend o estesa con nuove funzionalità.",
+        imageUrl: "/img/authserver.png",
+        githubLink: "https://github.com/EliaGiolli/express-ts-authserver",
+        demoLink: "",
+        technologies: ["Express","Typescript", "MongoDB"]
+    },
+    {
+        id: 9,
+        title: "Dashboard Admin",
+        description: "Dashboard Admin è un’applicazione che simula una dashboard per sviluppatori e amministratori: permette di monitorare lo stato del sistema, gestire eventi e registri, testare la sicurezza dei dati e esplorare vari strumenti di backend in modo sicuro e organizzato.",
+        longDescription: "Questo progetto consente di compiere delle basi operazioni CRUD per aggiungere e cancellare degli elementi all'inventario. L'app è stata creata con la CompositionAPI di Vue3 e TailwindCSS v4",
+        imageUrl: "/img/dashboard-admin.png",
+        githubLink: "https://github.com/EliaGiolli/dashboard-admin-express",
+        demoLink: "",
+        technologies: ["Express","Typescript"]
+    },
+    {
+        id: 10,
+        title: "Quotes Server",
+        description: "Quotes Server è un piccolo server che raccoglie e gestisce frasi o citazioni. È pensato per evolversi nel tempo, diventando una piattaforma completa dove salvare, consultare e condividere pensieri ispiratori.",
+        longDescription: "Citazioni è un server Node.js basato su Express che utilizza EJS per il rendering e integra strumenti come Helmet per la sicurezza e Mongoose per la gestione del database. Il progetto è in espansione e prevede l’aggiunta di autenticazione, middleware personalizzati e persistenza dei dati.",
+        imageUrl: "/img/quotes-server.png",
+        githubLink: "https://github.com/EliaGiolli/first-server-with-express/tree/main",
+        demoLink: "",
+        technologies: ["Express"]
+    },
+    {
+        id: 11,
+        title: "VeggieVibes",
+        description: "VeggieVibes è un’app moderna dedicata agli amanti della cucina vegetariana: permette di scoprire nuove ricette, esplorarle facilmente e trovare ispirazione per pasti sani e gustosi.",
+        longDescription: "VeggieVibes è un’app React basata su Vite che utilizza il Spoonacular API per recuperare e visualizzare dati relativi a ricette vegetariane. L’app gestisce la navigazione interna tramite React Router v6 e adotta TailwindCSS per uno stile moderno e reattivo.",
+        imageUrl: "/img/veggievibes.png",
+        githubLink: "https://github.com/EliaGiolli/VeggieVibes-react",
+        demoLink: "https://veggie-vibes-react.vercel.app/",
+        technologies: ["React", "Typescript","Tailwind CSS", "Vite"]
+    },
 ];
