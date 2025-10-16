@@ -6,6 +6,7 @@ import { useThemeStore } from '../store/store';
 import { useTranslation } from 'react-i18next';
 import { ReactTyped } from 'react-typed';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'motion/react'
 
 // ICONS
 import { FaLaptopCode } from "react-icons/fa";
@@ -20,6 +21,8 @@ function About() {
   const initialTheme = useThemeStore(state => state.initialTheme);
   const { t } = useTranslation('common');
   const router = useNavigate();
+
+  const MotionButton = motion(Button);
 
   return (
     <>
@@ -87,10 +90,13 @@ function About() {
             <p className={`text-center text-lg sm:text-2xl p-3 mb-4 
               ${initialTheme === 'dark' ? 'text-white' : 'text-gray-700'}`}>{t('about.p2')}</p>
 
-            <Button 
-              onClick={() => router('/contacts')}>
+            <MotionButton 
+              onClick={() => router('/contacts')}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              >
                 {t('about.button')}
-            </Button>
+            </MotionButton>
           </div>
         </Card>
 

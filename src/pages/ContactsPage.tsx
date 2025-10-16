@@ -19,7 +19,6 @@ function ContactsPage() {
           Insieme possiamo trovare la soluzione migliore per il sito web dei tuoi sogni
         </p>
       </div>
-      
       <FormComponent />
     </section>
   )

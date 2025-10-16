@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react';
 import { useThemeStore } from '../store/store';
 //External libraries
 import { useTranslation } from 'react-i18next';
+import { easeIn, motion } from 'motion/react';
 //Components
 import Card from '../components/Card';
 import Button from '../components/Button';
@@ -63,9 +64,20 @@ function Projects() {
 
   const limitedProjects = projectsData.slice(0, 3);
 
+  const MotionButton = motion(Button);
+
   return (
     <>  
-      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-8 py-8 min-h-[600px]'>
+      <motion.section 
+        className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-8 py-8 min-h-[600px]'
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut"
+        }}
+        viewport={{ once: true, amount: 0.2 }}
+        >
         {limitedProjects.map((project: ProjectDataTypes, index) => {
           const key = project.title
             .toLowerCase()
@@ -95,15 +107,19 @@ function Projects() {
                   {t(`projects.${key}.short`)}
                 </p>
                 <div className="mt-4 flex justify-center">
-                  <Button onClick={() => handleOpenModal(project)}>
+                  <MotionButton 
+                    onClick={() => handleOpenModal(project)}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    >
                     {t('projects.learnMore')}
-                  </Button>
+                  </MotionButton>
                 </div>
               </div>
             </Card>
           );
         })}
-      </section>
+      </motion.section>
 
       {isOpen && selectedProject && (
         <ModalCard 

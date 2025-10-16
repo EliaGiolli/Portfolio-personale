@@ -2,12 +2,12 @@
 import Button from './Button';
 //External libraries
 import { useNavigate } from 'react-router-dom';
-
-import { useThemeStore } from '../store/store';
+import  {easeIn, motion} from 'motion/react';
 import { useTranslation } from 'react-i18next';
-
 //Internal imports
 import FotoLaurea from '../../public/img/foto-laurea.jpg';
+import { useThemeStore } from '../store/store';
+//Types
 import { ButtonVariants } from '../types/enums';
 
 function HeroSection() {
@@ -16,10 +16,17 @@ function HeroSection() {
     const initialTheme = useThemeStore(state => state.initialTheme);
 
     const router = useNavigate();
+    //Framer Motion uses a motion() API to wrap any custom component in React
+    const MotionButton = motion(Button);
 
   return (
     <>
-        <section className='max-w-[1200px] mx-auto px-6 sm:px-10 py-3 grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
+        <motion.section 
+            className='max-w-[1200px] mx-auto px-6 sm:px-10 py-3 grid grid-cols-1 md:grid-cols-2 gap-10 items-center opacity-0'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: easeIn, duration: 2}}
+            >
             {/* Colonna sinistra: immagine */}
             <div className="w-full h-80 md:h-[500px] lg:h-[600px] order-1 md:order-none flex items-center justify-center">
                 <img
@@ -40,21 +47,27 @@ function HeroSection() {
                 <p className={`text-lg md:text-xl w-full sm:max-w-3xl my-5 
                     ${initialTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>{t("heroSection.p")}</p>
                 <div className="flex items-start gap-6">
-                    <Button 
+                    <MotionButton 
                         variant={ButtonVariants.customBtn}
-                        onClick={() => router('/contacts')}>
+                        onClick={() => router('/contacts')}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        >
                         {t("heroSection.btn")}
-                    </Button>
+                    </MotionButton>
 
-                    <Button 
+                    <MotionButton 
                         variant={ButtonVariants.transparentBtn}
-                        onClick={() => router('/projects')}>
+                        onClick={() => router('/projects')}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        >
                         {t("heroSection.buttonTransparent")}
-                    </Button>
+                    </MotionButton>
                 </div>
             </div>
         
-        </section>
+        </motion.section>
     </>
   )
 }

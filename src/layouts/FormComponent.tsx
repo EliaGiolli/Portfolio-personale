@@ -7,6 +7,7 @@ import { useOnSubmit } from "../custom hooks/useOnSubmit"
 //External libraries
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
+import { motion } from "motion/react"
 //Types
 import { ContactFormData } from "../types/generalTypes"
 
@@ -24,6 +25,9 @@ function FormComponent() {
   } = useForm<ContactFormData>();
 
   const onSubmit = useOnSubmit(reset);
+
+  const MotionButton = motion(Button);
+  const MotionInput = motion(InputField);
 
   return (
     <>
@@ -44,7 +48,7 @@ function FormComponent() {
             <h3 className="text-xl sm:text-2xl text-center">{t("contact.h3", "Inserisci nome e email")}</h3>
             <div className="flex flex-col items-center gap-4 p-6">
               <label htmlFor="name" className="mt-5">{t("contact.name.label", "Inserisci il tuo nome")}</label>
-              <InputField 
+              <MotionInput 
                 type="text"
                 {...register("nome",
                   {required: t("contact.name.required", "il campo è obbligatorio"),
@@ -54,10 +58,12 @@ function FormComponent() {
                 placeholder={t("contact.name.placeholder", "inserisci il tuo nome")} 
                 className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 
                   ${initialTheme ==='dark'?'bg-gray-700 text-white rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200'}`}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               />
               {errors.nome && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.nome.message}</p>}
               <label htmlFor="email">{t("contact.email.label", "Inserisci la tua email")}</label>
-              <InputField
+              <MotionInput
                 {...register("email",
                   {required: t("contact.email.required", "il campo è obbligatorio"),
                     minLength:3,
@@ -69,6 +75,8 @@ function FormComponent() {
                 placeholder={t("contact.email.placeholder", "inserisci la tua email")} 
                 className={`w-full transition-all mr-0 sm:mr-6 p-3 my-5 md:my-0 
                   ${initialTheme ==='dark'?'bg-gray-700 text-white rounded-md hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-800 ':'bg-white text-gray-900 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 border border-gray-200'}`}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
               />
               {errors.email && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.email.message}</p>}
             </div>
@@ -80,13 +88,15 @@ function FormComponent() {
               <label>{t("contact.privacy.label", "Accetta la nostra privacy")}</label>
             </div>
             {errors.privacy && <p className="bg-red-100 text-red-600 text-2xl p-2">{errors.privacy.message}</p>}
-            <Button
+            <MotionButton
               disabled={isSubmitting}
               type="submit" 
               className="custom-button"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             > 
               {t("contact.btn", "Contattami!")}
-            </Button>
+            </MotionButton>
           </div>
         </form>
     </>
