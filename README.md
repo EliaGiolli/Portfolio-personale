@@ -1,186 +1,95 @@
-# 🌐 Personal Portfolio – React, TypeScript & Tailwind CSS
+# 🌐 Personal Portfolio – React 19, TypeScript & Tailwind CSS
 
-Welcome to the repository of my personal portfolio! 🚀 This project is my online space to showcase my projects, my journey in front-end development, and my technical skills.
+Welcome to the latest version of my portfolio project! Built with the cutting edge of the React ecosystem, this repository showcases my frontend journey and technical capabilities in a maintainable, scalable, and performant architecture.
 
 ## ✨ Tech Stack
 
-- **React 19** – For building a dynamic and interactive UI.
-- **TypeScript** – For type safety and robust code.
-- **Vite** – For fast and optimized development.
-- **Tailwind CSS 4** – For modern, responsive, and highly customizable styling.
-- **@headlessui/react** – For accessible UI components (modals, dialogs).
-- **React Router 7** – For smooth navigation between pages.
-- **React Icons** – To enrich the interface with professional icons.
-- **React Typed** – For animated typing text effects.
-- **React Parallax** – For engaging parallax scrolling effects.
-- **React Hook Form** – For flexible and performant forms.
-- **React Scroll** – For smooth scrolling navigation.
-- **Class Variance Authority & clsx** – For utility-first and conditional class management.
-- **EmailJS** – For sending emails directly from the contact form.
-- **i18next** – For robust internationalization support.
-
-## 🔧 Getting Started
-
-To explore or contribute to the project, follow these simple steps:
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/your-portfolio.git
-   ```
-2. Move into the project directory:
-   ```sh
-   cd your-portfolio
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
-4. Start the development server:
-   ```sh
-   npm run dev
-   ```
-5. Open your browser at `http://localhost:5173/` (default for Vite).
+- **React 19** – Concurrent rendering, server components, transitions, and modern hooks for optimal UI performance and DX[web:1][web:3].
+- **TypeScript** – Type safety is enforced across components, routes, API calls, and i18n resources.
+- **Vite 6** – Lightning-fast builds and HMR.
+- **Tailwind CSS 4** – Responsive, mobile-first, and customizable styling.
+- **Framer Motion** – For declarative animations and smooth UI transitions.
+- **@headlessui/react** – Accessible UI primitives for modals, dialogs, popovers.
+- **React Router 7** – Granular, lazy-loaded, nested routing for scalable navigation[web:16][web:17][web:18].
+- **React Icons & React Typed** – Professional icon sets and animated text effects.
+- **React Parallax, React Scroll** – Parallax backgrounds and smooth in-page navigation.
+- **Zustand** – Modern, minimal state management.
+- **React Hook Form** – Type-safe, performant form handling.
+- **Class Variance Authority & clsx** – Utility-first and conditional CSS.
+- **EmailJS** – SMTP integration for contact forms.
+- **i18next** – Robust internationalization.
 
 ## 🚀 Main Features
 
-- **Interactive homepage** with animated typing text and parallax effects.
-- **About section** to introduce myself, my skills, and experience.
-- **Project portfolio page** displaying a grid of projects. Each project card includes an image, title, description, and a button to learn more.
-- **Project modal**: Clicking "Learn more" opens a modal with a detailed project description, technology stack (with icons), and direct links to GitHub and live demos. The modal is accessible and styled for both light and dark themes.
-- **Contact form** powered by React Hook Form and EmailJS for easy communication.
-- **Smooth navigation** with React Router and React Scroll.
-- **Responsive design** with Tailwind CSS for all devices.
+- Interactive homepage with animated text and parallax.
+- About section with personal intro, skills, and background.
+- Projects portfolio: Category pages, detailed project cards, and modal overlays for tech stack, links, and descriptions.
+- Routing with React Router 7: All core pages and project sections use nested, lazy-loaded route components and suspense fallbacks for fast navigation and bundle splitting.
+- Contacts page and form: Powered by React Hook Form, TypeScript enums, and EmailJS.
+- Responsive and accessible design for all devices and modes.
+- Smooth navigation with animated scroll and focus management.
+- Smooth, declarative animations implemented using Framer Motion for enhanced UI experience.
+- Routing leverages React.lazy and `<Suspense>` for code splitting at the route and sub-route level, optimizing initial load and navigation to deep project pages.
+- TypeScript powers every layer, from route params to i18n resources and UI props, boosting reliability and IDE support.
 
-## 🌍 Internationalization (i18n) Setup
+## 🗂️ Project Structure
 
-The project implements a robust internationalization system using i18next, supporting multiple languages (English, Italian, and Russian). Here's a detailed breakdown of the i18n implementation:
-
-### Configuration Files
-
-1. **`src/i18n.ts`** - Main i18n configuration file:
-   ```typescript
-   import i18n from 'i18next';
-   import { initReactI18next } from 'react-i18next';
-   import LanguageDetector from 'i18next-browser-languagedetector';
-   ```
-   - Initializes i18next with React integration
-   - Uses browser language detection
-   - Sets up fallback language (Italian)
-   - Configures interpolation and default namespace
-
-2. **`src/i18n.d.ts`** - TypeScript declaration file:
-   ```typescript
-   import 'i18next';
-   import eCommon from './locales/en/common.json'
-   ```
-   - Provides TypeScript type safety for translations
-   - Extends i18next's type definitions
-   - Ensures type checking for translation keys
-
-### Translation Structure
-
-Translations are organized in the `src/locales` directory:
-```
-src/locales/
-├── en/
-│   └── common.json
-├── it/
-│   └── common.json
-└── ru/
-    └── common.json
+The project is organized for clarity, modularity, and scalability:
+```bash
+src/
+├── components/ # UI elements: buttons, cards, modals
+├── custom hooks/ # useFocusRef, useMobileMenu, useOnSubmit
+├── data/ # Centralized data for projects
+├── layouts/ # Page layouts: About, Contacts, Navbar, Footer
+├── pages/ # Route-level React pages including error boundary
+│ └── projects/ # Nested project routes, supports categories/types
+├── router/ # createBrowserRouter config, with suspense and lazy loading
+├── store/ # Zustand store config for global app state
+├── types/ # Shared TypeScript types, enums, and interfaces
+├── locales/ # i18n resource JSONs for en/it/ru/esp
 ```
 
-Each language file follows the same structure, making it easy to maintain consistency across translations.
+## 🌍 Internationalization
 
-### Type Safety with TypeScript
+Localization is managed via i18next, with hierarchical JSON structures in [translate:en], [translate:it], [translate:ru], and [translate:esp]. Type-safe translation keys ensure compile-time checks and safe UI rendering. Language switching is programmatic and automatic via browser detection, with Italian as fallback.
 
-The project leverages TypeScript to ensure type safety in translations:
+## 🔧 Getting Started
 
-1. **Type Definitions**: The `i18n.d.ts` file extends i18next's type system:
-   ```typescript
-   declare module 'i18next' {
-     interface CustomTypeOptions {
-       resources: {
-         translation: typeof eCommon;
-       };
-       defaultNS: 'common';
-     }
-   }
-   ```
-   This ensures that:
-   - Translation keys are type-checked
-   - Autocomplete works in your IDE
-   - Prevents typos in translation keys
+1. Clone this repository:
+```bash
+git clone https://github.com/your-username/your-portfolio.git
+```
 
-2. **Usage in Components**:
-   ```typescript
-   import { useTranslation } from 'react-i18next';
-   
-   function MyComponent() {
-     const { t } = useTranslation();
-     return <h1>{t('navbar.about')}</h1>;
-   }
-   ```
+2. Enter the project directory:
+```bash
+cd your-portfolio
+```
 
-### Key Features
+3. Install dependencies:
 
-1. **Automatic Language Detection**:
-   - Uses `i18next-browser-languagedetector` to detect user's preferred language
-   - Falls back to Italian if the detected language isn't supported
+```bash
+npm install
+```
 
-2. **Namespace Organization**:
-   - Uses the 'common' namespace for shared translations
-   - Structured JSON format for easy maintenance
-   - Hierarchical organization of translation keys
+4. Start development:
 
-3. **Type-Safe Translations**:
-   - Full TypeScript support
-   - Compile-time checking of translation keys
-   - IDE autocomplete support
+```bash
+npm run dev
+```
 
-4. **Easy Language Switching**:
-   ```typescript
-   const { i18n } = useTranslation();
-   i18n.changeLanguage('en'); // Switch to English
-   ```
+5. Browse [http://localhost:5173/](http://localhost:5173) (default Vite port).
 
-### Best Practices Implemented
+## 🎯 Roadmap / Updates
 
-1. **Separation of Concerns**:
-   - Translation files are separate from application logic
-   - Clear directory structure for different languages
-
-2. **Type Safety**:
-   - Strong TypeScript integration
-   - Compile-time checking of translation keys
-   - Prevents runtime errors from missing translations
-
-3. **Maintainability**:
-   - Consistent JSON structure across languages
-   - Easy to add new languages
-   - Clear organization of translation keys
-
-4. **Performance**:
-   - Lazy loading of translation files
-   - Efficient language switching
-   - Browser caching support
-
-
-
-## 🎯 Upcoming Updates
-
-- Dedicated projects page to share my learning journey.
-- Contact page for collaboration opportunities.
-- UI/UX improvements with a focus on dark mode using ContextAPI.
-- Further code robustness and scalability with Next.js.
-- Unit testing with Jest and React Testing Library
+- Dedicated learning journey/blog section.
+- Collaboration hub for conversations and feedback.
+- Improved dark mode support using React Context API.
+- Migration to Next.js and server-side rendering.
+- Unit testing with Jest and React Testing Library.
 
 ## 📬 Contact
 
-Feel free to reach out or connect with me:
-- 💼 [LinkedIn](https://linkedin.com/in/eliagiolli)
-- 🐙 [GitHub](https://github.com/EliaGiolli)
-- 📧 Email: your-email@example.com
-
-Thank you for visiting my project! 😊
-
+Reach out for opportunities or feedback:
+- LinkedIn: [https://linkedin.com/in/eliagiolli](https://linkedin.com/in/eliagiolli)
+- GitHub: [https://github.com/EliaGiolli](https://github.com/EliaGiolli)
+- Email: eliagiolli22@gmail.com
