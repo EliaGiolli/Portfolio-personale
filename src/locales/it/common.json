@@ -50,6 +50,22 @@
       "short": "App moderna e interattiva che permette di aggiungere dei prodotti inseriti dall'utente al catalogo.",
       "long": "Questo progetto consente di compiere delle basi operazioni CRUD per aggiungere e cancellare degli elementi all'inventario. L'app è stata creata con la CompositionAPI di Vue3 e TailwindCSS v4."
     },
+    "shelfspot": {
+      "short": "ShelfSpot è un’app web che permette di scoprire, salvare e prendere in prestito libri, offrendo un’esperienza simile a una biblioteca digitale.",
+      "long": "ShelfSpot è un’app React con TypeScript e TailwindCSS che integra l’OpenLibrary API per gestione libri, Redux Toolkit per lo stato globale e React Router v7 per la navigazione. Include autenticazione, percorsi protetti, gestione di preferiti e sistema di prestito simulato"
+    },
+    "dashboardadmin": {
+      "short": "Dashboard Admin è un’applicazione che simula una dashboard per sviluppatori e amministratori",
+      "long": "Questo progetto consente di compiere delle basi operazioni CRUD per aggiungere e cancellare degli elementi all'inventario. L'app è stata creata con la CompositionAPI di Vue3 e TailwindCSS v4"
+    },
+    "quoteverver": {
+      "short": "Quotes Server è un piccolo server che raccoglie e gestisce frasi o citazioni.",
+      "long": "Citazioni è un server Node.js basato su Express che utilizza EJS per il rendering e integra strumenti come Helmet per la sicurezza e Mongoose per la gestione del database. Il progetto è in espansione e prevede l’aggiunta di autenticazione, middleware personalizzati e persistenza dei dati."
+    },
+    "veggievibes": {
+      "short": "VeggieVibes è un’app moderna dedicata agli amanti della cucina vegetariana",
+      "long": "VeggieVibes è un’app React basata su Vite che utilizza il Spoonacular API per recuperare e visualizzare dati relativi a ricette vegetariane. L’app gestisce la navigazione interna tramite React Router v6."
+    },
     "learnMore" : "scopri di più"
   },
   "contact": {
@@ -73,20 +89,24 @@
     },
     "btn": "Contattami!"
   },
-  "parallax": {
-    "one": {
-      "title": "Scopri cosa posso fare per te",
-      "iconAlt": "Icona razzo",
-      "text": "Imparo facendo. Questi sono alcuni dei miei progetti che mi hanno aiutato a crescere."
-    },
-    "two": {
-      "title": "Raccontami il tuo progetto",
-      "iconAlt": "Icona stretta di mano",
-      "text": "Sono sempre curioso di ascoltare nuove idee. Scrivimi senza impegno!"
-    }
-  },
   "footer": {
     "connect": "Connettiti con me!",
     "email": "email"
+  },
+  "projectPage": {
+    "title": "I miei progetti",
+    "paragraph": "Dai un'occhiata a quello che so fare"
+  },
+  "projectCategoryPage": {
+    "error": "Nessun progetto trovato.",
+    "details": "Vedi dettagli"
+  },
+  "projectDetailsPage": {
+    "error": "Progetto non trovato",
+    "demo": "Demo"
+  },
+  "contactpage": {
+    "title": "Hai bisogno di un sito web moderno?",
+    "paragraph": "Insieme possiamo trovare la soluzione migliore per il sito web dei tuoi sogni"
   }
 }

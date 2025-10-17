@@ -4,6 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import it from './locales/it/common.json'
 import en from './locales/en/common.json'; 
 import ru from './locales/ru/common.json';  
+import esp from './locales/esp/common.json'
 
 i18n   
 .use(LanguageDetector) 
@@ -11,7 +12,8 @@ i18n
 .init({ resources: { 
 	en: { common: en }, 
 	it: { common: it },           
-	ru: { common: ru },     
+	ru: { common: ru },
+	es: { common: esp }     
 	},     
 	fallbackLng: 'it', 
 	interpolation: {      

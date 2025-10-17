@@ -50,6 +50,26 @@
       "short": "Modern and interactive app to add user-entered products to the catalog.",
       "long": "This project allows you to perform basic CRUD operations to add and delete items from the inventory. The app was created with Vue 3's Composition API and TailwindCSS v4."
     },
+    "shelfspot": {
+      "short": "ShelfSpot is a web app that allows users to discover, save, and borrow books, offering an experience similar to a digital library.",
+      "long": "ShelfSpot is a React application built with TypeScript and TailwindCSS, integrating the OpenLibrary API for book management, Redux Toolkit for global state handling, and React Router v7 for navigation. It includes authentication, protected routes, favorites management, and a simulated loan system, with testing implemented using Vitest and Testing Library."
+    },
+    "authserver": {
+      "short": "This application allows users to register, securely log in, and manage their tasks. Each user can create, edit, view, and delete their own tasks, with a system that protects sensitive data and ensures that only authorized users can access or modify information.",
+      "long": "This app is a REST API built with Node.js, Express, TypeScript, and MongoDB. It provides secure JWT authentication, full CRUD task management with Zod validation, and data protection using Helmet and bcrypt. Designed with a modular architecture, it’s ready to be integrated with a frontend or extended with new features"
+    },
+    "dashboardadmin": {
+      "short": "Dashboard Admin is an application that simulates a dashboard for developers and administrators. It allows users to monitor system status, manage events and logs, test data security, and explore various backend tools in a safe and organized way.",
+      "long": "This project enables basic CRUD operations to add and remove items from the inventory. The app was built using Vue 3’s Composition API and TailwindCSS v4."
+    },
+    "quoteserver": {
+      "short": "Quotes Server is a small server designed to collect and manage quotes or sayings. It’s built to evolve over time into a complete platform where users can save, browse, and share inspiring thoughts.",
+      "long": "Quotes is a Node.js server based on Express, using EJS for rendering and integrating tools like Helmet for security and Mongoose for database management. The project is under active development, with future plans to add authentication, custom middleware, and data persistence."
+    },
+    "veggievibes": {
+      "short": "VeggieVibes is a modern app designed for vegetarian cuisine enthusiasts. It allows users to discover new recipes, explore them easily, and find inspiration for healthy and delicious meals.",
+      "long": "VeggieVibes is a React application built with Vite, using the Spoonacular API to fetch and display vegetarian recipe data. It manages internal navigation through React Router v6 and adopts TailwindCSS for a modern and responsive design."
+    },
     "learnMore" : "Learn more"
   },
   "contact": {
@@ -73,20 +93,24 @@
     },
     "button": "Contact me!"
   },
-  "parallax": {
-    "one": {
-      "title": "Discover what I can do for you",
-      "iconAlt": "Rocket icon",
-      "text": "I learn by doing. Here are some of my projects that helped me grow."
-    },
-    "two": {
-      "title": "Tell me about your project",
-      "iconAlt": "Handshake icon",
-      "text": "I'm always curious to hear new ideas. Feel free to write me!"
-    }
-  },
   "footer": {
     "connect": "Connect with me!",
     "email": "email"
+  },
+  "projectPage": {
+    "title": "My projects",
+    "paragraph": "Take a look at what I can do"
+  },
+   "projectCategoryPage": {
+    "error": "No projects found.",
+    "details": "Vew details"
+  },
+  "projectDetailsPage": {
+    "error": "Project not found",
+    "demo": "Demo"
+  },
+  "contactpage": {
+    "title": "Do you need a modern website?",
+    "paragraph": "Together we can find the best solution for the website of your dreams."
   }
 }

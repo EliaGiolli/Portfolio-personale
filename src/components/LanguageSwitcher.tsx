@@ -5,7 +5,8 @@ import { useThemeStore } from "../store/store";
 const languages = [
      { code: 'it', label: '🇮🇹 Italiano' },
      { code: 'en', label: '🇬🇧 English' },
-     { code: 'ru', label: '🇷🇺 Русский' }
+     { code: 'ru', label: '🇷🇺 Русский' },
+     { code: 'es', label: '🇪🇸 Español' }
 ];
 
 

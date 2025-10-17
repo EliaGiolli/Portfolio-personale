@@ -1,0 +1,112 @@
+{
+  "navbar": {
+    "about": "Quién soy",
+    "projects": "Proyectos",
+    "contact": "Contactos"
+  },
+  "heroSection": {
+    "h3": "¿Listo para dar tu primer paso?",
+    "h1": "¡Transformaré tu idea en un sitio profesional y eficiente!",
+    "p": "Cada proyecto es una oportunidad para crecer. Estoy aquí para llevar tu idea en línea y convertirla en realidad. Descubre lo que puedo hacer por ti.",
+    "btn": "¡Contáctame!",
+    "buttonTransparent": "¡Descubre mis proyectos!",
+    "bgAltImg": "foto de un fragmento de mi código en React"
+  },
+  "about": {
+    "intro1": "¡Hola! Soy Elia, un desarrollador React apasionado por interfaces web interactivas y accesibles.",
+    "intro2": "Desarrollo sitios escalables y multilingües, ideales para quienes desean expandir su negocio más allá de las fronteras nacionales.",
+    "h2": "Creo sitios escalables y multilingües — perfectos para empresas que quieren crecer más allá de las fronteras.",
+    "p1": "Tu sitio será:",
+    "features": {
+      "responsive": "Responsive en todos los dispositivos",
+      "seo": "Optimizado para velocidad y SEO",
+      "navigation": "Fácil de navegar para tus usuarios"
+    },
+    "p2": "Agendemos una llamada gratuita y transformemos tu idea en un sitio profesional que genere resultados.",
+    "button": "¡Contáctame!"
+  },
+  "projects": {
+    "pennywise": {
+      "short": "App para rastrear gastos diarios y el total.",
+      "long": "Una app simple e intuitiva para rastrear los gastos diarios. Permite agregar entradas, ver la lista y el total de inmediato. Excelente proyecto para profundizar en la gestión del estado en React."
+    },
+    "taskflow": {
+      "short": "Lista de tareas para gestionar actividades diarias.",
+      "long": "Una app personal para gestionar tareas diarias. Agrega, edita y elimina tareas rápidamente. Ofrece persistencia de datos mediante localStorage y un toggle de tema claro/oscuro. Creada para practicar las mejores prácticas de React y una gestión eficaz del estado."
+    },
+    "thecozycorner": {
+      "short": "Sitio interactivo para relajarse y explorar secciones de forma dinámica.",
+      "long": "The Cozy Corner es un proyecto desarrollado para explorar un diseño minimalista y una interacción relajante para el usuario. Cada sección ofrece una experiencia visual agradable, utilizando animaciones ligeras y un layout responsive. Tecnologías principales: TypeScript, Tailwind CSS y Vite."
+    },
+    "clockwise": {
+      "short": "Dashboard interactivo que muestra asistencia y horas mensuales trabajadas.",
+      "long": "Este proyecto permite visualizar gráficos con Recharts para mostrar turnos semanales y horas trabajadas al mes. El usuario puede ingresar tareas que podrá ver en una tabla."
+    },
+    "horrorvault": {
+      "short": "Sitio para buscar películas en línea. El usuario puede elegir películas de terror u otros géneros.",
+      "long": "Este proyecto permite buscar películas mediante la integración de una API pública. El usuario puede buscar películas de una base de datos simulada. Fue un ejercicio útil para familiarizarse con fetch API, manejo de errores y enrutamiento con Vue Router."
+    },
+    "vuestock": {
+      "short": "App moderna e interactiva que permite agregar productos al catálogo.",
+      "long": "Este proyecto permite realizar operaciones básicas CRUD para agregar y eliminar elementos del inventario. La app fue creada con la Composition API de Vue3 y TailwindCSS v4."
+    },
+    "shelfspot": {
+      "short": "ShelfSpot es una app web que permite descubrir, guardar y tomar prestados libros, ofreciendo una experiencia similar a una biblioteca digital.",
+      "long": "ShelfSpot es una app React con TypeScript y TailwindCSS que integra la OpenLibrary API para la gestión de libros, Redux Toolkit para el estado global y React Router v7 para la navegación. Incluye autenticación, rutas protegidas, gestión de favoritos y un sistema de préstamos simulado, con pruebas usando **Vitest** y **Testing Library**."
+    },
+    "dashboardAdmin": {
+      "short": "Dashboard Admin es una aplicación que simula un panel para desarrolladores y administradores.",
+      "long": "Este proyecto permite realizar operaciones básicas CRUD para agregar y eliminar elementos del inventario. La app fue creada con la Composition API de Vue3 y TailwindCSS v4."
+    },
+    "quoteServer": {
+      "short": "Quotes Server es un pequeño servidor que recopila y gestiona frases o citas.",
+      "long": "Quotes es un servidor Node.js basado en Express que utiliza EJS para renderizado e integra herramientas como Helmet para seguridad y Mongoose para la gestión de la base de datos. El proyecto está en expansión y se planea agregar autenticación, middleware personalizados y persistencia de datos."
+    },
+    "veggievibes": {
+      "short": "VeggieVibes es una app moderna para amantes de la cocina vegetariana.",
+      "long": "VeggieVibes es una app React basada en Vite, que utiliza la Spoonacular API para obtener y mostrar datos de recetas vegetarianas. La app gestiona la navegación interna mediante React Router v6 y adopta TailwindCSS para un estilo moderno y responsive."
+    },
+    "learnMore": "descubre más"
+  },
+  "contact": {
+    "h2": "¡Contáctame!",
+    "h3": "Ingresa tu nombre y correo",
+    "name": {
+      "label": "tu nombre",
+      "placeholder": "Ingresa tu nombre",
+      "required": "Este campo es obligatorio",
+      "shortName": "Nombre demasiado corto"
+    },
+    "email": {
+      "label": "tu correo",
+      "placeholder": "Ingresa tu correo",
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "Por favor ingresa un correo válido"
+    },
+    "privacy": {
+      "label": "Acepto la política de privacidad",
+      "p": "Tus datos serán tratados según nuestra política de privacidad"
+    },
+    "btn": "¡Contáctame!"
+  },
+  "footer": {
+    "connect": "¡Conéctate conmigo!",
+    "email": "correo"
+  },
+  "projectPage": {
+    "title": "Mis proyectos",
+    "paragraph": "Echa un vistazo a lo que puedo hacer"
+  },
+  "projectCategoryPage": {
+    "error": "No se encontraron proyectos.",
+    "details": "Ver detalles"
+  },
+  "projectDetailsPage": {
+    "error": "Proyecto no encontrado",
+    "demo": "Demo"
+  },
+  "contactpage": {
+    "title": "¿Necesitas un sitio web moderno?",
+    "paragraph": "Juntos podemos encontrar la mejor solución para el sitio web de tus sueños."
+  }
+}
