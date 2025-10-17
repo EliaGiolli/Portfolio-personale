@@ -33,49 +33,63 @@ Welcome to the latest version of my portfolio project! Built with the cutting ed
 
 ## ♿ Accessibility & Inclusive Design
 
-**Accessibility (a11y)** is a core part of this project’s architecture. Every component and interaction is built to ensure usability and inclusivity for all users.
+**Accessibility (a11y)** is a core part of this project’s architecture.
+Every component and interaction is built to ensure usability and inclusivity for all users.
 
-### 🧭 Semantic HTML & Structure
+### Semantic HTML & Structure
 
-- Consistent use of <header>, <main>, <section>, <article>, and <footer> elements for logical page hierarchy.
+- Consistent use of `header`, `main`, `section`, `article`, and `footer` elements for logical page hierarchy.
 
 - Layout components (e.g., ProjectsLayout, ContactsPage) use sections and landmarks to improve screen reader navigation.
 
-- Decorative <div>s have been replaced with semantic tags where possible.
+- Decorative `div` elements have been replaced with semantic tags where possible.
 
-### 🗣️ ARIA & Focus Management
+### ARIA & Focus Management
 
-- Implemented accessible modals via @headlessui/react with role="dialog", aria-modal="true", and aria-labelledby.
+- Implemented accessible modals via `@headlessui/react` with `role="dialog"`, `aria-modal="true"`, and `aria-labelledby`.
 
-- Custom hook useFocusRef ensures proper focus trapping, keyboard navigation, and Escape key closing inside dialogs.
+- Custom hook  useFocusRef ensures proper focus trapping, keyboard navigation, and Escape key closing inside dialogs.
 
-- Buttons, links, and interactive elements include descriptive aria-label attributes for clarity.
+- Buttons, links, and interactive elements include descriptive `aria-label` attributes for clarity and screen reader support.
 
-### 🎨 Color & Contrast
+### Color & Contrast
 
 - All text and background colors meet WCAG 2.1 AA contrast requirements.
 
-- Dynamic Tailwind classes automatically adjust text and background color depending on the theme (dark or light mode).
+- Dynamic Tailwind classes automatically adjust text and background colors depending on the theme (dark or light mode).
 
-### ⌨️ Keyboard Navigation
+- Color palette tested with Chrome Lighthouse and WCAG contrast checkers.
+
+### Keyboard Navigation
 
 - Full keyboard accessibility across modals, navigation, and forms.
 
-- Logical focus order and visible focus outlines for better discoverability.
+- Logical focus order for intuitive tab navigation.
 
-### 🌍 Internationalization & Language Attributes
+- Visible focus outlines for all interactive elements.
 
-- All translations are handled via i18next, with automatic language detection and safe fallback.
+- Modals and dialogs return focus to the trigger element after closing.
 
-- Accessible labels (e.g., for buttons and links) are localized using the same translation keys to provide a consistent experience across languages.
+### Internationalization & Language Attributes
 
-- The <html lang> attribute updates dynamically based on the selected language.
+- All translations handled via `i18next`, with automatic language detection and safe fallback logic.
 
-### ✅ Forms & Validation
+- Accessible labels (e.g., for buttons and links) are localized using translation keys for consistent multilingual experience.
 
-- React Hook Form provides type-safe validation with custom error messages readable by screen readers.
+- The lang attribute in the HTML document updates dynamically based on the selected language.
 
-- Form labels are explicitly associated with inputs, ensuring predictable navigation for assistive technologies.
+- Language switcher implemented with ARIA roles and keyboard navigation support.
+
+### Forms & Validation
+
+- React Hook Form provides type-safe validation and real-time error feedback.
+
+- Error messages are accessible to screen readers using aria-live="polite".
+
+- Form labels are explicitly associated with inputs for predictable navigation.
+
+- Submit and reset buttons are fully keyboard and screen-reader accessible.
+
 
 ## 🗂️ Project Structure
 
