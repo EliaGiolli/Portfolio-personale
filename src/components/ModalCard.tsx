@@ -12,9 +12,12 @@ import { useFocusRef } from '../custom hooks/useFocusRef';
 import { ModalCardProps } from '../types/generalTypes';
 
 function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
+    
     const { title, longDescription, imageUrl, githubLink, technologies, demoLink } = project;
-
+    //Theme classes
     const initialTheme = useThemeStore(state => state.initialTheme);
+    const isDark = initialTheme === 'dark';
+    
     const { t } = useTranslation();
 
     // Use the custom focus management hook
@@ -38,18 +41,18 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                     className={`
                         w-[90%] max-w-xl 
                         rounded-2xl shadow-2xl overflow-hidden 
-                        ${initialTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700'}
+                        ${isDark ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700'}
                     `}
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="modal-title"
                 >
-                    <div className={`flex justify-between items-center py-2 px-4 ${initialTheme === 'dark' ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700 border-b border-gray-200'}`}>
+                    <div className={`flex justify-between items-center py-2 px-4 ${isDark ? 'bg-gray-800 text-white' : 'bg-blue-50 text-gray-700 border-b border-gray-200'}`}>
                         <h2 id="modal-title" className="text-lg font-semibold">{title}</h2>
                         <button 
                             ref={closeButtonRef}
                             onClick={closeModal}
-                            className={`${initialTheme === 'dark' ? 'icon' : 'text-blue-600 hover:text-blue-700 rounded-lg p-1'}`}
+                            className={`${isDark ? 'icon' : 'text-blue-600 hover:text-blue-700 rounded-lg p-1'}`}
                             aria-label="Close modal"
                         >
                             <MdCloseFullscreen size={24} />
@@ -65,7 +68,7 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                             />
                         </div>
                         
-                        <p className={`my-5 ${initialTheme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
+                        <p className={`my-5 ${isDark ? 'text-white' : 'text-gray-700'}`}>
                             {t(`projects.${key}.long`, longDescription)}
                         </p>
                         
@@ -73,7 +76,7 @@ function ModalCard({ closeModal, project, getTechIcon }: ModalCardProps) {
                         <div className="md:flex flex-wrap gap-2 mb-4 hidden">
                             {technologies.map((tech, index) => (
                                 <span key={index} className='flex items-center text-sm px-3 py-1 my-3'>
-                                    {getTechIcon(tech, initialTheme === 'dark' ? 'bg-cyan-500 hover:bg-cyan-800 text-white rounded-lg' : 'bg-blue-600 hover:bg-blue-700 text-white rounded-xl')}
+                                    {getTechIcon(tech, isDark ? 'bg-cyan-500 hover:bg-cyan-800 text-white rounded-lg' : 'bg-blue-600 hover:bg-blue-700 text-white rounded-xl')}
                                     <span className="ml-1">{tech}</span>
                                 </span>
                             ))}

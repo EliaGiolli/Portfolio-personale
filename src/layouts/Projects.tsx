@@ -23,6 +23,8 @@ import { ProjectDataTypes } from '../types/ProjectDataTypes';
 function Projects() {
   
   const initialTheme = useThemeStore(state => state.initialTheme);
+  const isDark = initialTheme === 'dark';
+
   const { t } = useTranslation();
   //States
   const [isOpen, setIsOpen] = useState(false);
@@ -85,7 +87,11 @@ function Projects() {
             .replace(/[^a-z0-9]/gi, '');
 
           return (
-            <Card key={index} variant={CardVariants.project}>
+            <Card 
+              key={index} 
+              variant={CardVariants.project}
+              aria-labelledby={`project-title-${key}`}
+            >
               <div className="flex flex-col">
                 <div className='max-w-3xl'>
                   <img 
@@ -96,13 +102,14 @@ function Projects() {
                 </div>
                 <h2 
                   className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words mb-2 
-                    ${initialTheme === 'dark' ? 'text-cyan-500' : 'text-blue-600'}`}
+                    ${isDark ? 'text-cyan-500' : 'text-blue-600'}`}
+                  id={`project-title-${key}`}
                 >
                   {project.title}
                 </h2>
                 <p 
                   className={`text-center text-lg sm:text-2xl p-3 flex-grow
-                    ${initialTheme === 'dark' ? 'text-white' : 'text-gray-700'}`}
+                    ${isDark ? 'text-white' : 'text-gray-700'}`}
                 >
                   {t(`projects.${key}.short`)}
                 </p>
@@ -111,6 +118,7 @@ function Projects() {
                     onClick={() => handleOpenModal(project)}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    aria-expanded={isOpen && selectedProject?.title === project.title} 
                     >
                     {t('projects.learnMore')}
                   </MotionButton>
@@ -125,7 +133,8 @@ function Projects() {
         <ModalCard 
           closeModal={closeModal} 
           getTechIcon={getTechIcon} 
-          project={selectedProject} 
+          project={selectedProject}
+           
         />
       )}
     </>

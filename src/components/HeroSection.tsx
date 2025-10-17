@@ -14,6 +14,7 @@ function HeroSection() {
 
     const { t } = useTranslation('common');
     const initialTheme = useThemeStore(state => state.initialTheme);
+    const isDark = initialTheme === 'dark';
 
     const router = useNavigate();
     //Framer Motion uses a motion() API to wrap any custom component in React
@@ -26,6 +27,8 @@ function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ ease: easeIn, duration: 2}}
+            aria-labelledby='hero-title'
+            role='region'
             >
             {/* Colonna sinistra: immagine */}
             <div className="w-full h-80 md:h-[500px] lg:h-[600px] order-1 md:order-none flex items-center justify-center">
@@ -40,12 +43,14 @@ function HeroSection() {
 
             <div className={
                 `flex flex-col items-center md:items-start justify-center px-8 py-4 h-screen gap-y-4
-                ${initialTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
+                ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>
                 <h3 className='text-lg sm:text-xl font-medium tracking-wide uppercase'>{t("heroSection.h3")}</h3>
-                <h1 className={`text-3xl md:text-4xl font-extrabold leading-tight 
-                    ${initialTheme === 'dark' ? 'text-cyan-300' : 'text-blue-600'} `}>{t("heroSection.h1")}</h1>
+                <h1 
+                    id="hero-title"
+                    className={`text-3xl md:text-4xl font-extrabold leading-tight 
+                    ${isDark ? 'text-cyan-300' : 'text-blue-600'} `}>{t("heroSection.h1")}</h1>
                 <p className={`text-lg md:text-xl w-full sm:max-w-3xl my-5 
-                    ${initialTheme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>{t("heroSection.p")}</p>
+                    ${isDark ? 'text-gray-200' : 'text-gray-700'}`}>{t("heroSection.p")}</p>
                 <div className="flex items-start gap-6">
                     <MotionButton 
                         variant={ButtonVariants.customBtn}

@@ -13,12 +13,12 @@ function Card({
   const initialTheme = useThemeStore(state => state.initialTheme ?? 'dark'); 
 
   return (
-    <div
+    <article
       className={clsx(cardVariant({ variant, themeMode: initialTheme }), className)}
       {...props}
     >
       {children}
-    </div>
+    </article>
   );
 }
 

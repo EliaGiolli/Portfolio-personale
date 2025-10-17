@@ -20,7 +20,7 @@ Welcome to the latest version of my portfolio project! Built with the cutting ed
 
 ## 🚀 Main Features
 
-- Interactive homepage with animated text and parallax.
+- Interactive homepage with animated texts.
 - About section with personal intro, skills, and background.
 - Projects portfolio: Category pages, detailed project cards, and modal overlays for tech stack, links, and descriptions.
 - Routing with React Router 7: All core pages and project sections use nested, lazy-loaded route components and suspense fallbacks for fast navigation and bundle splitting.
@@ -30,6 +30,52 @@ Welcome to the latest version of my portfolio project! Built with the cutting ed
 - Smooth, declarative animations implemented using Framer Motion for enhanced UI experience.
 - Routing leverages React.lazy and `<Suspense>` for code splitting at the route and sub-route level, optimizing initial load and navigation to deep project pages.
 - TypeScript powers every layer, from route params to i18n resources and UI props, boosting reliability and IDE support.
+
+## ♿ Accessibility & Inclusive Design
+
+**Accessibility (a11y)** is a core part of this project’s architecture. Every component and interaction is built to ensure usability and inclusivity for all users.
+
+### 🧭 Semantic HTML & Structure
+
+- Consistent use of <header>, <main>, <section>, <article>, and <footer> elements for logical page hierarchy.
+
+- Layout components (e.g., ProjectsLayout, ContactsPage) use sections and landmarks to improve screen reader navigation.
+
+- Decorative <div>s have been replaced with semantic tags where possible.
+
+### 🗣️ ARIA & Focus Management
+
+- Implemented accessible modals via @headlessui/react with role="dialog", aria-modal="true", and aria-labelledby.
+
+- Custom hook useFocusRef ensures proper focus trapping, keyboard navigation, and Escape key closing inside dialogs.
+
+- Buttons, links, and interactive elements include descriptive aria-label attributes for clarity.
+
+### 🎨 Color & Contrast
+
+- All text and background colors meet WCAG 2.1 AA contrast requirements.
+
+- Dynamic Tailwind classes automatically adjust text and background color depending on the theme (dark or light mode).
+
+### ⌨️ Keyboard Navigation
+
+- Full keyboard accessibility across modals, navigation, and forms.
+
+- Logical focus order and visible focus outlines for better discoverability.
+
+### 🌍 Internationalization & Language Attributes
+
+- All translations are handled via i18next, with automatic language detection and safe fallback.
+
+- Accessible labels (e.g., for buttons and links) are localized using the same translation keys to provide a consistent experience across languages.
+
+- The <html lang> attribute updates dynamically based on the selected language.
+
+### ✅ Forms & Validation
+
+- React Hook Form provides type-safe validation with custom error messages readable by screen readers.
+
+- Form labels are explicitly associated with inputs, ensuring predictable navigation for assistive technologies.
 
 ## 🗂️ Project Structure
 

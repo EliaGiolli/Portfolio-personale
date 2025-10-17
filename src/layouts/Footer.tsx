@@ -1,64 +1,95 @@
 //Internal imports
-import { useThemeStore } from '../store/store'
+import { useThemeStore } from "../store/store";
 //External imports
-import { Link } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
-// React Icons
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
-import { FaReact, FaNodeJs, FaHtml5, FaCss3 } from 'react-icons/fa'
-import { IoLogoJavascript } from 'react-icons/io'
-import { SiExpress, SiMongodb } from 'react-icons/si'
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+//React Icons
+import { FaLinkedinIn, FaGithub, FaReact, FaNodeJs, FaHtml5, FaCss3 } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { SiExpress, SiMongodb } from "react-icons/si";
 
 function Footer() {
+  const { t } = useTranslation("common");
+  const initialTheme = useThemeStore((state) => state.initialTheme);
 
-  const { t } = useTranslation('common');
-  const initialTheme = useThemeStore(state => state.initialTheme);
+  // Centralized dynamic classes
+  const isDark = initialTheme === "dark";
+
+  const footerClasses = `p-3 ${isDark ? "bg-gray-800 text-white" : "bg-blue-50 text-gray-700"}`;
+  const brandTextClass = `text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words ${
+    isDark ? "text-cyan-300" : "text-blue-600"
+  }`;
+
+  const iconClass = `p-2 text-4xl transition-colors duration-300 ${
+    isDark ? "text-cyan-300 hover:text-cyan-500" : "text-blue-600 hover:text-blue-700"
+  }`;
 
   return (
-    <>
-      <footer className={`p-3 
-        ${initialTheme ==='dark'?'bg-gray-800 text-white':'bg-blue-50 text-gray-700'}`}>
-        <div className="w-full px-4 py-8">
-          <div className="text-center space-y-4">
-            {/* Logo e Titolo */}
-            <div className="flex items-center justify-center gap-4">
-              <Link to="/">
-                <img src="/img/logo.jpg" alt="Logo Giolli Design" className="w-12 h-11 object-cover rounded" />
-              </Link>
-              <h6 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center break-words
-                ${initialTheme ==='dark'?'text-cyan-300':'text-blue-600'}`}>GIOLLI DESIGN</h6>
-            </div>
+    <footer className={footerClasses}>
+      <div className="w-full px-4 py-8 text-center space-y-6">
+        {/* === BRAND === */}
+        <section aria-label="Brand e logo" className="flex items-center justify-center gap-4">
+          <Link to="/" aria-label="Homepage Giolli Design">
+            <img
+              src="/img/logo.jpg"
+              alt="Logo Giolli Design"
+              className="w-12 h-11 object-cover rounded"
+            />
+          </Link>
+          <p className={brandTextClass}>GIOLLI DESIGN</p>
+        </section>
 
-            {/* Connettiti con me */}
-            <h5 className="text-xl sm:text-2xl text-center">{t('footer.connect')}</h5>
-            <p className="text-center text-lg sm:text-2xl p-3">{t('footer.email')}: info@giollidesign.com</p>
+        {/* === CONTATTI === */}
+        <section aria-label="Contatti" className="space-y-2">
+          <h5 className="text-xl sm:text-2xl">{t("footer.connect")}</h5>
+          <address className="not-italic">
+            <p className="text-lg sm:text-2xl">
+              {t("footer.email")}:{" "}
+              <a
+                href="mailto:eliagiolli22@gmail.com"
+                className={`underline hover:no-underline ${
+                  isDark ? "text-cyan-400 hover:text-cyan-300" : "text-blue-600 hover:text-blue-700"
+                }`}
+              >
+                eliagiolli22@gmail.com
+              </a>
+            </p>
+          </address>
+        </section>
 
-            {/* Icone Social */}
-            <div className="flex justify-center gap-8">
-              <Link to="https://www.linkedin.com/in/eliagiolli/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedinIn className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-              </Link>
-              <Link to="https://github.com/EliaGiolli" target="_blank" rel="noopener noreferrer">
-                <FaGithub className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-              </Link>
-            </div>
+        {/* === SOCIAL === */}
+        <nav aria-label="Social links" className="flex justify-center gap-8">
+          <Link
+            to="https://www.linkedin.com/in/eliagiolli/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Profilo LinkedIn di Elia Giolli"
+          >
+            <FaLinkedinIn className={iconClass} />
+          </Link>
+          <Link
+            to="https://github.com/EliaGiolli"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Profilo GitHub di Elia Giolli"
+          >
+            <FaGithub className={iconClass} />
+          </Link>
+        </nav>
 
-            {/* Icone Tecnologie */}
-            <div className="flex justify-center gap-6 mt-4">
-              <FaReact className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-              <IoLogoJavascript className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-              <FaHtml5 className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-              <FaCss3 className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-              <FaNodeJs className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-              <SiExpress className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-              <SiMongodb className={`${initialTheme==='dark'?'icon':'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`} />
-            </div>
-
-          </div>
-        </div>
-      </footer>
-    </>
-  )
+        {/* === STACK TECNOLOGICO === */}
+        <section aria-hidden="true" className="flex justify-center flex-wrap gap-6 mt-4">
+          <FaReact className={iconClass} />
+          <IoLogoJavascript className={iconClass} />
+          <FaHtml5 className={iconClass} />
+          <FaCss3 className={iconClass} />
+          <FaNodeJs className={iconClass} />
+          <SiExpress className={iconClass} />
+          <SiMongodb className={iconClass} />
+        </section>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

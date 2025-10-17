@@ -1,6 +1,7 @@
-import React, { type ChangeEvent, type ReactNode, AnchorHTMLAttributes } from "react";
+import React, { type ChangeEvent, type ReactNode, AnchorHTMLAttributes, HtmlHTMLAttributes } from "react";
 import { ProjectDataTypes } from "./ProjectDataTypes";
 import { ButtonVariants, CardVariants } from "./enums";
+import { ForwardRefComponent } from "motion/react";
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: ButtonVariants
@@ -20,7 +21,8 @@ export interface InputProps {
     type?:string,
     placeholder?: string,
     value?: string,
-    onChange?: (event: ChangeEvent<HTMLInputElement>) => void 
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void,
+    id: string
 }
 
 export type CardProps = React.HTMLAttributes<HTMLDivElement> & {

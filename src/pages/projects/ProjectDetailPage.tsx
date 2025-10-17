@@ -9,7 +9,10 @@ import { CardVariants } from "../../types/enums";
 export default function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const project = projectsData.find((p) => p.slug === slug);
+  //Theme classes
   const initialTheme = useThemeStore((state) => state.initialTheme);
+  const isDark = initialTheme === 'dark';
+
   const { t } = useTranslation("common");
 
   if (!project) {
@@ -34,14 +37,14 @@ export default function ProjectDetailPage() {
       />
       <h1
         className={`text-3xl md:text-4xl font-extrabold leading-tight mb-5 ${
-          initialTheme === "dark" ? "text-cyan-300" : "text-blue-600"
+          isDark ? "text-cyan-300" : "text-blue-600"
         }`}
       >
         {project.title}
       </h1>
       <p
         className={`${
-          initialTheme === "dark" ? "text-gray-300" : "text-gray-700"
+          isDark ? "text-gray-300" : "text-gray-700"
         } text-md md:text-lg my-5`}
       >
         {t(`projects.${key}.long`)}
@@ -50,7 +53,7 @@ export default function ProjectDetailPage() {
         {project.githubLink && (
           <motion.a
             className={`${
-              initialTheme === "dark"
+              isDark
                 ? "text-cyan-400 hover:text-cyan-500"
                 : "text-blue-500 hover:text-blue-700"
             }`}
@@ -66,7 +69,7 @@ export default function ProjectDetailPage() {
         {project.demoLink && (
           <motion.a
             className={`${
-              initialTheme === "dark"
+              isDark
                 ? "text-cyan-400 hover:text-cyan-500"
                 : "text-blue-500 hover:text-blue-700"
             }`}

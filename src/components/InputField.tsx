@@ -7,6 +7,7 @@ function InputField({
   placeholder,
   value,
   onChange,
+  id,
   ...props  
 }: InputProps) {
   return (
@@ -17,6 +18,7 @@ function InputField({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
+          id={id}
           {...props}
         />
         {children}
