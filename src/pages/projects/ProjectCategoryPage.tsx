@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import { useThemeStore } from "../../store/store";
 //External libs
 import { useParams, Link } from "react-router-dom";
+import { motion } from "motion/react";
 //Data
 import { projectsData } from "../../data/projectsData";
 //Types
@@ -31,21 +32,43 @@ export default function ProjectCategoryPage() {
   }
 
   const initialTheme = useThemeStore(state => state.initialTheme);
+  const MotionCard = motion(Card);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
       {filteredProjects.map((project) => (
-        <Card 
+        <MotionCard
+          key={project.id}
           variant={CardVariants.project}
-          key={project.id} 
           className="border rounded p-4 shadow hover:shadow-lg transition"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut"
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+          whileHover={{ scale: 1.05 }}
         >
-          <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded mb-4" />
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="w-full h-48 object-cover rounded mb-4"
+          />
           <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
           <p className="my-2">{project.description}</p>
           <div className="flex flex-wrap gap-2 mb-2">
             {project.technologies.map((tech) => (
-              <span key={tech} className={`${initialTheme === 'dark' ? 'bg-blue-100 text-gray-700': 'bg-gray-200'} px-2 py-1 rounded text-sm`}>{tech}</span>
+              <span
+                key={tech}
+                className={`${
+                  initialTheme === "dark"
+                    ? "bg-blue-100 text-gray-700"
+                    : "bg-gray-200"
+                } px-2 py-1 rounded text-sm`}
+              >
+                {tech}
+              </span>
             ))}
           </div>
           <Link
@@ -54,8 +77,8 @@ export default function ProjectCategoryPage() {
           >
             Vedi dettagli
           </Link>
-        </Card>
-      ))}
+        </MotionCard>      
+        ))}
     </div>
   );
 }

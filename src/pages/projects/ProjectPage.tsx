@@ -1,16 +1,21 @@
 // src/pages/projects/ProjectsLayout.tsx
 //External libs
 import { Outlet, NavLink } from "react-router-dom";
+import { motion } from 'motion/react';
 //Internal imports
 import { useThemeStore } from "../../store/store";
 //Components
 import Card from "../../components/Card";
+//Icons
+import { CgBrowser } from "react-icons/cg";
+import { BsServer } from "react-icons/bs";
 //Types
 import { CardVariants } from "../../types/enums";
 
 export default function ProjectPage() {
 
   const initialTheme = useThemeStore(state => state.initialTheme);
+  const MotionCard = motion(Card);
 
   return (
     <section className="min-h-screen px-8 my-12">
@@ -22,26 +27,44 @@ export default function ProjectPage() {
       </div>
 
       <div className="flex flex-col justify-center gap-8 mb-8 text-lg font-medium">
-        <Card variant={CardVariants.project} className="min-w-[500px]">
-          <NavLink
-            to="frontend"
-            className={({ isActive }) =>
-              isActive ? "text-blue-500 underline" : "text-gray-500 hover:text-blue-400"
-          }
+        <MotionCard 
+          variant={CardVariants.project} 
+          className="min-w-[500px]"
+          whileHover={{ scale: 1.1 }}
           >
-            Front-end
-          </NavLink>
-        </Card>
-        <Card variant={CardVariants.project} className="min-w-[500px]">
-          <NavLink
-            to="backend"
-            className={({ isActive }) =>
-              isActive ? "text-blue-500 underline" : "text-gray-500 hover:text-blue-400"
-          }
+          <div className="flex gap-6 items-center text-center">  
+            <CgBrowser 
+              size={50} 
+              className={`${initialTheme === 'dark' ? 'text-cyan-500 hover:text-cyan-700 p-2 text-4xl transition-colors duration-300' : 'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`}/>
+            <NavLink
+              to="frontend"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500 underline" : "text-gray-500 hover:text-blue-400"
+            }
+            >
+              Front-end
+            </NavLink>
+          </div>
+        </MotionCard>
+        <MotionCard 
+          variant={CardVariants.project} 
+          className="min-w-[500px]"
+          whileHover={{ scale: 1.1 }}
           >
-            Back-end
-          </NavLink>
-        </Card>
+          <div className="flex gap-6 items-center text-center">  
+            <BsServer 
+              size={50} 
+              className={`${initialTheme === 'dark' ? 'text-cyan-500 hover:text-cyan-700 p-2 text-4xl transition-colors duration-300' : 'text-blue-600 hover:text-blue-700 p-2 text-4xl transition-colors duration-300'}`}/>
+            <NavLink
+              to="backend"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500 underline" : "text-gray-500 hover:text-blue-400"
+            }
+            >
+              Back-end
+            </NavLink>
+          </div>
+        </MotionCard>
       </div>
 
       <Outlet />
