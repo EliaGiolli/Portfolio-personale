@@ -4,15 +4,14 @@ Welcome to the latest version of my portfolio project! Built with the cutting ed
 
 ## ✨ Tech Stack
 
-- **React 19** – Concurrent rendering, server components, transitions, and modern hooks for optimal UI performance and DX[web:1][web:3].
+- **React 19** – Concurrent rendering, server components, transitions, and modern hooks for optimal UI performance and DX.
 - **TypeScript** – Type safety is enforced across components, routes, API calls, and i18n resources.
 - **Vite 6** – Lightning-fast builds and HMR.
 - **Tailwind CSS 4** – Responsive, mobile-first, and customizable styling.
 - **Framer Motion** – For declarative animations and smooth UI transitions.
 - **@headlessui/react** – Accessible UI primitives for modals, dialogs, popovers.
-- **React Router 7** – Granular, lazy-loaded, nested routing for scalable navigation[web:16][web:17][web:18].
+- **React Router 7** – Granular, lazy-loaded, nested routing for scalable navigation.
 - **React Icons & React Typed** – Professional icon sets and animated text effects.
-- **React Parallax, React Scroll** – Parallax backgrounds and smooth in-page navigation.
 - **Zustand** – Modern, minimal state management.
 - **React Hook Form** – Type-safe, performant form handling.
 - **Class Variance Authority & clsx** – Utility-first and conditional CSS.
@@ -51,7 +50,7 @@ src/
 
 ## 🌍 Internationalization
 
-Localization is managed via i18next, with hierarchical JSON structures in [translate:en], [translate:it], [translate:ru], and [translate:esp]. Type-safe translation keys ensure compile-time checks and safe UI rendering. Language switching is programmatic and automatic via browser detection, with Italian as fallback.
+Localization is managed via i18next, with hierarchical JSON structures in english, italian, russian, and spanish. Type-safe translation keys ensure compile-time checks and safe UI rendering. Language switching is programmatic and automatic via browser detection, with Italian as fallback.
 
 ## 🔧 Getting Started
 
